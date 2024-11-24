@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_hellite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "terrium:raw_hellite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:hellite_ingot_from_blasting_raw_hellite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_hellite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:hellite_ingot_from_blasting_raw_hellite"
+    ]
+  }
+}

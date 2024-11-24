@@ -1,0 +1,55 @@
+package com.laktostolerant.terrium.datagen;
+
+import com.laktostolerant.terrium.item.ModItems;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
+    public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
+    }
+
+    @Override
+    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(ItemTags.RABBIT_FOOD)
+                .add(ModItems.PINECONE);
+
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.HELLITE_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.HELLITE_PICKAXE);
+
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.HELLITE_AXE);
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.HELLITE_SHOVEL);
+
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.HELLITE_HOE);
+
+        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+                .add(ModItems.HELLITE_HELMET);
+
+        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+                .add(ModItems.HELLITE_CHESTPLATE);
+
+        getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+                .add(ModItems.HELLITE_LEGGINGS);
+
+        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+                .add(ModItems.HELLITE_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.HELLITE_HELMET)
+                .add(ModItems.HELLITE_CHESTPLATE)
+                .add(ModItems.HELLITE_LEGGINGS)
+                .add(ModItems.HELLITE_BOOTS);
+    }
+}

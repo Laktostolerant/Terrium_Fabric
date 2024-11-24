@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.laktostolerant.terrium.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ExampleMixin",
+    "NoiseChunkGeneratorMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
