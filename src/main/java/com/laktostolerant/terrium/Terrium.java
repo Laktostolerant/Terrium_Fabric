@@ -7,8 +7,9 @@ import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import terrablender.api.TerraBlenderApi;
 
-public class Terrium implements ModInitializer {
+public class Terrium implements ModInitializer, TerraBlenderApi {
 	public static final String MOD_ID = "terrium";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
@@ -17,5 +18,11 @@ public class Terrium implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+	}
+
+	@Override
+	public void onTerraBlenderInitialized()
+	{
+
 	}
 }

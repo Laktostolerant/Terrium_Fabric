@@ -25,7 +25,7 @@
 			"com.laktostolerant.terrium.TerriumClient"
 		],
 		"terrablender": [
-			"com.laktostolerant.terrium.TerriumTerraBlender"
+			"com.laktostolerant.terrium.Terrium"
 		]
 	},
 	"mixins": [
