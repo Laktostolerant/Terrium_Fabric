@@ -6,15 +6,14 @@ import com.laktostolerant.terrium.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import terrablender.api.TerraBlenderApi;
 
-public class TerriumTerraBlender implements ModInitializer {
+public class TerriumTerraBlender implements TerraBlenderApi {
 	public static final String MOD_ID = "terrium";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
-	public void onInitialize() {
-		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
-		ModItemGroups.registerItemGroups();
+	public void onTerraBlenderInitialized() {
+		// Initialize your biome modifications or settings here
 	}
 }
