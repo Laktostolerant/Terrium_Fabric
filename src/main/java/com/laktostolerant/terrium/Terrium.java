@@ -3,6 +3,8 @@ package com.laktostolerant.terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItemGroups;
 import com.laktostolerant.terrium.item.ModItems;
+import com.laktostolerant.terrium.world.gen.ModOreGeneration;
+import com.laktostolerant.terrium.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -18,6 +20,8 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+
+		ModWorldGeneration.generateModWorldGen();
 	}
 
 	@Override
