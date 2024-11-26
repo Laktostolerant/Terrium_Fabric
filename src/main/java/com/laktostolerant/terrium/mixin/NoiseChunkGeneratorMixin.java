@@ -27,6 +27,7 @@ public abstract class NoiseChunkGeneratorMixin {
      * @author Laktostolerant
      * @reason Customize fluid generation behavior for lava placement.
      */
+    /**
     @ModifyArg(
             method = "createFluidLevelSampler(Lnet/minecraft/world/gen/chunk/ChunkGeneratorSettings;)Lnet/minecraft/world/gen/chunk/AquiferSampler$FluidLevelSampler;",
             at = @At(
@@ -39,6 +40,7 @@ public abstract class NoiseChunkGeneratorMixin {
         // Modify the y-parameter to influence the logic
         return Math.max(originalY, -54); // Example logic: constrain to -54
     }
+     **/
 
 
 
