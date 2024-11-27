@@ -19,7 +19,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.PURSHALE_BRICKS);
-
+        addDrop(ModBlocks.LOAMSTONE);
+        addDrop(ModBlocks.WATCHFUL_PURSHALE, block -> this.drops(block, ModBlocks.COBBLED_PURSHALE));
         addDrop(ModBlocks.PURSHALE, block -> this.drops(block, ModBlocks.COBBLED_PURSHALE));
 
         addDrop(ModBlocks.HELLITE_ORE, oreDrops(ModBlocks.HELLITE_ORE, ModItems.RAW_HELLITE));

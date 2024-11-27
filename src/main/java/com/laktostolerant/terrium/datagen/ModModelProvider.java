@@ -17,17 +17,20 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURSHALE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WATCHFUL_PURSHALE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HELLITE_ORE);
 
         blockStateModelGenerator.registerRotatable(ModBlocks.PURSHALE_BRICKS);
         blockStateModelGenerator.registerRotatable(ModBlocks.COBBLED_PURSHALE);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUADRANT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LOAMSTONE);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.PINECONE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINECANNON, Models.HANDHELD_MACE);
+        itemModelGenerator.register(ModItems.PINECANNON_CROSSBOW, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINECONE_JAM, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.HELLITE_INGOT, Models.GENERATED);

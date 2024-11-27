@@ -4,6 +4,8 @@
   "item.terrium.raw_hellite": "Raw Hellite",
 
   "item.terrium.pinecone": "Pinecone",
+  "item.terrium.pinecannon": "Pinecannon",
+  "item.terrium.pinecannon_crossbow": "Pinecannon Crossbow",
   "item.terrium.pinecone_jam": "Pinecone Jam",
 
   "item.terrium.hellite_sword": "Hellite Sword",
@@ -18,6 +20,7 @@
   "item.terrium.hellite_boots": "Hellite Boots",
 
   "block.terrium.purshale": "Purshale",
+  "block.terrium.watchful_purshale": "Watchful Purshale",
   "block.terrium.cobbled_purshale": "Cobbled Purshale",
   "block.terrium.purshale_bricks": "Purshale Bricks",
   "block.terrium.hellite_ore": "Purshale Hellite Ore",

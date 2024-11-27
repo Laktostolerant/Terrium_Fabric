@@ -3,7 +3,7 @@ package com.laktostolerant.terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItemGroups;
 import com.laktostolerant.terrium.item.ModItems;
-import com.laktostolerant.terrium.world.gen.ModOreGeneration;
+import com.laktostolerant.terrium.world.ModBiomeModifiers;
 import com.laktostolerant.terrium.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
@@ -27,6 +27,7 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 	@Override
 	public void onTerraBlenderInitialized()
 	{
-
+		ModBiomeModifiers.modifyBiomes();
+		ModWorldGeneration.registerSurfaceRules();
 	}
 }

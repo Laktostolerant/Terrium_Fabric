@@ -33,12 +33,16 @@ public class ModItemGroups {
                         entries.add(ModItems.HELLITE_BOOTS);
 
                         entries.add(ModItems.PINECONE);
+                        entries.add(ModItems.PINECANNON);
+                        entries.add(ModItems.PINECANNON_CROSSBOW);
                         entries.add(ModItems.PINECONE_JAM);
 
                         entries.add(ModBlocks.PURSHALE);
+                        entries.add(ModBlocks.WATCHFUL_PURSHALE);
                         entries.add(ModBlocks.COBBLED_PURSHALE);
                         entries.add(ModBlocks.PURSHALE_BRICKS);
                         entries.add(ModBlocks.HELLITE_ORE);
+                        entries.add(ModBlocks.LOAMSTONE);
                     })
 
                     .build()

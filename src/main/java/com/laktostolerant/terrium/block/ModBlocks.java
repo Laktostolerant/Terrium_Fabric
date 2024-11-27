@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -16,6 +18,14 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
     public static final Block PURSHALE = registerBlock("purshale",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f, 7)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE)
+            )
+    );
+
+    public static final Block WATCHFUL_PURSHALE = registerBlock("watchful_purshale",
             new Block(AbstractBlock.Settings.create()
                     .strength(4f, 7)
                     .requiresTool()
@@ -48,15 +58,13 @@ public class ModBlocks {
             )
     );
 
-    public static final Block QUADRANT = registerBlock("quadrant",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
-                    AbstractBlock.Settings.create()
-                            .strength(5f, 6)
+    public static final Block LOAMSTONE = registerBlock("loamstone",
+            new Block(AbstractBlock.Settings.create()
+                            .strength(0.4f)
                             .requiresTool()
-                            .sounds(BlockSoundGroup.DEEPSLATE)
+                            .sounds(BlockSoundGroup.NETHERRACK)
             )
     );
-
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -74,11 +82,12 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.PURSHALE);
+            entries.add(ModBlocks.WATCHFUL_PURSHALE);
             entries.add(ModBlocks.HELLITE_ORE);
             entries.add(ModBlocks.COBBLED_PURSHALE);
             entries.add(ModBlocks.PURSHALE_BRICKS);
 
-            entries.add(ModBlocks.QUADRANT);
+            entries.add(ModBlocks.LOAMSTONE);
         });
     }
 

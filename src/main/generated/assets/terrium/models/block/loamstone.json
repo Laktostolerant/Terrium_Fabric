@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "terrium:block/quadrant"
+    "all": "terrium:block/loamstone"
   }
 }

@@ -21,7 +21,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PURSHALE);
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.QUADRANT)
+                .add(ModBlocks.LOAMSTONE)
+                .add(ModBlocks.WATCHFUL_PURSHALE)
                 .add(ModBlocks.PURSHALE)
                 .add(ModBlocks.HELLITE_ORE)
                 .add(ModBlocks.COBBLED_PURSHALE)
@@ -29,6 +30,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.PURSHALE)
+                .add(ModBlocks.WATCHFUL_PURSHALE)
                 .add(ModBlocks.COBBLED_PURSHALE)
                 .add(ModBlocks.PURSHALE_BRICKS);
 
