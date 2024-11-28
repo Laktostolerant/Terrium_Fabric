@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium.item;
 
 import com.laktostolerant.terrium.Terrium;
+import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.custom.ModCustomCrossbow;
 import com.laktostolerant.terrium.item.custom.ModDrinkItem;
 import com.laktostolerant.terrium.item.custom.ModCustomBow;
@@ -38,8 +39,6 @@ public class ModItems {
             .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(45))));
     public static final Item HELLITE_BOOTS = registerItem("hellite_boots", new ArmorItem(ModArmorMaterials.HELLITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
             .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(45))));
-
-
 
 
     public static final Item PINECANNON = registerItem("pinecannon", new ModCustomBow(new Item.Settings()

@@ -1,12 +1,12 @@
-// 1.21	2024-11-27T21:53:19.2652643	Terrium/Tags for minecraft:item
+// 1.21	2024-11-28T14:06:20.2796991	Terrium/Tags for minecraft:item
 6f6488ffc2471b71c526f246f730b7bf46f1a63b data\minecraft\tags\item\rabbit_food.json
 a4ad4bafb8f8729e579c07587d57b97a6a8b252c data\minecraft\tags\item\swords.json
-ce9fdca8be8937e7b598fc83a240b1ce6833b40b data\minecraft\tags\item\trimmable_armor.json
-632602b97806ec310d69deeccfb73b3f4975ecb4 data\minecraft\tags\item\axes.json
-1fe3744fd74e919d1b83f87f5523da0f29b5b27b data\minecraft\tags\item\leg_armor.json
-384df2f07d728b50b8f78ffcda2f497f74d40243 data\minecraft\tags\item\chest_armor.json
-c0aede829135750fdd4aa15d35bc7932d89bcc17 data\minecraft\tags\item\hoes.json
 f9cc6d2923a09191e579e1e9c32a7146e0dd4b8f data\minecraft\tags\item\head_armor.json
 c5a7b9961964a4dbd0809ede0b55597d02967847 data\minecraft\tags\item\shovels.json
-eb78f9c85a7c8055ff51bac775ae52db4d5ffc24 data\minecraft\tags\item\foot_armor.json
+384df2f07d728b50b8f78ffcda2f497f74d40243 data\minecraft\tags\item\chest_armor.json
+ce9fdca8be8937e7b598fc83a240b1ce6833b40b data\minecraft\tags\item\trimmable_armor.json
+1fe3744fd74e919d1b83f87f5523da0f29b5b27b data\minecraft\tags\item\leg_armor.json
 5bc30566d54420eaf8ac5856540d97e4c29b86e5 data\minecraft\tags\item\pickaxes.json
+c0aede829135750fdd4aa15d35bc7932d89bcc17 data\minecraft\tags\item\hoes.json
+eb78f9c85a7c8055ff51bac775ae52db4d5ffc24 data\minecraft\tags\item\foot_armor.json
+632602b97806ec310d69deeccfb73b3f4975ecb4 data\minecraft\tags\item\axes.json

@@ -43,6 +43,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PURSHALE_BRICKS);
                         entries.add(ModBlocks.HELLITE_ORE);
                         entries.add(ModBlocks.LOAMSTONE);
+
+                        entries.add(ModBlocks.DARKELP);
                     })
 
                     .build()

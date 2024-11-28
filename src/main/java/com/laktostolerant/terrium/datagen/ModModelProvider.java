@@ -4,10 +4,12 @@ import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Items;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -24,6 +26,11 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerRotatable(ModBlocks.COBBLED_PURSHALE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LOAMSTONE);
+
+
+        blockStateModelGenerator.registerPlantPart(ModBlocks.DARKELP, ModBlocks.DARKELP_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //blockStateModelGenerator.registerItemModel(Items.KELP);
+        blockStateModelGenerator.excludeFromSimpleItemModelGeneration(ModBlocks.DARKELP_PLANT);
     }
 
     @Override
