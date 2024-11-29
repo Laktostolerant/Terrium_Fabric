@@ -2,6 +2,7 @@ package com.laktostolerant.terrium.world;
 
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
+import com.laktostolerant.terrium.util.ModTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -24,14 +25,16 @@ public class ModConfiguredFeatures {
 
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
-        RuleTest deepslateReplacables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest purshaleOreInDeepslate = new TagMatchRuleTest(ModTags.Blocks.PURSHALE_ORE_REPLACEABLES);
         List<OreFeatureConfig.Target> helliteOres =
-                List.of(OreFeatureConfig.createTarget(deepslateReplacables, ModBlocks.HELLITE_ORE.getDefaultState()));
+                List.of(OreFeatureConfig.createTarget(purshaleOreInDeepslate, ModBlocks.HELLITE_ORE.getDefaultState()));
 
 
         register(context, HELLITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(helliteOres, 4));
 
+        /**
         register(context, LAVA_REMOVER_KEY, Feature.GEODE, createLavaRemoverConfig());
+         **/
     }
 
 

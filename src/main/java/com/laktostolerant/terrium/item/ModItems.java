@@ -10,6 +10,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.UseAction;
 
 public class ModItems {
 
@@ -43,13 +44,24 @@ public class ModItems {
 
     public static final Item PINECANNON = registerItem("pinecannon", new ModCustomBow(new Item.Settings()
             .maxDamage(1)
-            .maxCount(1))
+            .maxCount(1),
+
+            50,
+            10
+            )
     );
+
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.BOW;
+    }
 
     public static final Item PINECANNON_CROSSBOW = registerItem("pinecannon_crossbow", new ModCustomCrossbow(new Item.Settings()
             .maxCount(1)
             .maxDamage(1)
     ));
+
+    public static final Item DARKELP = registerItem("darkelp", new AliasedBlockItem(ModBlocks.DARKELP, new Item.Settings()));
+    public static final Item DUSKWEED = registerItem("duskweed", new AliasedBlockItem(ModBlocks.DUSKWEED, new Item.Settings()));
 
 
 
@@ -79,6 +91,9 @@ public class ModItems {
             entries.add(HELLITE_CHESTPLATE);
             entries.add(HELLITE_LEGGINGS);
             entries.add(HELLITE_BOOTS);
+
+            entries.add(DARKELP);
+            entries.add(DUSKWEED);
         });
     }
 }

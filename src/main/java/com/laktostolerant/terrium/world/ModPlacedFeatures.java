@@ -33,6 +33,7 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(2,  //place per chunks
                         HeightRangePlacementModifier.uniform(YOffset.aboveBottom(5), YOffset.aboveBottom(35))));
 
+        /**
         // Register Depth Features
         register(context, DEPTHS_63_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.LAVA_REMOVER_KEY),
                 List.of(HeightRangePlacementModifier.trapezoid(YOffset.fixed(-64), YOffset.fixed(-64))));
@@ -48,6 +49,7 @@ public class ModPlacedFeatures {
 
         register(context, DEPTHS_127_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.LAVA_REMOVER_KEY),
                 List.of(HeightRangePlacementModifier.trapezoid(YOffset.fixed(-122), YOffset.fixed(-122))));
+         **/
     }
 
 

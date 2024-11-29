@@ -17,8 +17,10 @@ public class ModTags {
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Terrium.MOD_ID, name));
         }
-    }
 
+        public static final TagKey<Block> PURSHALE_ORE_REPLACEABLES = createTag("purshale_ore_replaceables");
+    }
+;
     public static class Items {
 
 

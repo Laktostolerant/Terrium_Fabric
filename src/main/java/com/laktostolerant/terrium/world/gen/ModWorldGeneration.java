@@ -14,34 +14,13 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules;
+import org.spongepowered.include.com.google.common.collect.ImmutableList;
 import terrablender.api.SurfaceRuleManager;
 import terrablender.api.TerraBlenderApi;
+import terrablender.worldgen.TBSurfaceRuleData;
 
 public class ModWorldGeneration {
     public static void generateModWorldGen() {
         ModOreGeneration.generateOres();
-    }
-
-    public static void registerSurfaceRules() {
-        // Define the vertical gradient condition for Y-levels below -60
-        MaterialRules.MaterialCondition belowNegative60 = MaterialRules.verticalGradient(
-                "terrium_purshale_gradient", // Unique name for the condition
-                YOffset.fixed(-60), // Y-level where the condition starts being true
-                YOffset.fixed(-255) // Maximum depth for the condition
-        );
-
-        // Define the rule to replace deepslate with purshale
-        MaterialRules.MaterialRule purshaleRule = MaterialRules.condition(
-                belowNegative60,
-                MaterialRules.block(Blocks.PURPLE_TERRACOTTA.getDefaultState()) // Replace with your custom block
-        );
-
-        // Inject the custom rule into the overworld surface rules
-        SurfaceRuleManager.addToDefaultSurfaceRulesAtStage(
-                SurfaceRuleManager.RuleCategory.OVERWORLD,
-                SurfaceRuleManager.RuleStage.AFTER_BEDROCK, // Apply the rule after bedrock generation
-                10, // Priority (higher numbers are processed earlier)
-                purshaleRule
-        );
     }
 }

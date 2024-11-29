@@ -10,6 +10,8 @@ public class ModBiomeModifiers {
 
     public static void modifyBiomes() {
         // Add Depth Features to all Overworld biomes
+
+        /**
         BiomeModifications.addFeature(
                 BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), // Select all Overworld biomes
                 GenerationStep.Feature.UNDERGROUND_DECORATION,
@@ -39,5 +41,6 @@ public class ModBiomeModifiers {
                 GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.DEPTHS_127_PLACED_KEY
         );
+         **/
     }
 }

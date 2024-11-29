@@ -1,5 +1,5 @@
-// 1.21	2024-11-28T14:06:20.2827352	Terrium/Tags for minecraft:block
-4d0a9496df674dbf49b9e9d59a29168848f228a6 data\minecraft\tags\block\needs_diamond_tool.json
-d9e15ce9b2ca23ead68d81403e1110a024d0223b data\minecraft\tags\block\overworld_carver_replaceables.json
-0ba78086f6eb772cfc81e096cd4bb21a03cf7453 data\terrium\tags\block\needs_netherite_tool.json
+// 1.21	2024-11-29T10:50:35.3056952	Terrium/Tags for minecraft:block
 3fd9e13002e1053adcf2dbd683ac3f46ee0fb7a1 data\minecraft\tags\block\mineable\pickaxe.json
+d9e15ce9b2ca23ead68d81403e1110a024d0223b data\minecraft\tags\block\overworld_carver_replaceables.json
+4d0a9496df674dbf49b9e9d59a29168848f228a6 data\minecraft\tags\block\needs_diamond_tool.json
+0ba78086f6eb772cfc81e096cd4bb21a03cf7453 data\terrium\tags\block\needs_netherite_tool.json

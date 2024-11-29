@@ -26,5 +26,8 @@
   "block.terrium.hellite_ore": "Purshale Hellite Ore",
   "block.terrium.loamstone": "Loamstone",
 
+  "item.terrium.darkelp": "Darkelp",
+  "item.terrium.duskweed": "Duskweed",
+
   "itemgroup.tutorialmod.terrium_items": "Terrium"
 }

@@ -28,6 +28,5 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 	public void onTerraBlenderInitialized()
 	{
 		ModBiomeModifiers.modifyBiomes();
-		ModWorldGeneration.registerSurfaceRules();
 	}
 }

@@ -44,7 +44,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.HELLITE_ORE);
                         entries.add(ModBlocks.LOAMSTONE);
 
-                        entries.add(ModBlocks.DARKELP);
+                        entries.add(ModItems.DARKELP);
+                        entries.add(ModBlocks.DUSKWEED);
                     })
 
                     .build()

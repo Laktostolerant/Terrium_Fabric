@@ -1,9 +1,3 @@
-// 1.21	2024-11-28T14:06:20.2781301	Terrium/World Gen
-eeb9b571b558e7855a6deba2d11403603620cbc3 data\terrium\worldgen\configured_feature\lava_remover.json
-207032835f507a54f99c06388270b55f26518fa6 data\terrium\worldgen\placed_feature\hellite_ore_placed.json
-908686eae02906c6239c7c971b02986e10e394b6 data\terrium\worldgen\placed_feature\depths_95_placed.json
+// 1.21	2024-11-29T10:50:35.3046951	Terrium/World Gen
 1dae63509bf022aff7a90d5fc63ca5c3baa35f76 data\terrium\worldgen\configured_feature\hellite_ore.json
-48c7e70e49fce380206cadd05c7e0afe34ab1053 data\terrium\worldgen\placed_feature\depths_79_placed.json
-8ede462a265d128cb844af609fa93aabbffe2b6b data\terrium\worldgen\placed_feature\depths_127_placed.json
-b0193737461c49094e7c8ba883674134c7e87622 data\terrium\worldgen\placed_feature\depths_63_placed.json
-ce85a9e0c9190edb0ec6c8f4c6f3bf310f2c99e3 data\terrium\worldgen\placed_feature\depths_111_placed.json
+207032835f507a54f99c06388270b55f26518fa6 data\terrium\worldgen\placed_feature\hellite_ore_placed.json

@@ -3,6 +3,7 @@ package com.laktostolerant.terrium.block;
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.custom.CustomLandKelp;
 import com.laktostolerant.terrium.block.custom.CustomLandKelpBlock;
+import com.laktostolerant.terrium.block.custom.DuskweedPlantBlock;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
@@ -74,7 +75,7 @@ public class ModBlocks {
                     .noCollision()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WET_GRASS)
-                    .luminance(state -> 3) // Emits light with level 7
+                    .luminance(state -> 2)
                     .pistonBehavior(PistonBehavior.DESTROY),
 
                     Direction.UP, // Growth direction
@@ -83,13 +84,13 @@ public class ModBlocks {
             )
     );
 
-    public static final Block DARKELP = registerBlock("darkelp",
+    public static final Block DARKELP = registerBlockWithoutItem("darkelp",
             new CustomLandKelp(AbstractBlock.Settings.create()
                     .mapColor(MapColor.WATER_BLUE)
                     .noCollision()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WET_GRASS)
-                    .luminance(state -> 3) // Emits light with level 7
+                    .luminance(state -> 2) // Emits light with level 7
                     .pistonBehavior(PistonBehavior.DESTROY),
 
 
@@ -101,11 +102,27 @@ public class ModBlocks {
             )
     );
 
+    public static final Block DUSKWEED = registerBlockWithoutItem("duskweed",
+            new DuskweedPlantBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .replaceable()
+                    .noCollision()
+                    .breakInstantly()
+                    .luminance(state -> 1)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .offset(AbstractBlock.OffsetType.XZ)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
 
 
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(Terrium.MOD_ID, name), block);
+    }
+
+    private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(Terrium.MOD_ID, name), block);
     }
 
@@ -129,6 +146,7 @@ public class ModBlocks {
             entries.add(ModBlocks.LOAMSTONE);
 
             entries.add(DARKELP);
+            entries.add(DUSKWEED);
         });
     }
 

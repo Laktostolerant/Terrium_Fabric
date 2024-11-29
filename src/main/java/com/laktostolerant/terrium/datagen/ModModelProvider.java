@@ -4,12 +4,13 @@ import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Items;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -29,8 +30,9 @@ public class ModModelProvider extends FabricModelProvider {
 
 
         blockStateModelGenerator.registerPlantPart(ModBlocks.DARKELP, ModBlocks.DARKELP_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
-        //blockStateModelGenerator.registerItemModel(Items.KELP);
         blockStateModelGenerator.excludeFromSimpleItemModelGeneration(ModBlocks.DARKELP_PLANT);
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.DUSKWEED, TexturedModel.TEMPLATE_SEAGRASS);
     }
 
     @Override
@@ -54,5 +56,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HELLITE_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HELLITE_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HELLITE_BOOTS);
+
+        itemModelGenerator.register(ModItems.DARKELP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DUSKWEED, Models.GENERATED);
     }
 }

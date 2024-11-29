@@ -20,6 +20,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
                 .add(ModBlocks.PURSHALE);
 
+        getOrCreateTagBuilder(BlockTags.BASE_STONE_OVERWORLD)
+                .add(ModBlocks.PURSHALE);
+
+        getOrCreateTagBuilder(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
+                .add(ModBlocks.PURSHALE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.PURSHALE_ORE_REPLACEABLES)
+                .add(ModBlocks.PURSHALE);
+
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.LOAMSTONE)
                 .add(ModBlocks.WATCHFUL_PURSHALE)
