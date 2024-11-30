@@ -27,7 +27,7 @@ public class PurshaleMixin {
         // Fully purshale layer below Y -65, excluding bedrock
         MaterialRules.MaterialRule fullyPurshale = MaterialRules.condition(
                 MaterialRules.verticalGradient("purshale_full", YOffset.fixed(-65), YOffset.getBottom()),
-                MaterialRules.condition(noBedrock, MaterialRules.block(ModBlocks.PURSHALE.getDefaultState())) // Exclude bedrock
+                MaterialRules.condition(noBedrock, MaterialRules.block(ModBlocks.WATCHFUL_PURSHALE.getDefaultState())) // Exclude bedrock
         );
 
         // Choppy mixing strictly between Y -60 and Y -65, excluding bedrock
@@ -37,7 +37,7 @@ public class PurshaleMixin {
                         noBedrock, // Exclude bedrock
                         MaterialRules.condition(
                                 MaterialRules.noiseThreshold(NoiseParametersKeys.SURFACE, -0.1, 0.1), // Random choppy effect
-                                MaterialRules.block(ModBlocks.PURSHALE.getDefaultState()) // Purshale block
+                                MaterialRules.block(ModBlocks.WATCHFUL_PURSHALE.getDefaultState()) // Purshale block
                         )
                 )
         );
