@@ -21,6 +21,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PURSHALE)
                 .add(ModBlocks.WATCHFUL_PURSHALE);
 
+        getOrCreateTagBuilder(ModTags.Blocks.ABYSS_GROWABLES)
+                .add(ModBlocks.PURSHALE)
+                        .add(ModBlocks.WATCHFUL_PURSHALE);
+
 
         getOrCreateTagBuilder(BlockTags.BASE_STONE_OVERWORLD)
                 .add(ModBlocks.PURSHALE);

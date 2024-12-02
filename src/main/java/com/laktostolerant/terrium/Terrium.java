@@ -3,6 +3,8 @@ package com.laktostolerant.terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItemGroups;
 import com.laktostolerant.terrium.item.ModItems;
+import com.laktostolerant.terrium.world.ModPlacedFeatures;
+import com.laktostolerant.terrium.world.biome.ModBiomes;
 import com.laktostolerant.terrium.world.biome.ModOverworldRegion;
 import com.laktostolerant.terrium.world.biome.surface.ModMaterialRules;
 import com.laktostolerant.terrium.world.gen.ModWorldGeneration;

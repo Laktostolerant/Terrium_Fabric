@@ -11,15 +11,14 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeEffects;
-import net.minecraft.world.biome.GenerationSettings;
-import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.carver.ConfiguredCarver;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+
+import java.util.Set;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> ABYSS_BIOME = RegistryKey.of(RegistryKeys.BIOME,
@@ -27,6 +26,14 @@ public class ModBiomes {
 
     public static final RegistryKey<Biome> DEEP_JUNGLE = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(Terrium.MOD_ID, "deep_jungle"));
+
+    private static final Set<RegistryKey<Biome>> EXCLUDED_BIOMES = Set.of(
+            BiomeKeys.DEEP_DARK,
+            BiomeKeys.LUSH_CAVES,
+            BiomeKeys.DRIPSTONE_CAVES,
+            ModBiomes.DEEP_JUNGLE // Your custom biome
+    );
+
 
     public static void boostrap (Registerable<Biome> context) {
         context.register(ABYSS_BIOME, abyssBiome(context));
@@ -42,29 +49,15 @@ public class ModBiomes {
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
     }
 
+
     public static Biome abyssBiome(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
 
-        //DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
-        //DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
-
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
-
-        //globalOverworldGeneration(biomeBuilder);
-        //DefaultBiomeFeatures.addMossyRocks(biomeBuilder);
-        //DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
-        //DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
-
-        //biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
-        //DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
-        //DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
-
-        //DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
-        //DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ABYSS_PLANTS_PLACED_KEY);
 

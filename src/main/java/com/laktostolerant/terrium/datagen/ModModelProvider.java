@@ -19,7 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PURSHALE);
+        blockStateModelGenerator.registerSingleton(ModBlocks.PURSHALE, TexturedModel.CUBE_BOTTOM_TOP);
         blockStateModelGenerator.registerSingleton(ModBlocks.WATCHFUL_PURSHALE, TexturedModel.CUBE_BOTTOM_TOP);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HELLITE_ORE);
 

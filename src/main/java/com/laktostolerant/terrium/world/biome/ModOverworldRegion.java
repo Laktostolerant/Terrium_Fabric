@@ -22,8 +22,19 @@ public class ModOverworldRegion extends Region {
                     RegistryKey<Biome>>> mapper) {
         //super.addBiomes(registry, mapper);
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
-            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.DEEP_DARK, ModBiomes.ABYSS_BIOME);
             modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.LUSH_CAVES, ModBiomes.DEEP_JUNGLE);
         });
+
+
+        MultiNoiseUtil.ParameterRange temperature = MultiNoiseUtil.ParameterRange.of(0.7F, 0.8F); // Deep Dark-like temperature
+        MultiNoiseUtil.ParameterRange humidity = MultiNoiseUtil.ParameterRange.of(0.4F, 0.6F);    // Moderate humidity
+        MultiNoiseUtil.ParameterRange continentalness = MultiNoiseUtil.ParameterRange.of(-1.0F, -0.7F); // Underground zones
+        MultiNoiseUtil.ParameterRange erosion = MultiNoiseUtil.ParameterRange.of(0.0F, 0.2F);    // Low erosion
+        MultiNoiseUtil.ParameterRange weirdness = MultiNoiseUtil.ParameterRange.of(-0.5F, -0.2F); // Subtle weirdness
+        MultiNoiseUtil.ParameterRange depth = MultiNoiseUtil.ParameterRange.of(-2.0F, -1.5F);    // Below y=-64
+        float offset = 0.0F; // Default offset
+
+        // Call addBiome to map your custom biome
+        this.addBiome(mapper, temperature, humidity, continentalness, erosion, weirdness, depth, offset, ModBiomes.ABYSS_BIOME);
     }
 }
