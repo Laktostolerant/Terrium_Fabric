@@ -75,7 +75,7 @@ public class ModBlocks {
                     .noCollision()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WET_GRASS)
-                    .luminance(state -> 2)
+                    .luminance(state -> 3)
                     .pistonBehavior(PistonBehavior.DESTROY),
 
                     Direction.UP, // Growth direction
@@ -90,7 +90,7 @@ public class ModBlocks {
                     .noCollision()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WET_GRASS)
-                    .luminance(state -> 2) // Emits light with level 7
+                    .luminance(state -> 3) // Emits light with level 7
                     .pistonBehavior(PistonBehavior.DESTROY),
 
 

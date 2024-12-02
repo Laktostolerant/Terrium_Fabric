@@ -18,7 +18,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
-                .add(ModBlocks.PURSHALE);
+                .add(ModBlocks.PURSHALE)
+                .add(ModBlocks.WATCHFUL_PURSHALE);
+
 
         getOrCreateTagBuilder(BlockTags.BASE_STONE_OVERWORLD)
                 .add(ModBlocks.PURSHALE);

@@ -24,7 +24,7 @@ public class DuskweedPlantBlock extends PlantBlock {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor == ModBlocks.PURSHALE.getDefaultState();
+        return floor == ModBlocks.PURSHALE.getDefaultState() || floor == ModBlocks.WATCHFUL_PURSHALE.getDefaultState();
     }
 
     @Override
