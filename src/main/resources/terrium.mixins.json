@@ -3,7 +3,8 @@
   "package": "com.laktostolerant.terrium.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ExampleMixin",
+    "MineshaftStructureMixin",
+    "StrongholdStructureMixin",
     "PurshaleMixin",
     "SurfaceRulesMixin"
   ],
