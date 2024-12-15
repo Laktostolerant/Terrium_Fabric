@@ -16,12 +16,12 @@ public class SurfaceRulesMixin {
     @Inject(method = "createFluidLevelSampler", at = @At("RETURN"), cancellable = true)
     private static void modifyFluidLevelSampler(ChunkGeneratorSettings settings, CallbackInfoReturnable<AquiferSampler.FluidLevelSampler> cir) {
 
-        AquiferSampler.FluidLevel customFluidLevelLava = new AquiferSampler.FluidLevel(-120, Blocks.LAVA.getDefaultState());
+        AquiferSampler.FluidLevel customFluidLevelLava = new AquiferSampler.FluidLevel(-240, Blocks.LAVA.getDefaultState());
         AquiferSampler.FluidLevel customFluidLevelWater = new AquiferSampler.FluidLevel(settings.seaLevel(), settings.defaultFluid());
 
         AquiferSampler.FluidLevelSampler modifiedSampler = (x, y, z) -> {
-            if (y < -120) {
-                return customFluidLevelLava; // NEW LAVA LEVEL IS -120
+            if (y < -240) {
+                return customFluidLevelLava; // NEW LAVA LEVEL IS -240
             } else {
                 return customFluidLevelWater;
             }
