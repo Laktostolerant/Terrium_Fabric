@@ -1,0 +1,60 @@
+{
+  "type": "minecraft:cave",
+  "config": {
+    "probability": 1,
+    "y": {
+      "type": "minecraft:uniform",
+      "min_inclusive": {
+        "absolute": -230
+      },
+      "max_inclusive": {
+        "absolute": -70
+      }
+    },
+    "lava_level": {
+      "absolute": -240
+    },
+    "replaceable": "#minecraft:overworld_carver_replaceables",
+    "floor_level": {
+      "type": "minecraft:uniform",
+      "min_inclusive": -1,
+      "max_exclusive": -0.2
+    },
+    "horizontal_radius_multiplier": {
+      "type": "minecraft:constant",
+      "value": 10
+    },
+    "vertical_radius_multiplier": {
+      "type": "minecraft:constant",
+      "value": 2
+    },
+    "yScale": {
+      "type": "minecraft:constant",
+      "value": 1
+    },
+    "debug_settings": {
+      "air_state": {
+        "Name": "minecraft:oak_button",
+        "Properties": {
+          "face": "wall",
+          "facing": "north",
+          "powered": "false"
+        }
+      },
+      "water_state": {
+        "Name": "minecraft:candle",
+        "Properties": {
+          "candles": "1",
+          "lit": "false",
+          "waterlogged": "false"
+        }
+      },
+      "lava_state": {
+        "Name": "minecraft:orange_stained_glass"
+      },
+      "barrier_state": {
+        "Name": "minecraft:glass"
+      }
+    }
+  }
+}

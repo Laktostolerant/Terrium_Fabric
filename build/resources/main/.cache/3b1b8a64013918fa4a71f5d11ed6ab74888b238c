@@ -1,4 +1,4 @@
-// 1.21	2024-12-13T20:12:58.795664	Terrium/Model Definitions
+// 1.21	2024-12-14T15:19:37.9593126	Terrium/Model Definitions
 a2cc2cf10789d25cf7dc7f53c3e2b406730b39c4 assets\terrium\models\block\hellite_ore.json
 d0507c5a6773b75fe5a6b4fc41087aa93a04931d assets\terrium\models\item\hellite_boots.json
 56cdab49c7af8902ad24f6e1be6819b20413b0aa assets\terrium\blockstates\watchful_purshale.json
@@ -16,8 +16,8 @@ a17641d7e8b58423de8a7bdf97c47de34717a99c assets\terrium\models\item\duskweed.jso
 7944b6e597b28c0c1b85578b0c6e64b5de336879 assets\terrium\models\item\hellite_leggings_lapis_trim.json
 39e52691eb13f85092d178e9a7c6001a0df9da39 assets\terrium\models\item\hellite_boots_lapis_trim.json
 2dc2a83445209552e59accc833971210baeb023d assets\terrium\models\item\pinecone_jam.json
-d496187eee6d2c83da8c11e5db7b6405bb936116 assets\terrium\models\item\watchful_purshale.json
 a62d28cc86e95a0a4413173ec9aeffe816776557 assets\terrium\blockstates\cobbled_purshale.json
+d496187eee6d2c83da8c11e5db7b6405bb936116 assets\terrium\models\item\watchful_purshale.json
 3816c9430c8c65a04647f9e79a6e9ab84e63e530 assets\terrium\models\item\hellite_boots_quartz_trim.json
 8441d52e96140ca466e2b6fab60ef4d7603eb154 assets\terrium\models\item\hellite_boots_emerald_trim.json
 a08ea922f81063d6d3c8bcce5a83d201f110daf5 assets\terrium\blockstates\hellite_ore.json
@@ -31,8 +31,8 @@ b01b16b8433a4be2ae4e5fd0afd82f038e194ba6 assets\terrium\models\item\hellite_helm
 6dab0990f4c2dc930afb88d24767a63ad8622aeb assets\terrium\models\item\hellite_chestplate_diamond_trim.json
 dcbc8201843fc1dc1c942f8ccb1c1e4fd3e4c47d assets\terrium\models\item\hellite_chestplate_emerald_trim.json
 b333e124dc49bd51d67d423a2de01954248c6102 assets\terrium\models\item\hellite_helmet_redstone_trim.json
-fa84584915ccb3d324fbfdd15241a3637eb8fad4 assets\terrium\blockstates\darkelp.json
 388c8ed7ad76ee4ef5861607c5f19a8730489678 assets\terrium\models\item\hellite_axe.json
+fa84584915ccb3d324fbfdd15241a3637eb8fad4 assets\terrium\blockstates\darkelp.json
 bc403049a08ffce224ee407d33ddd27856fecd04 assets\terrium\models\item\hellite_leggings_copper_trim.json
 5d0c1a61a3af5ede606e3d989637ee9b799260eb assets\terrium\models\item\hellite_boots_diamond_trim.json
 448925b0d118a4c3bdf6ffb07079d615b8f1fa70 assets\terrium\models\item\hellite_leggings_emerald_trim.json
@@ -71,8 +71,8 @@ be6853aadafeb7b1ba1069a69cc58eeb02ece9f0 assets\terrium\blockstates\duskweed.jso
 12e9ab94552068c978b2d3557c9c967647cec0fd assets\terrium\models\item\cobbled_purshale.json
 f5cbaebaf225cbbd9cbb01101a3444dc03fd26d0 assets\terrium\models\item\hellite_leggings_iron_trim.json
 92a438474617147f76db53bf8ebaefb6d42cc709 assets\terrium\models\item\hellite_helmet_lapis_trim.json
-6ace32cce47228d818579adb9a35f211648527ec assets\terrium\models\block\darkelp_plant.json
 22d441db4719e52f90da811ef69127587c0a3e58 assets\terrium\models\item\hellite_chestplate.json
+6ace32cce47228d818579adb9a35f211648527ec assets\terrium\models\block\darkelp_plant.json
 b23f9620d7ecdb7d67fb5edcfaab16ae8fb712ea assets\terrium\models\item\hellite_helmet.json
 1dbe236e269f7a0aee173b74bec092aa9777980d assets\terrium\blockstates\purshale_bricks.json
 d9646088479963e1580bc59f8c06ac3c199a16d4 assets\terrium\models\item\hellite_chestplate_netherite_trim.json
