@@ -1,0 +1,33 @@
+{
+  "item.terrium.hellite_ingot": "Hellite Ingot",
+  "item.terrium.hellite_nugget": "Hellite Nugget",
+  "item.terrium.raw_hellite": "Raw Hellite",
+
+  "item.terrium.pinecone": "Pinecone",
+  "item.terrium.pinecannon": "Pinecannon",
+  "item.terrium.pinecannon_crossbow": "Pinecannon Crossbow",
+  "item.terrium.pinecone_jam": "Pinecone Jam",
+
+  "item.terrium.hellite_sword": "Hellite Sword",
+  "item.terrium.hellite_pickaxe": "Hellite Pickaxe",
+  "item.terrium.hellite_axe": "Hellite Axe",
+  "item.terrium.hellite_shovel": "Hellite Shovel",
+  "item.terrium.hellite_hoe": "Hellite Hoe",
+
+  "item.terrium.hellite_helmet": "Hellite Helmet",
+  "item.terrium.hellite_chestplate": "Hellite Chestplate",
+  "item.terrium.hellite_leggings": "Hellite Leggings",
+  "item.terrium.hellite_boots": "Hellite Boots",
+
+  "block.terrium.purshale": "Purshale",
+  "block.terrium.watchful_purshale": "Watchful Purshale",
+  "block.terrium.cobbled_purshale": "Cobbled Purshale",
+  "block.terrium.purshale_bricks": "Purshale Bricks",
+  "block.terrium.hellite_ore": "Purshale Hellite Ore",
+  "block.terrium.loamstone": "Loamstone",
+
+  "item.terrium.darkelp": "Darkelp",
+  "item.terrium.duskweed": "Duskweed",
+
+  "itemgroup.tutorialmod.terrium_items": "Terrium"
+}

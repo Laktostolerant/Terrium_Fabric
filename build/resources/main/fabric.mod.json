@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "terrium",
+	"version": "1.0.0",
+	"name": "Terrium",
+	"description": "Making a mod atm lol",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://laktostolerant.com/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/terrium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.laktostolerant.terrium.Terrium"
+		],
+		"fabric-datagen": [
+			"com.laktostolerant.terrium.TerriumDataGenerator"
+		],
+		"client": [
+			"com.laktostolerant.terrium.TerriumClient"
+		],
+		"terrablender": [
+			"com.laktostolerant.terrium.Terrium"
+		]
+	},
+	"mixins": [
+		"terrium.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

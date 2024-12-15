@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.laktostolerant.terrium.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ExampleMixin",
+    "PurshaleMixin",
+    "SurfaceRulesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

@@ -79,7 +79,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
 
                     Direction.UP, // Growth direction
-                    Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 9.0, 16.0), // Example VoxelShape
+                    Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 9.0, 16.0),
                     false // Does not tick water
             )
     );
@@ -88,6 +88,7 @@ public class ModBlocks {
             new CustomLandKelp(AbstractBlock.Settings.create()
                     .mapColor(MapColor.WATER_BLUE)
                     .noCollision()
+                    .ticksRandomly()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WET_GRASS)
                     .luminance(state -> 3) // Emits light with level 7
@@ -95,9 +96,9 @@ public class ModBlocks {
 
 
                     Direction.UP, // Growth direction
-                    Block.createCuboidShape(0.0, 0.0, 0.0, 14.0, 9.0, 16.0), // Example VoxelShape
+                    Block.createCuboidShape(0.0, 0.0, 0.0, 14.0, 9.0, 16.0),
                     false, // Does not tick water
-                    0.1, // Growth chance
+                    0.15, // Growth chance
                     ModBlocks.DARKELP_PLANT // The plant block associated with this kelp
             )
     );

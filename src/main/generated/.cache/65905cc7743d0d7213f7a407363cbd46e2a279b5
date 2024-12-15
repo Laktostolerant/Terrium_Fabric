@@ -1,9 +1,9 @@
-// 1.21	2024-12-10T16:33:40.8086887	Terrium/Tags for minecraft:block
+// 1.21	2024-12-14T15:19:37.9583119	Terrium/Tags for minecraft:block
+3fd9e13002e1053adcf2dbd683ac3f46ee0fb7a1 data\minecraft\tags\block\mineable\pickaxe.json
+d9e15ce9b2ca23ead68d81403e1110a024d0223b data\minecraft\tags\block\deepslate_ore_replaceables.json
+944c7a3c4c866c38de169688a549d72091912169 data\minecraft\tags\block\overworld_carver_replaceables.json
 d9e15ce9b2ca23ead68d81403e1110a024d0223b data\minecraft\tags\block\base_stone_overworld.json
 d9e15ce9b2ca23ead68d81403e1110a024d0223b data\terrium\tags\block\purshale_ore_replaceables.json
-944c7a3c4c866c38de169688a549d72091912169 data\terrium\tags\block\abyss_growables.json
 4d0a9496df674dbf49b9e9d59a29168848f228a6 data\minecraft\tags\block\needs_diamond_tool.json
-944c7a3c4c866c38de169688a549d72091912169 data\minecraft\tags\block\overworld_carver_replaceables.json
-3fd9e13002e1053adcf2dbd683ac3f46ee0fb7a1 data\minecraft\tags\block\mineable\pickaxe.json
+944c7a3c4c866c38de169688a549d72091912169 data\terrium\tags\block\abyss_growables.json
 0ba78086f6eb772cfc81e096cd4bb21a03cf7453 data\terrium\tags\block\needs_netherite_tool.json
-d9e15ce9b2ca23ead68d81403e1110a024d0223b data\minecraft\tags\block\deepslate_ore_replaceables.json

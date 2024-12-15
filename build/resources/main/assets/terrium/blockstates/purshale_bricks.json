@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "terrium:block/purshale_bricks"
+      },
+      {
+        "model": "terrium:block/purshale_bricks",
+        "y": 90
+      },
+      {
+        "model": "terrium:block/purshale_bricks",
+        "y": 180
+      },
+      {
+        "model": "terrium:block/purshale_bricks",
+        "y": 270
+      }
+    ]
+  }
+}
