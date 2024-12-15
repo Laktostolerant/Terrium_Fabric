@@ -1,0 +1,18 @@
+{
+  "noise": {
+    "min_y": -128,
+    "height": 448,
+    "sampling": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "noise_provider": {
+      "type": "minecraft:perlin",
+      "frequency": 1.0,
+      "octaves": 8,
+      "lacunarity": 2.0,
+      "persistence": 0.5
+    }
+  }
+}

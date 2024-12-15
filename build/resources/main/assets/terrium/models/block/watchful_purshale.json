@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "terrium:block/watchful_purshale_bottom",
+    "side": "terrium:block/watchful_purshale_side",
+    "top": "terrium:block/watchful_purshale_top"
+  }
+}

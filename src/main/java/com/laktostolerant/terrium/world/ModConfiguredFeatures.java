@@ -50,6 +50,8 @@ public class ModConfiguredFeatures {
         );
 
 
+
+
         register(
                 context,
                 ABYSS_PLANTS_GROUP,
@@ -95,4 +97,5 @@ public class ModConfiguredFeatures {
                                                                                   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
+
 }

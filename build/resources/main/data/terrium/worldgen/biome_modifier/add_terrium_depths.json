@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "terrium:depths_63",
+    "terrium:depths_79",
+    "terrium:depths_95",
+    "terrium:depths_111",
+    "terrium:depths_127"
+  ],
+  "step": "underground_decoration"
+}

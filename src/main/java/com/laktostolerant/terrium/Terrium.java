@@ -4,6 +4,7 @@ import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItemGroups;
 import com.laktostolerant.terrium.item.ModItems;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
+import com.laktostolerant.terrium.world.biome.ModBiomeModifiers;
 import com.laktostolerant.terrium.world.biome.ModBiomes;
 import com.laktostolerant.terrium.world.biome.ModOverworldRegion;
 import com.laktostolerant.terrium.world.biome.surface.ModMaterialRules;
@@ -37,5 +38,7 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 		Regions.register(new ModOverworldRegion(Identifier.of(Terrium.MOD_ID, "overworld"), RegionType.OVERWORLD, 4));
 
 		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, Terrium.MOD_ID, ModMaterialRules.makeRules());
+
+		ModBiomeModifiers.modifyBiomes();
 	}
 }
