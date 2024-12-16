@@ -68,6 +68,7 @@ public class ModBiomes {
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ABYSS_PLANTS_PLACED_KEY);
+        biomeBuilder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CAVE_EXTRA_UNDERGROUND);
 
         return new Biome.Builder()
                 .precipitation(true)
