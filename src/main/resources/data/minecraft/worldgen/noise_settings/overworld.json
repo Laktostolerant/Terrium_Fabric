@@ -275,7 +275,7 @@
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "minecraft:y",
-            "min_inclusive": -250,
+            "min_inclusive": -244,
             "max_exclusive": -128,
             "when_in_range": "minecraft:noise_cave",
             "when_out_of_range": 2

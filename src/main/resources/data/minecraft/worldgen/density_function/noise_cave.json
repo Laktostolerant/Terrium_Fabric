@@ -10,8 +10,8 @@
         "argument2": {
           "type": "minecraft:noise",
           "noise": "minecraft:cave_entrance",
-          "xz_scale": 0.75,
-          "y_scale": 0.5
+          "xz_scale": 0.8,
+          "y_scale": 0.75
         }
       },
       "argument2": {
@@ -38,7 +38,7 @@
                 "argument": {
                   "type": "minecraft:noise",
                   "noise": "minecraft:spaghetti_3d_rarity",
-                  "xz_scale": 2,
+                  "xz_scale": 1,
                   "y_scale": 1
                 }
               },
@@ -52,7 +52,7 @@
                 "argument": {
                   "type": "minecraft:noise",
                   "noise": "minecraft:spaghetti_3d_rarity",
-                  "xz_scale": 2,
+                  "xz_scale": 1,
                   "y_scale": 1
                 }
               },
@@ -62,10 +62,10 @@
           },
           "argument2": {
             "type": "minecraft:add",
-            "argument1": -0.0765,
+            "argument1": 0,
             "argument2": {
               "type": "minecraft:mul",
-              "argument1": -0.011499999999999996,
+              "argument1": 0,
               "argument2": {
                 "type": "minecraft:noise",
                 "noise": "minecraft:spaghetti_3d_thickness",
@@ -76,7 +76,7 @@
           }
         },
         "max": 1,
-        "min": -1
+        "min": 0
       }
     }
   }
