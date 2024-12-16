@@ -33,6 +33,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.excludeFromSimpleItemModelGeneration(ModBlocks.DARKELP_PLANT);
 
         blockStateModelGenerator.registerSingleton(ModBlocks.DUSKWEED, TexturedModel.TEMPLATE_SEAGRASS);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLUBBER);
     }
 
     @Override

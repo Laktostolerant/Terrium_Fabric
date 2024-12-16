@@ -3,6 +3,7 @@ package com.laktostolerant.terrium.block;
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.custom.CustomLandKelp;
 import com.laktostolerant.terrium.block.custom.CustomLandKelpBlock;
+import com.laktostolerant.terrium.block.custom.CustomStickyBlock;
 import com.laktostolerant.terrium.block.custom.DuskweedPlantBlock;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -116,6 +117,17 @@ public class ModBlocks {
             )
     );
 
+    public static final Block BLUBBER = registerBlock("blubber",
+            new CustomStickyBlock(AbstractBlock.Settings.create()
+                    .strength(1, 1)
+                    .velocityMultiplier(0.0F)
+                    .jumpVelocityMultiplier(0.1F)
+                    .sounds(BlockSoundGroup.SLIME)
+                    .breakInstantly()
+                    .nonOpaque()
+            )
+    );
+
 
 
     private static Block registerBlock(String name, Block block) {
@@ -148,6 +160,8 @@ public class ModBlocks {
 
             entries.add(DARKELP);
             entries.add(DUSKWEED);
+
+            entries.add(ModBlocks.BLUBBER);
         });
     }
 
