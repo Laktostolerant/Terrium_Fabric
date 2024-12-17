@@ -21,7 +21,7 @@ public class SurfaceRulesMixin {
 
         AquiferSampler.FluidLevelSampler modifiedSampler = (x, y, z) -> {
             if (y < -128) {
-                return customFluidLevelLava; // NEW LAVA LEVEL IS -256
+                return customFluidLevelLava;
             } else {
                 return customFluidLevelWater;
             }
