@@ -12,7 +12,7 @@
       }
     },
     "lava_level": {
-      "absolute": -256
+      "absolute": -240
     },
     "replaceable": "#minecraft:overworld_carver_replaceables",
     "floor_level": {

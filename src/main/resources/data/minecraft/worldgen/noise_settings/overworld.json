@@ -269,17 +269,10 @@
         "argument2": {
           "type": "minecraft:range_choice",
           "input": "minecraft:y",
-          "min_inclusive": -128,
-          "max_exclusive": -65,
+          "min_inclusive": -221,
+          "max_exclusive": -52,
           "when_in_range": "minecraft:custom",
-          "when_out_of_range": {
-            "type": "minecraft:range_choice",
-            "input": "minecraft:y",
-            "min_inclusive": -250,
-            "max_exclusive": -128,
-            "when_in_range": "minecraft:noise_cave",
-            "when_out_of_range": 2
-          }
+          "when_out_of_range": 2
         }
       }
     },
