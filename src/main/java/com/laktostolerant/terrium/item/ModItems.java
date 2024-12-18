@@ -62,7 +62,7 @@ public class ModItems {
 
     public static final Item DARKELP = registerItem("darkelp", new AliasedBlockItem(ModBlocks.DARKELP, new Item.Settings()));
     public static final Item DUSKWEED = registerItem("duskweed", new AliasedBlockItem(ModBlocks.DUSKWEED, new Item.Settings()));
-
+    public static final Item MURKROOT = registerItem("murkroot", new AliasedBlockItem(ModBlocks.MURKROOT, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
@@ -94,6 +94,7 @@ public class ModItems {
 
             entries.add(DARKELP);
             entries.add(DUSKWEED);
+            entries.add(MURKROOT);
         });
     }
 }

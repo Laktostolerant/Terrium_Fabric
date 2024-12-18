@@ -63,5 +63,6 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.DARKELP, Models.GENERATED);
         itemModelGenerator.register(ModItems.DUSKWEED, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MURKROOT, Models.GENERATED);
     }
 }

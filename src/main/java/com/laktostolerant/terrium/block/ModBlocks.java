@@ -128,7 +128,7 @@ public class ModBlocks {
             )
     );
 
-    public static final Block MURKROOT = registerBlock("murkroot",
+    public static final Block MURKROOT = registerBlockWithoutItem("murkroot",
             new HangingRootsBlock(AbstractBlock.Settings.create()
                     .mapColor(MapColor.DIRT_BROWN)
                     .replaceable()

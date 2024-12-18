@@ -49,7 +49,7 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.BLUBBER);
 
-                        entries.add(ModBlocks.MURKROOT);
+                        entries.add(ModItems.MURKROOT);
                     })
 
                     .build()

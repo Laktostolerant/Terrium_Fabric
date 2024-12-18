@@ -59,6 +59,7 @@ public class ModPlacedFeatures {
                 BiomePlacementModifier.of()
         );
 
+        /*
         register(
                 context,
                 ABYSS_ROOTS_PLACED_KEY,
@@ -70,6 +71,19 @@ public class ModPlacedFeatures {
                 RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
                 BiomePlacementModifier.of()
         );
+         */
+
+        register(
+                context,
+                ABYSS_ROOTS_PLACED_KEY, abyss_roots_configured_key,
+                new PlacementModifier[]{CountPlacementModifier.of(188),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)),
+                        BiomePlacementModifier.of()}
+        );
+
     }
 
 
