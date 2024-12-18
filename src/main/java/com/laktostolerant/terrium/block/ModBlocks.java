@@ -128,6 +128,17 @@ public class ModBlocks {
             )
     );
 
+    public static final Block MURKROOT = registerBlock("murkroot",
+            new HangingRootsBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DIRT_BROWN)
+                    .replaceable()
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.HANGING_ROOTS)
+                    .offset(AbstractBlock.OffsetType.XZ)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)));
+
 
 
     private static Block registerBlock(String name, Block block) {
@@ -162,6 +173,8 @@ public class ModBlocks {
             entries.add(DUSKWEED);
 
             entries.add(ModBlocks.BLUBBER);
+
+            entries.add(ModBlocks.MURKROOT);
         });
     }
 

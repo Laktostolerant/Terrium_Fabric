@@ -17,5 +17,11 @@ public class ModBiomeModifiers {
                 GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.ABYSS_PLANTS_PLACED_KEY
         );
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), // Select all Overworld biomes
+                GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.ABYSS_ROOTS_PLACED_KEY
+        );
     }
 }

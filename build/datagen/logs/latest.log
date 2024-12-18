@@ -1,5 +1,5 @@
-[09:42:12] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21 with Fabric Loader 0.16.9
-[09:42:12] [main/INFO] (FabricLoader) Loading 44 mods:
+[15:33:41] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21 with Fabric Loader 0.16.9
+[15:33:41] [main/INFO] (FabricLoader) Loading 44 mods:
 	- fabric-api 0.102.0+1.21
 	- fabric-api-base 0.4.42+6573ed8cd1
 	- fabric-api-lookup-api-v1 1.6.68+b5597344d1
@@ -44,29 +44,29 @@
 	- mixinextras 0.4.1
 	- terrablender 4.0.0.2
 	- terrium 1.0.0
-[09:42:12] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/tigom/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
-[09:42:12] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[09:42:12] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[09:42:12] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[09:42:13] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[09:42:21] [main/INFO] (terrium) Registering Mod Items for terrium
-[09:42:21] [main/INFO] (terrium) Registering Mod Blocks for terrium
-[09:42:21] [main/INFO] (terrium) Registering I0tem Groups for terrium
-[09:42:21] [main/INFO] (terrablender) Registered region minecraft:overworld to index 0 for type OVERWORLD
-[09:42:21] [main/INFO] (terrablender) Registered region minecraft:nether to index 0 for type NETHER
-[09:42:21] [main/INFO] (terrablender) Registered region terrium:overworld to index 1 for type OVERWORLD
-[09:42:21] [main/INFO] (FabricDataGenHelper) Running data generator for terrium
-[09:42:22] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:block
-[09:42:22] [main/INFO] (Minecraft) Terrium/Tags for minecraft:block finished after 25 ms
-[09:42:22] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:item
-[09:42:22] [main/INFO] (Minecraft) Terrium/Tags for minecraft:item finished after 2 ms
-[09:42:22] [main/INFO] (Minecraft) Starting provider: Terrium/Block Loot Tables
-[09:42:22] [main/INFO] (Minecraft) Terrium/Block Loot Tables finished after 16 ms
-[09:42:22] [main/INFO] (Minecraft) Starting provider: Terrium/Model Definitions
-[09:42:22] [main/INFO] (Minecraft) Terrium/Model Definitions finished after 77 ms
-[09:42:22] [main/INFO] (Minecraft) Starting provider: Terrium/Recipes
-[09:42:22] [main/INFO] (Minecraft) Terrium/Recipes finished after 72 ms
-[09:42:22] [main/INFO] (Minecraft) Starting provider: Terrium/World Gen
-[09:42:22] [main/INFO] (Minecraft) Terrium/World Gen finished after 11 ms
-[09:42:22] [main/INFO] (Minecraft) All providers took: 208 ms
-[09:42:22] [main/INFO] (Minecraft) Caching: total files: 131, old count: 128, new count: 132, removed stale: 0, written: 3
+[15:33:41] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/tigom/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[15:33:41] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[15:33:41] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[15:33:41] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[15:33:42] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[15:33:48] [main/INFO] (terrablender) Registered region minecraft:overworld to index 0 for type OVERWORLD
+[15:33:48] [main/INFO] (terrablender) Registered region minecraft:nether to index 0 for type NETHER
+[15:33:48] [main/INFO] (terrablender) Registered region terrium:overworld to index 1 for type OVERWORLD
+[15:33:49] [main/INFO] (terrium) Registering Mod Items for terrium
+[15:33:49] [main/INFO] (terrium) Registering Mod Blocks for terrium
+[15:33:49] [main/INFO] (terrium) Registering I0tem Groups for terrium
+[15:33:49] [main/INFO] (FabricDataGenHelper) Running data generator for terrium
+[15:33:49] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:block
+[15:33:49] [main/INFO] (Minecraft) Terrium/Tags for minecraft:block finished after 13 ms
+[15:33:49] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:item
+[15:33:49] [main/INFO] (Minecraft) Terrium/Tags for minecraft:item finished after 1 ms
+[15:33:49] [main/INFO] (Minecraft) Starting provider: Terrium/Block Loot Tables
+[15:33:49] [main/INFO] (Minecraft) Terrium/Block Loot Tables finished after 11 ms
+[15:33:49] [main/INFO] (Minecraft) Starting provider: Terrium/Model Definitions
+[15:33:49] [main/INFO] (Minecraft) Terrium/Model Definitions finished after 39 ms
+[15:33:49] [main/INFO] (Minecraft) Starting provider: Terrium/Recipes
+[15:33:49] [main/INFO] (Minecraft) Terrium/Recipes finished after 29 ms
+[15:33:49] [main/INFO] (Minecraft) Starting provider: Terrium/World Gen
+[15:33:49] [main/INFO] (Minecraft) Terrium/World Gen finished after 9 ms
+[15:33:49] [main/INFO] (Minecraft) All providers took: 107 ms
+[15:33:49] [main/INFO] (Minecraft) Caching: total files: 137, old count: 134, new count: 138, removed stale: 0, written: 3

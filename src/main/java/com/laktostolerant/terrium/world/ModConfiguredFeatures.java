@@ -34,6 +34,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_PLANTS_GROUP = registerKey("abyss_plants_group");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_PLANTS_KEY = registerKey("abyss_plants");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_ROOTS_GROUP = registerKey("abyss_roots_group");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_ROOTS_KEY = registerKey("abyss_roots");
+
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -84,6 +87,35 @@ public class ModConfiguredFeatures {
         );
 
 
+        register(
+                context,
+                ABYSS_ROOTS_GROUP,
+                Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(
+                        new WeightedBlockStateProvider(
+                                DataPool.<BlockState>builder() // Explicitly specify BlockState
+                                        .add(ModBlocks.MURKROOT.getDefaultState(), 1)
+                                        .build()
+                        )
+                )
+        );
+
+        register(
+                context,
+                ABYSS_ROOTS_KEY,
+                Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(
+                        ModTags.Blocks.ABYSS_GROWABLES,
+                        BlockStateProvider.of(ModBlocks.PURSHALE),
+                        PlacedFeatures.createEntry(registryEntryLookup.getOrThrow(ABYSS_PLANTS_GROUP),
+                                new PlacementModifier[0]), VerticalSurfaceType.CEILING,
+                        ConstantIntProvider.create(1),
+                        0.0F,
+                        20,
+                        0.2F,
+                        UniformIntProvider.create(2, 4),
+                        0.25F)
+        );
     }
 
 

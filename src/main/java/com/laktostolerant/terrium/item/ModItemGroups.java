@@ -48,6 +48,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DUSKWEED);
 
                         entries.add(ModBlocks.BLUBBER);
+
+                        entries.add(ModBlocks.MURKROOT);
                     })
 
                     .build()
