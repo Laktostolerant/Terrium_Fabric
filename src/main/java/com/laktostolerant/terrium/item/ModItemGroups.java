@@ -15,7 +15,7 @@ public class ModItemGroups {
             Identifier.of(Terrium.MOD_ID, "terrium_items"),
             FabricItemGroup.builder()
                     .icon(() -> new ItemStack(ModItems.HELLITE_INGOT))
-                    .displayName(Text.translatable("itemgroup.tutorialmod.terrium_items"))
+                    .displayName(Text.translatable("itemgroup.terrium.terrium_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.HELLITE_INGOT);
                         entries.add(ModItems.RAW_HELLITE);

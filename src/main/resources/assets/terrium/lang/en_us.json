@@ -29,5 +29,7 @@
   "item.terrium.darkelp": "Darkelp",
   "item.terrium.duskweed": "Duskweed",
 
-  "itemgroup.tutorialmod.terrium_items": "Terrium"
+  "block.terrium.blubber": "Blubber",
+
+  "itemgroup.terrium.terrium_items": "Terrium"
 }
