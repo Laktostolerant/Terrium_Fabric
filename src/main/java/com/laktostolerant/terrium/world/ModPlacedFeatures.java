@@ -25,6 +25,7 @@ import java.util.Set;
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> HELLITE_ORE_PLACED_KEY = registerKey("hellite_ore_placed");
     public static final RegistryKey<PlacedFeature> ABYSS_PLANTS_PLACED_KEY = registerKey("abyss_plants_placed_key");
+    public static final RegistryKey<PlacedFeature> ABYSS_ROOTS_PLACED_KEY = registerKey("abyss_roots_placed_key");
 
     private static final Set<RegistryKey<Biome>> EXCLUDED_BIOMES = Set.of(
             BiomeKeys.DEEP_DARK,
@@ -36,7 +37,8 @@ public class ModPlacedFeatures {
 
     public static void boostrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
-        RegistryEntry<ConfiguredFeature<?, ?>> abyss_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.ABYSS_PLANTS_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> abyss_plants_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.ABYSS_PLANTS_KEY);
+        RegistryEntry<ConfiguredFeature<?, ?>> abyss_roots_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.ABYSS_ROOTS_KEY);
 
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -48,13 +50,38 @@ public class ModPlacedFeatures {
         register(
                 context,
                 ABYSS_PLANTS_PLACED_KEY,
-                abyss_configured_key,
+                abyss_plants_configured_key,
                 CountPlacementModifier.of(50),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.BOTTOM_TO_120_RANGE,
                 EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
                 RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
                 BiomePlacementModifier.of()
+        );
+
+        /*
+        register(
+                context,
+                ABYSS_ROOTS_PLACED_KEY,
+                abyss_roots_configured_key,
+                CountPlacementModifier.of(20),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.BOTTOM_TO_120_RANGE,
+                EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
+                BiomePlacementModifier.of()
+        );
+         */
+
+        register(
+                context,
+                ABYSS_ROOTS_PLACED_KEY, abyss_roots_configured_key,
+                new PlacementModifier[]{CountPlacementModifier.of(188),
+                        SquarePlacementModifier.of(),
+                        PlacedFeatures.BOTTOM_TO_120_RANGE,
+                        EnvironmentScanPlacementModifier.of(Direction.UP, BlockPredicate.hasSturdyFace(Direction.DOWN), BlockPredicate.IS_AIR, 12),
+                        RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(-1)),
+                        BiomePlacementModifier.of()}
         );
 
     }

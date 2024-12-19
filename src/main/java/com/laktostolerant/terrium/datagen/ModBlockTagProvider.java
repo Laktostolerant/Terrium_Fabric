@@ -51,5 +51,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.HELLITE_ORE);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ROSE_LOG)
+                .add(ModBlocks.ROSE_WOOD)
+                .add(ModBlocks.STRIPPED_ROSE_WOOD)
+                .add(ModBlocks.STRIPPED_ROSE_LOG);
+
+        getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.ROSE_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ModBlocks.ROSE_GATE);
     }
 }

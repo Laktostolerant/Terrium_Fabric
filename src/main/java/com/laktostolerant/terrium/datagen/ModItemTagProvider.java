@@ -1,9 +1,11 @@
 package com.laktostolerant.terrium.datagen;
 
+import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import org.jetbrains.annotations.Nullable;
 
@@ -51,5 +53,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.HELLITE_CHESTPLATE)
                 .add(ModItems.HELLITE_LEGGINGS)
                 .add(ModItems.HELLITE_BOOTS);
+
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.ROSE_LOG.asItem())
+                .add(ModBlocks.ROSE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_ROSE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_ROSE_LOG.asItem());
+
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.ROSE_PLANKS.asItem());
     }
 }

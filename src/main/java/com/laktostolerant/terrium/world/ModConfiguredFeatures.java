@@ -5,6 +5,7 @@ import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.util.ModTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CaveVines;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -13,9 +14,12 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.VerticalSurfaceType;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.math.intprovider.WeightedListIntProvider;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -33,6 +37,9 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_PLANTS_GROUP = registerKey("abyss_plants_group");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_PLANTS_KEY = registerKey("abyss_plants");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_ROOTS_GROUP = registerKey("abyss_roots_group");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_ROOTS_KEY = registerKey("abyss_roots");
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -84,6 +91,35 @@ public class ModConfiguredFeatures {
         );
 
 
+        register(
+                context,
+                ABYSS_ROOTS_GROUP,
+                Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(
+                        new WeightedBlockStateProvider(
+                                DataPool.<BlockState>builder() // Explicitly specify BlockState
+                                        .add(ModBlocks.MURKROOT.getDefaultState(), 1)
+                                        .build()
+                        )
+                )
+        );
+
+        register(
+                context,
+                ABYSS_ROOTS_KEY,
+                Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(
+                        ModTags.Blocks.ABYSS_GROWABLES,
+                        BlockStateProvider.of(ModBlocks.PURSHALE),
+                        PlacedFeatures.createEntry(registryEntryLookup.getOrThrow(ABYSS_PLANTS_GROUP),
+                                new PlacementModifier[0]), VerticalSurfaceType.CEILING,
+                        ConstantIntProvider.create(1),
+                        0.0F,
+                        20,
+                        0.2F,
+                        UniformIntProvider.create(2, 4),
+                        0.25F)
+        );
     }
 
 

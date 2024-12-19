@@ -16,6 +16,7 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
@@ -128,7 +129,69 @@ public class ModBlocks {
             )
     );
 
+    public static final Block MURKROOT = registerBlockWithoutItem("murkroot",
+            new HangingRootsBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DIRT_BROWN)
+                    .replaceable()
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.HANGING_ROOTS)
+                    .offset(AbstractBlock.OffsetType.XZ)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
 
+
+    public static final Block ROSE_LOG = registerBlock("rose_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LOG)));
+
+    public static final Block ROSE_WOOD= registerBlock("rose_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_WOOD)));
+
+    public static final Block STRIPPED_ROSE_LOG = registerBlock("stripped_rose_log",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_CHERRY_LOG)));
+
+    public static final Block STRIPPED_ROSE_WOOD = registerBlock("stripped_rose_wood",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.STRIPPED_CHERRY_WOOD)));
+
+    public static final Block ROSE_PLANKS = registerBlock("rose_planks",
+            new Block(AbstractBlock.Settings.copy(Blocks.CHERRY_PLANKS)));
+
+    public static final Block ROSE_LEAVES = registerBlock("rose_leaves",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
+
+    public static final Block ROSE_SAPLING = registerBlock("rose_sapling",
+            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
+
+    public static final Block ROSE_STAIRS = registerBlock("rose_stairs",
+            new StairsBlock(ModBlocks.ROSE_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.CHERRY_STAIRS)));
+
+    public static final Block ROSE_SLAB = registerBlock("rose_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_SLAB)));
+
+    public static final Block ROSE_BUTTON = registerBlock("rose_button",
+            new ButtonBlock(BlockSetType.CHERRY, 2, AbstractBlock.Settings.copy(Blocks.CHERRY_BUTTON)));
+
+    public static final Block ROSE_PRESSURE_PLATE = registerBlock("rose_pressure_plate",
+            new PressurePlateBlock(BlockSetType.CHERRY, AbstractBlock.Settings.copy(Blocks.CHERRY_PRESSURE_PLATE)));
+
+    public static final Block ROSE_FENCE = registerBlock("rose_fence",
+            new FenceBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE)));
+
+    public static final Block ROSE_GATE = registerBlock("rose_gate",
+            new FenceGateBlock(WoodType.CHERRY, AbstractBlock.Settings.copy(Blocks.CHERRY_FENCE)));
+
+    public static final Block ROSE_DOOR = registerBlock("rose_door",
+            new DoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.copy(Blocks.CHERRY_DOOR)));
+
+    public static final Block ROSE_TRAPDOOR = registerBlock("rose_trapdoor",
+            new TrapdoorBlock(BlockSetType.CHERRY, AbstractBlock.Settings.copy(Blocks.CHERRY_TRAPDOOR)));
+
+    /*
+    public static final Block ROSE_SIGN = registerBlock("rose_sign",
+            new SignBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.CHERRY_SIGN)));
+    */
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -162,6 +225,8 @@ public class ModBlocks {
             entries.add(DUSKWEED);
 
             entries.add(ModBlocks.BLUBBER);
+
+            entries.add(ModBlocks.MURKROOT);
         });
     }
 

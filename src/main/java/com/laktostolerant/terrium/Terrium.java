@@ -11,6 +11,9 @@ import com.laktostolerant.terrium.world.biome.surface.ModMaterialRules;
 import com.laktostolerant.terrium.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.block.FireBlock;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +33,15 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 		ModItemGroups.registerItemGroups();
 
 		ModWorldGeneration.generateModWorldGen();
+
+		StrippableBlockRegistry.register(ModBlocks.ROSE_LOG, ModBlocks.STRIPPED_ROSE_LOG);
+		StrippableBlockRegistry.register(ModBlocks.ROSE_WOOD, ModBlocks.STRIPPED_ROSE_WOOD);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROSE_LOG, 2, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROSE_WOOD, 2, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ROSE_LOG, 2, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ROSE_WOOD, 2, 5);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROSE_PLANKS, 3, 10);
+		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROSE_LEAVES, 5, 15);
 	}
 
 	@Override
