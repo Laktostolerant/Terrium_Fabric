@@ -32,5 +32,20 @@
 
   "block.terrium.blubber": "Blubber",
 
+  "block.terrium.rose_log": "Rose Log",
+  "block.terrium.rose_wood": "Rose Wood",
+  "block.terrium.stripped_rose_log": "Stripped Rose Log",
+  "block.terrium.stripped_rose_wood": "Stripped Rose Wood",
+  "block.terrium.rose_planks": "Rose Planks",
+  "block.terrium.rose_door": "Rose Door",
+  "block.terrium.rose_slab": "Rose Slab",
+  "block.terrium.rose_stairs": "Rose Stairs",
+  "block.terrium.rose_fence": "Rose Fence",
+  "block.terrium.rose_gate": "Rose Fence Gate",
+  "block.terrium.rose_button": "Rose Button",
+  "block.terrium.rose_pressure_plate": "Rose Pressure Plate",
+  "block.terrium.rose_sapling": "Rose Sapling",
+  "block.terrium.rose_leaves": "Rose Leaves",
+
   "itemgroup.terrium.terrium_items": "Terrium"
 }

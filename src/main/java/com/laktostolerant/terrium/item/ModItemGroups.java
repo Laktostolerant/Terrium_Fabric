@@ -50,6 +50,23 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLUBBER);
 
                         entries.add(ModItems.MURKROOT);
+
+                        entries.add(ModBlocks.ROSE_LOG);
+                        entries.add(ModBlocks.ROSE_WOOD);
+                        entries.add(ModBlocks.STRIPPED_ROSE_LOG);
+                        entries.add(ModBlocks.STRIPPED_ROSE_WOOD);
+                        entries.add(ModBlocks.ROSE_LEAVES);
+                        entries.add(ModBlocks.ROSE_SAPLING);
+
+                        entries.add(ModBlocks.ROSE_PLANKS);
+                        entries.add(ModBlocks.ROSE_STAIRS);
+                        entries.add(ModBlocks.ROSE_FENCE);
+                        entries.add(ModBlocks.ROSE_TRAPDOOR);
+                        entries.add(ModBlocks.ROSE_DOOR);
+                        entries.add(ModBlocks.ROSE_SLAB);
+                        entries.add(ModBlocks.ROSE_GATE);
+                        entries.add(ModBlocks.ROSE_BUTTON);
+                        entries.add(ModBlocks.ROSE_PRESSURE_PLATE);
                     })
 
                     .build()

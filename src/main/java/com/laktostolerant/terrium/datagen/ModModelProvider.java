@@ -8,6 +8,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
@@ -37,6 +39,27 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BLUBBER);
 
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.MURKROOT, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerLog(ModBlocks.ROSE_LOG).log(ModBlocks.ROSE_LOG).wood(ModBlocks.ROSE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_ROSE_LOG).log(ModBlocks.STRIPPED_ROSE_LOG).wood(ModBlocks.STRIPPED_ROSE_WOOD);
+
+        BlockStateModelGenerator.BlockTexturePool roseWoodPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ROSE_PLANKS);
+        roseWoodPool.family(new BlockFamily.Builder(ModBlocks.ROSE_PLANKS).build());
+        roseWoodPool.stairs(ModBlocks.ROSE_STAIRS);
+        roseWoodPool.slab(ModBlocks.ROSE_SLAB);
+        roseWoodPool.button(ModBlocks.ROSE_BUTTON);
+        roseWoodPool.fence(ModBlocks.ROSE_FENCE);
+        roseWoodPool.fenceGate(ModBlocks.ROSE_GATE);
+        roseWoodPool.pressurePlate(ModBlocks.ROSE_PRESSURE_PLATE);
+
+        blockStateModelGenerator.registerDoor(ModBlocks.ROSE_DOOR);
+        /*
+        blockStateModelGenerator.registerTrapdoor(ModBlocks.ROSE_TRAPDOOR);
+         */
+
+
+        blockStateModelGenerator.registerSingleton(ModBlocks.ROSE_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.ROSE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
