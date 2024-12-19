@@ -6,6 +6,7 @@
     "MineshaftStructureMixin",
     "StrongholdStructureMixin",
     "PurshaleMixin",
+    "AquiferSamplerMixin",
     "SurfaceRulesMixin"
   ],
   "injectors": {

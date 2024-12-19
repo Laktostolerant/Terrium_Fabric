@@ -18,7 +18,7 @@ public class AquiferSamplerMixin {
             at = @At("STORE"),
             ordinal = 0)
     private BlockState forceWaterBelowYNeg60(BlockState original, DensityFunction.NoisePos pos, double density) {
-        if (pos.blockY() < -60 && original != null && original.isOf(Blocks.LAVA)) {
+        if (pos.blockY() < -80 && original != null && original.isOf(Blocks.LAVA)) {
             return Blocks.WATER.getDefaultState();
         }
         return original;
