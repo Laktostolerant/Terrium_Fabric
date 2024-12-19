@@ -53,9 +53,7 @@ public class ModModelProvider extends FabricModelProvider {
         roseWoodPool.pressurePlate(ModBlocks.ROSE_PRESSURE_PLATE);
 
         blockStateModelGenerator.registerDoor(ModBlocks.ROSE_DOOR);
-        /*
         blockStateModelGenerator.registerTrapdoor(ModBlocks.ROSE_TRAPDOOR);
-         */
 
 
         blockStateModelGenerator.registerSingleton(ModBlocks.ROSE_LEAVES, TexturedModel.LEAVES);
