@@ -200,7 +200,7 @@ public class ModBlocks {
 
 
     public static final Block GOOP_FLUID_BLOCK = registerBlockWithoutItem("goop_fluid_block",
-            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER)));
+            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER).luminance(state -> 5)));
 
 
     private static Block registerBlock(String name, Block block) {

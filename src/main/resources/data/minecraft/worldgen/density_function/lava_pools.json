@@ -10,14 +10,14 @@
         "argument2": {
           "type": "minecraft:noise",
           "noise": "minecraft:cave_entrance",
-          "xz_scale": 3,
-          "y_scale": 11
+          "xz_scale": 1,
+          "y_scale": 40
         }
       },
       "argument2": {
         "type": "minecraft:y_clamped_gradient",
         "from_value": 0,
-        "from_y": -10,
+        "from_y": 7,
         "to_value": 0,
         "to_y": 30
       }
@@ -53,7 +53,7 @@
                   "type": "minecraft:noise",
                   "noise": "minecraft:spaghetti_3d_rarity",
                   "xz_scale": 1,
-                  "y_scale": 1
+                  "y_scale": 4
                 }
               },
               "noise": "minecraft:spaghetti_3d_2",
@@ -70,7 +70,7 @@
                 "type": "minecraft:noise",
                 "noise": "minecraft:spaghetti_3d_thickness",
                 "xz_scale": 1,
-                "y_scale": 1
+                "y_scale": 4
               }
             }
           }
