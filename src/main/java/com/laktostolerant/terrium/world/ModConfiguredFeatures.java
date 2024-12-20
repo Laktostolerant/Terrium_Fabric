@@ -21,12 +21,16 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.intprovider.WeightedListIntProvider;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.collection.Weighted;
+import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
+import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
 
@@ -40,6 +44,8 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_ROOTS_GROUP = registerKey("abyss_roots_group");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_ROOTS_KEY = registerKey("abyss_roots");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ROSE_TREE_KEY = registerKey("rose");
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -66,8 +72,8 @@ public class ModConfiguredFeatures {
                 new SimpleBlockFeatureConfig(
                         new WeightedBlockStateProvider(
                                 DataPool.<BlockState>builder() // Explicitly specify BlockState
-                                        .add(ModBlocks.DARKELP_PLANT.getDefaultState(), 1)
-                                        .add(ModBlocks.DUSKWEED.getDefaultState(), 25)
+                                        .add(ModBlocks.DARKELP.getDefaultState(), 1)
+                                        .add(ModBlocks.DUSKWEED.getDefaultState(), 40)
                                         .build()
                     )
             )
@@ -120,6 +126,15 @@ public class ModConfiguredFeatures {
                         UniformIntProvider.create(2, 4),
                         0.25F)
         );
+
+        register(context, ROSE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.ROSE_LOG),
+                new MegaJungleTrunkPlacer(10, 10, 10),
+
+                BlockStateProvider.of(ModBlocks.ROSE_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 3),
+
+                new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
 

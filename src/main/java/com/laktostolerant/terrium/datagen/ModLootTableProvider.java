@@ -32,7 +32,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.STRIPPED_ROSE_LOG);
         addDrop(ModBlocks.STRIPPED_ROSE_WOOD);
 
-        addDrop(ModBlocks.ROSE_LEAVES, leavesDrops(ModBlocks.ROSE_LEAVES, ModBlocks.ROSE_SAPLING, 0.0625f));
+        addDrop(ModBlocks.ROSE_LEAVES, leavesDrops(ModBlocks.ROSE_LEAVES, ModBlocks.ROSE_SAPLING, 0.005f));
 
         addDrop(ModBlocks.ROSE_STAIRS);
         addDrop(ModBlocks.ROSE_BUTTON);

@@ -6,7 +6,10 @@
       "entries": [
         {
           "data": {
-            "Name": "terrium:darkelp_plant"
+            "Name": "terrium:darkelp",
+            "Properties": {
+              "age": "0"
+            }
           },
           "weight": 1
         },
@@ -14,7 +17,7 @@
           "data": {
             "Name": "terrium:duskweed"
           },
-          "weight": 25
+          "weight": 40
         }
       ]
     }
