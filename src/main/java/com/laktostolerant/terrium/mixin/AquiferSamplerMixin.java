@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium.mixin;
 
 
+import com.laktostolerant.terrium.block.ModBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.gen.chunk.AquiferSampler;
@@ -20,12 +21,9 @@ public class AquiferSamplerMixin {
         int y = pos.blockY();
 
         if (y >= -120 && y <= -60 && original != null && original.isOf(Blocks.LAVA)) {
-            return Blocks.NOTE_BLOCK.getDefaultState();
-        } else if (y >= -190 && y < -120 && original != null && original.isOf(Blocks.LAVA)) {
-            return Blocks.WARPED_FUNGUS.getDefaultState();
-        }
-        else if (y >= -250 && y < -190 && original != null && original.isOf(Blocks.LAVA)){
-            return  Blocks.DEEPSLATE.getDefaultState();
+            return Blocks.WATER.getDefaultState();
+        } else if (y >= -250 && y < -120 && original != null && original.isOf(Blocks.LAVA)) {
+            return ModBlocks.GOOP_FLUID_BLOCK.getDefaultState();
         }
         return original;
     }
