@@ -14,7 +14,7 @@
     }
   },
   "noise": {
-    "min_y": -256,
+    "min_y": -320,
     "height": 1024,
     "size_horizontal": 1,
     "size_vertical": 2
@@ -264,22 +264,29 @@
         "argument2": {
           "type": "minecraft:range_choice",
           "input": "minecraft:y",
-          "min_inclusive": -90,
+          "min_inclusive": -100,
           "max_exclusive": -65,
           "when_in_range": "minecraft:lava_pools",
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "minecraft:y",
             "min_inclusive": -200,
-            "max_exclusive": -90,
+            "max_exclusive": -100,
             "when_in_range": "minecraft:noise_cave",
             "when_out_of_range": {
               "type": "minecraft:range_choice",
               "input": "minecraft:y",
-              "min_inclusive": -248,
+              "min_inclusive": -210,
               "max_exclusive": -200,
-              "when_in_range": "minecraft:custom",
-              "when_out_of_range": 2
+              "when_in_range": "minecraft:ceilingdensity",
+              "when_out_of_range": {
+                "type": "minecraft:range_choice",
+                "input": "minecraft:y",
+                "min_inclusive": -310,
+                "max_exclusive": -210,
+                "when_in_range": "minecraft:custom",
+                "when_out_of_range": 2
+              }
             }
           }
         }

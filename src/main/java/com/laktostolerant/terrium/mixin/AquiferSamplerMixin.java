@@ -20,9 +20,9 @@ public class AquiferSamplerMixin {
     private BlockState modifyAquiferRanges(BlockState original, DensityFunction.NoisePos pos, double density) {
         int y = pos.blockY();
 
-        if (y >= -120 && y <= -60 && original != null && original.isOf(Blocks.LAVA)) {
+        if (y >= -90 && y <= -60 && original != null && original.isOf(Blocks.LAVA)) {
             return Blocks.WATER.getDefaultState();
-        } else if (y >= -250 && y < -120 && original != null && original.isOf(Blocks.LAVA)) {
+        } else if (y >= -320 && y < -90 && original != null && original.isOf(Blocks.LAVA)) {
             return ModBlocks.GOOP_FLUID_BLOCK.getDefaultState();
         }
         return original;

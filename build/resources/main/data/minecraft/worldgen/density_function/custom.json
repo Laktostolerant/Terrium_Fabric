@@ -3,14 +3,14 @@
   "argument1": {
     "type": "minecraft:y_clamped_gradient",
     "from_value": 1.5,
-    "from_y": -255,
+    "from_y": -320,
     "to_value": -1.5,
     "to_y": -200
   },
   "argument2": {
     "type": "minecraft:noise",
     "noise": "minecraft:deepocean",
-    "xz_scale": 1,
+    "xz_scale": 2,
     "y_scale": 1
   }
 }
