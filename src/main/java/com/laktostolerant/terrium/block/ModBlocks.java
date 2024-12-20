@@ -5,6 +5,7 @@ import com.laktostolerant.terrium.block.custom.CustomLandKelp;
 import com.laktostolerant.terrium.block.custom.CustomLandKelpBlock;
 import com.laktostolerant.terrium.block.custom.CustomStickyBlock;
 import com.laktostolerant.terrium.block.custom.DuskweedPlantBlock;
+import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.world.tree.ModSaplingGenerator;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -198,6 +199,8 @@ public class ModBlocks {
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_PILLAR)));
 
 
+    public static final Block GOOP_FLUID_BLOCK = registerBlockWithoutItem("goop_fluid_block",
+            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER)));
 
 
     private static Block registerBlock(String name, Block block) {

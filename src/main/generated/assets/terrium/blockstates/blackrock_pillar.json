@@ -1,21 +1,7 @@
 {
   "variants": {
-    "": [
-      {
-        "model": "terrium:block/blackrock_pillar"
-      },
-      {
-        "model": "terrium:block/blackrock_pillar",
-        "y": 90
-      },
-      {
-        "model": "terrium:block/blackrock_pillar",
-        "y": 180
-      },
-      {
-        "model": "terrium:block/blackrock_pillar",
-        "y": 270
-      }
-    ]
+    "": {
+      "model": "terrium:block/blackrock_pillar"
+    }
   }
 }

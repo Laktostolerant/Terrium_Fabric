@@ -48,5 +48,9 @@
   "block.terrium.rose_leaves": "Rose Leaves",
   "block.terrium.rose_trapdoor": "Rose Trapdoor",
 
+  "block.terrium.blackrock_pillar": "Blackrock Pillar",
+
+  "item.terrium.goop_bucket": "Goop Bucket",
+
   "itemgroup.terrium.terrium_items": "Terrium"
 }

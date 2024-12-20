@@ -20,6 +20,7 @@ public class TerriumDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
+		pack.addProvider(ModFluidTagProvider::new);
 	}
 
 	@Override

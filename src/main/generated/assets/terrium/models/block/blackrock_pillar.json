@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "terrium:block/blackrock_pillar"
+    "end": "terrium:block/blackrock_pillar_top",
+    "side": "terrium:block/blackrock_pillar"
   }
 }
