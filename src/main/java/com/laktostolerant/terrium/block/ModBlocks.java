@@ -5,6 +5,8 @@ import com.laktostolerant.terrium.block.custom.CustomLandKelp;
 import com.laktostolerant.terrium.block.custom.CustomLandKelpBlock;
 import com.laktostolerant.terrium.block.custom.CustomStickyBlock;
 import com.laktostolerant.terrium.block.custom.DuskweedPlantBlock;
+import com.laktostolerant.terrium.fluid.ModFluids;
+import com.laktostolerant.terrium.world.tree.ModSaplingGenerator;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
@@ -162,7 +164,7 @@ public class ModBlocks {
             new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
 
     public static final Block ROSE_SAPLING = registerBlock("rose_sapling",
-            new LeavesBlock(AbstractBlock.Settings.copy(Blocks.CHERRY_LEAVES)));
+            new SaplingBlock(ModSaplingGenerator.ROSE, AbstractBlock.Settings.copy(Blocks.CHERRY_SAPLING)));
 
     public static final Block ROSE_STAIRS = registerBlock("rose_stairs",
             new StairsBlock(ModBlocks.ROSE_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.CHERRY_STAIRS)));
@@ -192,6 +194,14 @@ public class ModBlocks {
     public static final Block ROSE_SIGN = registerBlock("rose_sign",
             new SignBlock(WoodType.OAK, AbstractBlock.Settings.copy(Blocks.CHERRY_SIGN)));
     */
+
+    public static final Block BLACKROCK_PILLAR = registerBlock("blackrock_pillar",
+            new PillarBlock(AbstractBlock.Settings.copy(Blocks.QUARTZ_PILLAR)));
+
+
+    public static final Block GOOP_FLUID_BLOCK = registerBlockWithoutItem("goop_fluid_block",
+            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

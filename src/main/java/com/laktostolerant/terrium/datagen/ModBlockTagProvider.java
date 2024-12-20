@@ -1,11 +1,14 @@
 package com.laktostolerant.terrium.datagen;
 
 import com.laktostolerant.terrium.block.ModBlocks;
+import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.FluidTags;
+
 import java.util.concurrent.CompletableFuture;
 
 

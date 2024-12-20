@@ -2,6 +2,7 @@ package com.laktostolerant.terrium.item;
 
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
+import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.item.custom.ModCustomCrossbow;
 import com.laktostolerant.terrium.item.custom.ModDrinkItem;
 import com.laktostolerant.terrium.item.custom.ModCustomBow;
@@ -65,6 +66,9 @@ public class ModItems {
     public static final Item MURKROOT = registerItem("murkroot", new AliasedBlockItem(ModBlocks.MURKROOT, new Item.Settings()));
 
 
+    public static final Item GOOP_BUCKET = registerItem("goop_bucket",
+            new BucketItem(ModFluids.GOOP_STILL, new Item.Settings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Terrium.MOD_ID, name), item);
     }
@@ -95,6 +99,8 @@ public class ModItems {
             entries.add(DARKELP);
             entries.add(DUSKWEED);
             entries.add(MURKROOT);
+
+            entries.add(GOOP_BUCKET);
         });
     }
 }

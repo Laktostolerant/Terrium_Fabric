@@ -67,6 +67,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.ROSE_GATE);
                         entries.add(ModBlocks.ROSE_BUTTON);
                         entries.add(ModBlocks.ROSE_PRESSURE_PLATE);
+
+                        entries.add(ModBlocks.BLACKROCK_PILLAR);
+
+                        entries.add(ModItems.GOOP_BUCKET);
                     })
 
                     .build()

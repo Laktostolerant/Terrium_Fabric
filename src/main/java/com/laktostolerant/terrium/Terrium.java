@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium;
 
 import com.laktostolerant.terrium.block.ModBlocks;
+import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.item.ModItemGroups;
 import com.laktostolerant.terrium.item.ModItems;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
@@ -30,6 +31,7 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModFluids.registerModFluids();
 		ModItemGroups.registerItemGroups();
 
 		ModWorldGeneration.generateModWorldGen();
