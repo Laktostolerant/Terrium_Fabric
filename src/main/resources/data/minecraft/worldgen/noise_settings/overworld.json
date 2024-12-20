@@ -264,20 +264,20 @@
         "argument2": {
           "type": "minecraft:range_choice",
           "input": "minecraft:y",
-          "min_inclusive": -80,
+          "min_inclusive": -90,
           "max_exclusive": -65,
           "when_in_range": "minecraft:lava_pools",
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "minecraft:y",
-            "min_inclusive": -130,
-            "max_exclusive": -80,
+            "min_inclusive": -200,
+            "max_exclusive": -90,
             "when_in_range": "minecraft:noise_cave",
             "when_out_of_range": {
               "type": "minecraft:range_choice",
               "input": "minecraft:y",
-              "min_inclusive": -250,
-              "max_exclusive": -130,
+              "min_inclusive": -248,
+              "max_exclusive": -200,
               "when_in_range": "minecraft:custom",
               "when_out_of_range": 2
             }

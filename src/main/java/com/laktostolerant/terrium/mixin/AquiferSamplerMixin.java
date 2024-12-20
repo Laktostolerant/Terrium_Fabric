@@ -7,21 +7,26 @@ import net.minecraft.world.gen.chunk.AquiferSampler;
 import net.minecraft.world.gen.densityfunction.DensityFunction;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AquiferSampler.Impl.class)
 public class AquiferSamplerMixin {
-
-    @ModifyVariable(method = "apply(Lnet/minecraft/world/gen/densityfunction/DensityFunction$NoisePos;D)Lnet/minecraft/block/BlockState;",
+    @ModifyVariable(
+            method = "apply(Lnet/minecraft/world/gen/densityfunction/DensityFunction$NoisePos;D)Lnet/minecraft/block/BlockState;",
             at = @At("STORE"),
-            ordinal = 0)
-    private BlockState forceWaterBelowYNeg60(BlockState original, DensityFunction.NoisePos pos, double density) {
-        if (pos.blockY() < -80 && original != null && original.isOf(Blocks.LAVA)) {
-            return Blocks.WATER.getDefaultState();
+            ordinal = 0
+    )
+    private BlockState modifyAquiferRanges(BlockState original, DensityFunction.NoisePos pos, double density) {
+        int y = pos.blockY();
+
+        if (y >= -120 && y <= -60 && original != null && original.isOf(Blocks.LAVA)) {
+            return Blocks.NOTE_BLOCK.getDefaultState();
+        } else if (y >= -190 && y < -120 && original != null && original.isOf(Blocks.LAVA)) {
+            return Blocks.WARPED_FUNGUS.getDefaultState();
+        }
+        else if (y >= -250 && y < -190 && original != null && original.isOf(Blocks.LAVA)){
+            return  Blocks.DEEPSLATE.getDefaultState();
         }
         return original;
     }
-    // it should actually be replacing aquifers with purely water but now it just nukes them
 }
