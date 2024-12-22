@@ -25,7 +25,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
     public static final Block PURSHALE = registerBlock("purshale",
-            new Block(AbstractBlock.Settings.create()
+            new PillarBlock(AbstractBlock.Settings.create()
                     .strength(4f, 7)
                     .requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE)
@@ -201,6 +201,20 @@ public class ModBlocks {
 
     public static final Block GOOP_FLUID_BLOCK = registerBlockWithoutItem("goop_fluid_block",
             new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER)));
+
+    public static final Block PYSCORIA = registerBlock("pyscoria",
+            new PillarBlock(AbstractBlock.Settings.create()
+                    .strength(5f, 8)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE)
+            )
+    );
+
+
+
+
+
+
 
 
     private static Block registerBlock(String name, Block block) {

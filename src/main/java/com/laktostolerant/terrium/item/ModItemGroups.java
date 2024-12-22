@@ -38,6 +38,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PINECONE_JAM);
 
                         entries.add(ModBlocks.PURSHALE);
+                        entries.add(ModBlocks.PYSCORIA);
                         entries.add(ModBlocks.WATCHFUL_PURSHALE);
                         entries.add(ModBlocks.COBBLED_PURSHALE);
                         entries.add(ModBlocks.PURSHALE_BRICKS);
