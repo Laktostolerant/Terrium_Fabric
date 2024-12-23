@@ -30,7 +30,7 @@ public class ModOverworldRegion extends Region {
         MultiNoiseUtil.ParameterRange humidity = MultiNoiseUtil.ParameterRange.of(0.4F, 0.6F);
         MultiNoiseUtil.ParameterRange continentalness = MultiNoiseUtil.ParameterRange.of(-1.0F, -0.7F);
         MultiNoiseUtil.ParameterRange erosion = MultiNoiseUtil.ParameterRange.of(0.0F, 0.2F);
-        MultiNoiseUtil.ParameterRange depth = MultiNoiseUtil.ParameterRange.of(1.5F, 2.5F);
+        MultiNoiseUtil.ParameterRange depth = MultiNoiseUtil.ParameterRange.of(2F, 2.5F);
         MultiNoiseUtil.ParameterRange weirdness = MultiNoiseUtil.ParameterRange.of(-0.5F, -0.2F);
 
         float offset = 0.0F;
@@ -40,3 +40,4 @@ public class ModOverworldRegion extends Region {
         this.addBiome(mapper, temperature, humidity, continentalness, erosion, weirdness, depth, offset, ModBiomes.DEEP_JUNGLE);
     }
 }
+3

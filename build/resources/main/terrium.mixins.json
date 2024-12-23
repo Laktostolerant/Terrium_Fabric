@@ -7,6 +7,7 @@
     "StrongholdStructureMixin",
     "PurshaleMixin",
     "AquiferSamplerMixin",
+    "MultiNoiseUtilParameterRangeMixin",
     "SurfaceRulesMixin"
   ],
   "injectors": {
