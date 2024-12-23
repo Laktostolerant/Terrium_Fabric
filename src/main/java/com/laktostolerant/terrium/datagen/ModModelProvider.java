@@ -61,6 +61,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSingleton(ModBlocks.PURSHALE, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerSingleton(ModBlocks.PYSCORIA, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
         blockStateModelGenerator.registerSingleton(ModBlocks.BLACKROCK_PILLAR, TexturedModel.END_FOR_TOP_CUBE_COLUMN);
+
+        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.SNOWY_GRASS, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
@@ -88,5 +90,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DARKELP, Models.GENERATED);
         itemModelGenerator.register(ModItems.DUSKWEED, Models.GENERATED);
         itemModelGenerator.register(ModItems.MURKROOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SNOWY_GRASS, Models.GENERATED);
     }
 }

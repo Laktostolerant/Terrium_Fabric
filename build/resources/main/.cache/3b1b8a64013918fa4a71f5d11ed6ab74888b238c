@@ -1,4 +1,4 @@
-// 1.21	2024-12-22T08:56:12.9407497	Terrium/Model Definitions
+// 1.21	2024-12-23T09:05:26.5262209	Terrium/Model Definitions
 6af8a6bd414ecc2408c89b395f64082807f67182 assets\terrium\models\block\rose_stairs_inner.json
 d0507c5a6773b75fe5a6b4fc41087aa93a04931d assets\terrium\models\item\hellite_boots.json
 f3d034f774caa859398fb8e0a8a7c8ded2772aa8 assets\terrium\models\item\pyscoria.json
@@ -18,6 +18,7 @@ d20ebf30ebbab7d0dcc9b058bf69a4a8bea380b6 assets\terrium\models\item\hellite_ches
 64c0d191019f58596fd029bc884444fd8c3fcabf assets\terrium\models\block\stripped_rose_log_horizontal.json
 50d2e0da1e1044cef9a55a9196347299eb4e1847 assets\terrium\blockstates\rose_slab.json
 f4c625454b5976c15bf3e50ff9f6902400733dbc assets\terrium\models\block\rose_leaves.json
+2dcaca0c529e50e6c79dfdbb2a958bbe8d545985 assets\terrium\blockstates\snowy_grass.json
 2dc2a83445209552e59accc833971210baeb023d assets\terrium\models\item\pinecone_jam.json
 24ae65228e25d86f6bee5581f3b67789b00c74e9 assets\terrium\models\block\stripped_rose_log.json
 28c354fe332628fc85df0e829f2fa2313ceca333 assets\terrium\models\item\murkroot.json
@@ -53,8 +54,8 @@ b64c8d446d8b18f00af9b97c79d4835a9f44d934 assets\terrium\models\item\hellite_helm
 b4fd586a192f56963b30e8ceb033433372f37540 assets\terrium\models\item\hellite_helmet_iron_trim.json
 d5c076f4dca1a3b519d3d901bc1add24e5f8a0fe assets\terrium\blockstates\blubber.json
 82a1a594a1884c9ceb259d06fa32f6e12bd7a1c9 assets\terrium\models\item\rose_trapdoor.json
-c0ad179c699c290662b84b1a325f8f381564af4a assets\terrium\blockstates\pyscoria.json
 f6349d2695c709ae1928ea92f4977c5c229182fd assets\terrium\models\item\hellite_chestplate_gold_trim.json
+c0ad179c699c290662b84b1a325f8f381564af4a assets\terrium\blockstates\pyscoria.json
 ab31cf33a9e726776d1a0e0ad45ef06206f8a2cc assets\terrium\blockstates\murkroot.json
 278b2cd39661b838db88224e8f5aebfa69f4e472 assets\terrium\models\block\pyscoria.json
 2f2f56ff6900d818d981f1f3dc44675e40a4ea1b assets\terrium\models\item\rose_leaves.json
@@ -84,8 +85,8 @@ a004156df452c4f7496b306afb483b8c69e1f20c assets\terrium\models\block\rose_pressu
 df8df838a5ca115b4eada53821b1648d687b17a2 assets\terrium\models\block\stripped_rose_wood.json
 92a438474617147f76db53bf8ebaefb6d42cc709 assets\terrium\models\item\hellite_helmet_lapis_trim.json
 756cf178c6103845c6c1e16226fe8f45e7e5637d assets\terrium\models\block\blubber.json
-3c61a3d2e946967bf14fdcbabda7b28bcd0b3fa5 assets\terrium\blockstates\stripped_rose_log.json
 22d441db4719e52f90da811ef69127587c0a3e58 assets\terrium\models\item\hellite_chestplate.json
+3c61a3d2e946967bf14fdcbabda7b28bcd0b3fa5 assets\terrium\blockstates\stripped_rose_log.json
 6ace32cce47228d818579adb9a35f211648527ec assets\terrium\models\block\darkelp_plant.json
 1dbe236e269f7a0aee173b74bec092aa9777980d assets\terrium\blockstates\purshale_bricks.json
 e280837b297b840bfd3cfd3f138bfd821daeeb29 assets\terrium\models\block\watchful_purshale.json
@@ -130,6 +131,7 @@ c0906b8041114d7e2b248b7e982671a09508a504 assets\terrium\models\item\hellite_ches
 49a090640ecd8e6c65684d3e3f97b271df428742 assets\terrium\blockstates\purshale.json
 16da0d8faa61b7e2bc3ebbf626bf53cd8fec5353 assets\terrium\models\block\rose_door_bottom_right_open.json
 a45fe9c93ffe307f36d9651ebc97f4ea33d55f0d assets\terrium\models\block\loamstone.json
+b952096bd7a75406f1ca1aba1b037459929e8248 assets\terrium\models\block\snowy_grass.json
 a51d347e75e763a2a7881c4d66b8ee6744f10e6a assets\terrium\models\block\rose_gate_wall_open.json
 38b59c3fa9868142180985566238f643447cf6d0 assets\terrium\models\item\hellite_ingot.json
 0692bde8b490b6e6af0d53e9445c216fcc3a39aa assets\terrium\blockstates\stripped_rose_wood.json
@@ -152,6 +154,7 @@ cb220cd5ea831c4b1c938539efdb2b85aa3f523d assets\terrium\models\item\hellite_boot
 be6853aadafeb7b1ba1069a69cc58eeb02ece9f0 assets\terrium\blockstates\duskweed.json
 f5cbaebaf225cbbd9cbb01101a3444dc03fd26d0 assets\terrium\models\item\hellite_leggings_iron_trim.json
 b23f9620d7ecdb7d67fb5edcfaab16ae8fb712ea assets\terrium\models\item\hellite_helmet.json
+16c99093ee9a9713d0886db787b053d4d34bb345 assets\terrium\models\item\snowy_grass.json
 d9646088479963e1580bc59f8c06ac3c199a16d4 assets\terrium\models\item\hellite_chestplate_netherite_trim.json
 d2a4ff4ce9eb548d1e6b1929d7d8221e353bb98c assets\terrium\models\block\rose_fence_post.json
 3e1ef82c5f1fa8effdc4e27c36ec2b7bcd0814f6 assets\terrium\blockstates\rose_trapdoor.json
