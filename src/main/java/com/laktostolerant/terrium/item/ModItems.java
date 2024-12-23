@@ -64,7 +64,7 @@ public class ModItems {
     public static final Item DARKELP = registerItem("darkelp", new AliasedBlockItem(ModBlocks.DARKELP, new Item.Settings()));
     public static final Item DUSKWEED = registerItem("duskweed", new AliasedBlockItem(ModBlocks.DUSKWEED, new Item.Settings()));
     public static final Item MURKROOT = registerItem("murkroot", new AliasedBlockItem(ModBlocks.MURKROOT, new Item.Settings()));
-
+    public static final Item SNOWY_GRASS = registerItem("snowy_grass", new AliasedBlockItem(ModBlocks.SNOWY_GRASS, new Item.Settings()));
 
     public static final Item GOOP_BUCKET = registerItem("goop_bucket",
             new BucketItem(ModFluids.GOOP_STILL, new Item.Settings()));

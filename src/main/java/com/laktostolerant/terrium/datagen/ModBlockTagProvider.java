@@ -42,6 +42,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.LOAMSTONE)
                 .add(ModBlocks.WATCHFUL_PURSHALE)
                 .add(ModBlocks.PURSHALE)
+                .add(ModBlocks.PYSCORIA)
                 .add(ModBlocks.HELLITE_ORE)
                 .add(ModBlocks.COBBLED_PURSHALE)
                 .add(ModBlocks.PURSHALE_BRICKS);
@@ -53,7 +54,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PURSHALE_BRICKS);
 
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+                .add(ModBlocks.PYSCORIA)
                 .add(ModBlocks.HELLITE_ORE);
+
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ModBlocks.ROSE_LOG)

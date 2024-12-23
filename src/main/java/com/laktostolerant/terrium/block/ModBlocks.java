@@ -1,10 +1,7 @@
 package com.laktostolerant.terrium.block;
 
 import com.laktostolerant.terrium.Terrium;
-import com.laktostolerant.terrium.block.custom.CustomLandKelp;
-import com.laktostolerant.terrium.block.custom.CustomLandKelpBlock;
-import com.laktostolerant.terrium.block.custom.CustomStickyBlock;
-import com.laktostolerant.terrium.block.custom.DuskweedPlantBlock;
+import com.laktostolerant.terrium.block.custom.*;
 import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.world.tree.ModSaplingGenerator;
 import com.mojang.serialization.MapCodec;
@@ -25,7 +22,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
     public static final Block PURSHALE = registerBlock("purshale",
-            new Block(AbstractBlock.Settings.create()
+            new PillarBlock(AbstractBlock.Settings.create()
                     .strength(4f, 7)
                     .requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE)
@@ -201,6 +198,35 @@ public class ModBlocks {
 
     public static final Block GOOP_FLUID_BLOCK = registerBlockWithoutItem("goop_fluid_block",
             new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER).luminance(state -> 5)));
+
+
+    public static final Block SNOWY_GRASS = registerBlockWithoutItem("snowy_grass",
+            new SnowyGrassBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.WHITE)
+                    .replaceable()
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .offset(AbstractBlock.OffsetType.XYZ)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+            )
+    );
+
+
+    public static final Block PYSCORIA = registerBlock("pyscoria",
+            new PillarBlock(AbstractBlock.Settings.create()
+                    .strength(5f, 8)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE)
+            )
+    );
+
+
+
+
+
+
 
 
     private static Block registerBlock(String name, Block block) {

@@ -38,6 +38,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PINECONE_JAM);
 
                         entries.add(ModBlocks.PURSHALE);
+                        entries.add(ModBlocks.PYSCORIA);
                         entries.add(ModBlocks.WATCHFUL_PURSHALE);
                         entries.add(ModBlocks.COBBLED_PURSHALE);
                         entries.add(ModBlocks.PURSHALE_BRICKS);
@@ -71,6 +72,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLACKROCK_PILLAR);
 
                         entries.add(ModItems.GOOP_BUCKET);
+
+                        entries.add(ModItems.SNOWY_GRASS);
                     })
 
                     .build()

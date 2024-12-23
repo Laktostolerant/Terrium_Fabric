@@ -1,8 +1,7 @@
 {
-  "parent": "minecraft:block/cube_bottom_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "bottom": "terrium:block/purshale_bottom",
-    "side": "terrium:block/purshale_side",
-    "top": "terrium:block/purshale_top"
+    "end": "terrium:block/purshale_top",
+    "side": "terrium:block/purshale"
   }
 }

@@ -22,6 +22,7 @@ public class TerriumClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUBBER, RenderLayer.getTranslucent());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MURKROOT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SNOWY_GRASS, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROSE_SAPLING, RenderLayer.getCutout());
 
