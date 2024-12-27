@@ -76,7 +76,7 @@ public class ModBlocks {
                     .noCollision()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WET_GRASS)
-                    .luminance(state -> 3)
+                    .luminance(state -> 6)
                     .pistonBehavior(PistonBehavior.DESTROY),
 
                     Direction.UP, // Growth direction
@@ -92,7 +92,7 @@ public class ModBlocks {
                     .ticksRandomly()
                     .breakInstantly()
                     .sounds(BlockSoundGroup.WET_GRASS)
-                    .luminance(state -> 3) // Emits light with level 7
+                    .luminance(state -> 6) // Emits light with level 7
                     .pistonBehavior(PistonBehavior.DESTROY),
 
 
@@ -197,7 +197,7 @@ public class ModBlocks {
 
 
     public static final Block GOOP_FLUID_BLOCK = registerBlockWithoutItem("goop_fluid_block",
-            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER).luminance(state -> 5)));
+            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER).luminance(state -> 7)));
 
 
     public static final Block SNOWY_GRASS = registerBlockWithoutItem("snowy_grass",

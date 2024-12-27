@@ -9,10 +9,10 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public class MultiNoiseUtilParameterRangeMixin {
     @ModifyConstant(method = "<clinit>", constant = @Constant(floatValue = -2.0F))
     private static float modifyMinRange(float original) {
-        return -2.5F;
+        return -3F;
     }
     @ModifyConstant(method = "<clinit>", constant = @Constant(floatValue = 2.0F))
     private static float modifyMaxRange(float original) {
-        return 2.5F;
+        return 3F;
     }
 }

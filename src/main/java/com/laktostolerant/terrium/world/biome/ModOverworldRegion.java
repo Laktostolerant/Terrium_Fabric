@@ -40,4 +40,3 @@ public class ModOverworldRegion extends Region {
         this.addBiome(mapper, temperature, humidity, continentalness, erosion, weirdness, depth, offset, ModBiomes.DEEP_JUNGLE);
     }
 }
-3

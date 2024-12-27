@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:ore_redstone",
+  "feature": "minecraft:spring_nether_open",
   "placement": [
     {
       "type": "minecraft:count",
@@ -11,12 +11,12 @@
     {
       "type": "minecraft:height_range",
       "height": {
-        "type": "minecraft:trapezoid",
+        "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 32
+          "below_top": 4
         },
         "min_inclusive": {
-          "absolute": -32
+          "absolute": -62
         }
       }
     },

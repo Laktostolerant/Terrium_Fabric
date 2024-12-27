@@ -20,17 +20,12 @@
     "size_vertical": 2
   },
   "noise_router": {
-    "barrier": {
-      "type": "minecraft:noise",
-      "noise": "minecraft:aquifer_barrier",
-      "xz_scale": 1,
-      "y_scale": 1
-    },
+    "barrier": 100,
     "fluid_level_floodedness": {
       "type": "minecraft:noise",
       "noise": "minecraft:aquifer_fluid_level_floodedness",
       "xz_scale": 1,
-      "y_scale": 0.67
+      "y_scale": 0
     },
     "fluid_level_spread": {
       "type": "minecraft:noise",
@@ -266,19 +261,19 @@
           "input": "minecraft:y",
           "min_inclusive": -100,
           "max_exclusive": -65,
-          "when_in_range": "minecraft:lava_pools",
+          "when_in_range": "minecraft:custom",
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "minecraft:y",
             "min_inclusive": -200,
             "max_exclusive": -100,
-            "when_in_range": "minecraft:noise_cave",
+            "when_in_range": "minecraft:custom",
             "when_out_of_range": {
               "type": "minecraft:range_choice",
               "input": "minecraft:y",
               "min_inclusive": -210,
               "max_exclusive": -200,
-              "when_in_range": "minecraft:ceilingdensity",
+              "when_in_range": "minecraft:custom",
               "when_out_of_range": {
                 "type": "minecraft:range_choice",
                 "input": "minecraft:y",

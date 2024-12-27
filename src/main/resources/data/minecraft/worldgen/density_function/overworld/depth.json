@@ -2,10 +2,10 @@
   "type": "minecraft:add",
   "argument1": {
     "type": "minecraft:y_clamped_gradient",
-    "from_value": 2.5,
-    "from_y": -128,
-    "to_value": -2.5,
-    "to_y": 400
+    "from_value": 3,
+    "from_y": -320,
+    "to_value": -3,
+    "to_y": 600
   },
   "argument2": "minecraft:overworld/offset"
 }
