@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-31T21:54:27.677040248	Terrium/Model Definitions
+// 1.21.1	2024-12-31T22:22:13.119399825	Terrium/Model Definitions
 51641263b51111144088e3fcd695e7ec34ca46db assets/terrium/blockstates/loamstone.json
 56cdab49c7af8902ad24f6e1be6819b20413b0aa assets/terrium/blockstates/watchful_purshale.json
 ab31cf33a9e726776d1a0e0ad45ef06206f8a2cc assets/terrium/blockstates/murkroot.json
@@ -10,8 +10,8 @@ db62567691b4549bfbf3228bc7567b2785db2ccd assets/terrium/models/block/rose_button
 c80de9bed20fc087b71c11962dc8cb55532d29db assets/terrium/models/item/rose_fence.json
 dcbc8201843fc1dc1c942f8ccb1c1e4fd3e4c47d assets/terrium/models/item/hellite_chestplate_emerald_trim.json
 12e9ab94552068c978b2d3557c9c967647cec0fd assets/terrium/models/item/cobbled_purshale.json
-b952096bd7a75406f1ca1aba1b037459929e8248 assets/terrium/models/block/snowy_grass.json
 f3b2e8d5f04002077360b7116063a47349d557d5 assets/terrium/models/block/murkroot.json
+b952096bd7a75406f1ca1aba1b037459929e8248 assets/terrium/models/block/snowy_grass.json
 e6d5f2d9733bb27ff624ba0b7d370db7307612ad assets/terrium/models/item/pinecannon.json
 7f4a275789a4d53bf5ee37c7b701af4f5e8e688d assets/terrium/blockstates/rose_log.json
 403b3b84b6efd4213e91191b4a76eb76251ced35 assets/terrium/models/item/stripped_rose_wood.json
@@ -26,7 +26,6 @@ edacf32edd3c9d79c4168d9aced1a891240a1233 assets/terrium/models/item/hellite_boot
 f6349d2695c709ae1928ea92f4977c5c229182fd assets/terrium/models/item/hellite_chestplate_gold_trim.json
 278b2cd39661b838db88224e8f5aebfa69f4e472 assets/terrium/models/block/pyscoria.json
 4cac85ab5a52e827e2f094aa9a867b043d6bbac8 assets/terrium/blockstates/rose_fence.json
-dd0894f9950059e40b2893dd136fe22f90898593 assets/terrium/models/item/testglow.json
 b23f9620d7ecdb7d67fb5edcfaab16ae8fb712ea assets/terrium/models/item/hellite_helmet.json
 24ae65228e25d86f6bee5581f3b67789b00c74e9 assets/terrium/models/block/stripped_rose_log.json
 3095d0a380203ecc937cba735d337bd6dec64dc0 assets/terrium/models/item/hellite_leggings_quartz_trim.json
@@ -68,11 +67,9 @@ cd804d1546fa1a982c31960a67bac4ef4e8caa7c assets/terrium/models/item/hellite_nugg
 fa84584915ccb3d324fbfdd15241a3637eb8fad4 assets/terrium/blockstates/darkelp.json
 6bd9661739e42623eeea0feea907d85a5f964385 assets/terrium/models/block/rose_door_bottom_left.json
 d62152e0b61f0a497c0a2b29965b32d8d816786e assets/terrium/models/block/rose_door_bottom_left_open.json
-a213941a499e6c0f8bf7a315188fde3b2a70c42f assets/terrium/models/block/testglow.json
 92a438474617147f76db53bf8ebaefb6d42cc709 assets/terrium/models/item/hellite_helmet_lapis_trim.json
 1d0219dd37b918a70679ca2dc3723957a94d464f assets/terrium/models/block/rose_log.json
 a602a0f51c5627b297b332426ff0c9410de5081f assets/terrium/models/block/rose_fence_side.json
-db69e3121f8c5f6cdad84ab681f276f4802e3223 assets/terrium/blockstates/testglow.json
 0b123b32437fb0d1b45b7024e586018b4f03cffa assets/terrium/models/item/blackrock_pillar.json
 dd8f5b69bc2b24dbf7cf3d64d9cbde35ac4ff40a assets/terrium/models/item/hellite_chestplate_redstone_trim.json
 b5231d89ba85ea93ba1ea6786688ab06ab27652d assets/terrium/blockstates/rose_door.json
@@ -106,8 +103,8 @@ e636b38c95d3e4b4135957c514652130423aa722 assets/terrium/models/item/blubber.json
 6af8a6bd414ecc2408c89b395f64082807f67182 assets/terrium/models/block/rose_stairs_inner.json
 82a1a594a1884c9ceb259d06fa32f6e12bd7a1c9 assets/terrium/models/item/rose_trapdoor.json
 4638044850182f1d671359bd8038e5747b046d81 assets/terrium/models/block/rose_pressure_plate.json
-756cf178c6103845c6c1e16226fe8f45e7e5637d assets/terrium/models/block/blubber.json
 14181f1022e2833193f0b8a166154a8c4887389d assets/terrium/models/item/hellite_boots_amethyst_trim.json
+756cf178c6103845c6c1e16226fe8f45e7e5637d assets/terrium/models/block/blubber.json
 d0507c5a6773b75fe5a6b4fc41087aa93a04931d assets/terrium/models/item/hellite_boots.json
 99ffa969376a543b66d53a77c0b70724350c8f61 assets/terrium/models/item/hellite_leggings_gold_trim.json
 5fea0518a0999d6707daecf86258675aad9087a0 assets/terrium/blockstates/rose_leaves.json

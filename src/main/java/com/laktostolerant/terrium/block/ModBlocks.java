@@ -116,7 +116,6 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-    public static final Block TestGlow = registerBlock("testglow", new TestGlowBlock(AbstractBlock.Settings.create().luminance(state -> 15)));
     public static final Block BLUBBER = registerBlock("blubber",
             new CustomStickyBlock(AbstractBlock.Settings.create()
                     .strength(1, 1)
