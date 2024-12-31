@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium.datagen;
 
 import com.laktostolerant.terrium.block.ModBlocks;
+import com.laktostolerant.terrium.block.custom.TestGlowBlock;
 import com.laktostolerant.terrium.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -23,6 +24,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSingleton(ModBlocks.WATCHFUL_PURSHALE, TexturedModel.CUBE_BOTTOM_TOP);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HELLITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TestGlow);
 
         blockStateModelGenerator.registerRotatable(ModBlocks.PURSHALE_BRICKS);
         blockStateModelGenerator.registerRotatable(ModBlocks.COBBLED_PURSHALE);

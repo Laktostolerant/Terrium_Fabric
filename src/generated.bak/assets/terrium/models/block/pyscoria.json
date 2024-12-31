@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "terrium:block/pyscoria_top",
+    "side": "terrium:block/pyscoria"
+  }
+}

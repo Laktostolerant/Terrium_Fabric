@@ -15,14 +15,14 @@
         },
         "argument2": {
           "type": "minecraft:noise",
-          "noise": "minecraftn:ceilingnoise",
+          "noise": "minecraft:ceilingnoise",
           "xz_scale": -5,
           "y_scale": 1.4
         }
       },
       "argument2": {
         "type": "minecraft:noise",
-        "noise": "minecraftn:ceilingnoise",
+        "noise": "minecraft:ceilingnoise",
         "xz_scale": 3,
         "y_scale": 4
       }
@@ -38,7 +38,7 @@
       },
       "argument2": {
         "type": "minecraft:noise",
-        "noise": "minecraftn:ceilingnoise",
+        "noise": "minecraft:ceilingnoise",
         "xz_scale": 11,
         "y_scale": 2.1
       }

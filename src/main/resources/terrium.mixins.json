@@ -8,6 +8,11 @@
     "PurshaleMixin",
     "AquiferSamplerMixin",
     "MultiNoiseUtilParameterRangeMixin",
+    "PlayerEntityGravity",
+    "GravityTick",
+    "BackgroundRendererMixin",
+    "CameraMixin",
+    "CameraAccessor",
     "SurfaceRulesMixin"
   ],
   "injectors": {

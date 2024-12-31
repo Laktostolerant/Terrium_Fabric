@@ -1,5 +1,6 @@
 package com.laktostolerant.terrium.datagen;
 
+import com.laktostolerant.terrium.Terrium;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.minecraft.registry.RegistryKeys;
@@ -17,6 +18,7 @@ public class ModWorldGenerator extends FabricDynamicRegistryProvider {
         entries.addAll(wrapperLookup.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(wrapperLookup.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
         entries.addAll(wrapperLookup.getWrapperOrThrow(RegistryKeys.BIOME));
+        Terrium.LOGGER.info("added world datagen");
     }
 
     @Override

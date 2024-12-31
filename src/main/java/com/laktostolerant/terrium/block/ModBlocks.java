@@ -116,7 +116,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY)
             )
     );
-
+    public static final Block TestGlow = registerBlock("testglow", new TestGlowBlock(AbstractBlock.Settings.create().luminance(state -> 15)));
     public static final Block BLUBBER = registerBlock("blubber",
             new CustomStickyBlock(AbstractBlock.Settings.create()
                     .strength(1, 1)
@@ -197,7 +197,7 @@ public class ModBlocks {
 
 
     public static final Block GOOP_FLUID_BLOCK = registerBlockWithoutItem("goop_fluid_block",
-            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.WATER).luminance(state -> 7)));
+            new FluidBlock(ModFluids.GOOP_STILL, AbstractBlock.Settings.copy(Blocks.LAVA).luminance(state -> 7).velocityMultiplier(0.4F)));
 
 
     public static final Block SNOWY_GRASS = registerBlockWithoutItem("snowy_grass",

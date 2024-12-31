@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "terrium:block/rose_pressure_plate"
+    },
+    "powered=true": {
+      "model": "terrium:block/rose_pressure_plate_down"
+    }
+  }
+}
