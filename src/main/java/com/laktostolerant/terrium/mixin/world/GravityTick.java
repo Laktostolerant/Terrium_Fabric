@@ -1,4 +1,4 @@
-package com.laktostolerant.terrium.mixin;
+package com.laktostolerant.terrium.mixin.world;
 
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,10 +12,10 @@ public class GravityTick {
     @Inject(method = "tick", at = @At("HEAD"))
     private void onTick(CallbackInfo ci) {
         PlayerEntity self = (PlayerEntity)(Object)this;
-        if (self.getY() <= -63) {
+        if (self.getY() <= -80) {
             self.getAttributeInstance(EntityAttributes.GENERIC_GRAVITY)
-                    .setBaseValue(0.03D);
-            self.getAttributeInstance(EntityAttributes.GENERIC_FALL_DAMAGE_MULTIPLIER).setBaseValue(0.05);
+                    .setBaseValue(0.05D);
+            self.getAttributeInstance(EntityAttributes.GENERIC_FALL_DAMAGE_MULTIPLIER).setBaseValue(0.1);
         } else {
             self.getAttributeInstance(EntityAttributes.GENERIC_GRAVITY)
                     .setBaseValue(0.08D);

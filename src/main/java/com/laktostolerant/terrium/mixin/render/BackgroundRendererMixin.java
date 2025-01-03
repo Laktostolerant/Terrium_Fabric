@@ -1,11 +1,10 @@
-package com.laktostolerant.terrium.mixin;
+package com.laktostolerant.terrium.mixin.render;
 
 import com.laktostolerant.terrium.fluid.GoopFluid;
-import net.minecraft.block.enums.CameraSubmersionType;
+import com.laktostolerant.terrium.mixin.accessors.CameraAccessor;
 import net.minecraft.client.render.BackgroundRenderer;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.client.render.BackgroundRenderer.FogType;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;

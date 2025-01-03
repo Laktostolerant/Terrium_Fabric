@@ -1,6 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "terrium",
+	"accessWidener": "terrium.accesswidener",
 	"version": "1.0.0",
 	"name": "Terrium",
 	"description": "Making a mod atm lol",

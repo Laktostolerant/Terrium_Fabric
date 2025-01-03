@@ -1,4 +1,4 @@
-package com.laktostolerant.terrium.mixin;
+package com.laktostolerant.terrium.mixin.accessors;
 
 import net.minecraft.client.render.Camera;
 import net.minecraft.world.BlockView;

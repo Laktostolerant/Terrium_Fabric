@@ -1,10 +1,10 @@
-// 1.21.1	2024-12-31T22:22:13.118776392	Terrium/Tags for minecraft:block
+// 1.21.1	2025-01-02T02:28:59.286090179	Terrium/Tags for minecraft:block
 ed31db8c734f151628710013eb1ce16a20279b1f data/minecraft/tags/block/mineable/pickaxe.json
 4d0a9496df674dbf49b9e9d59a29168848f228a6 data/minecraft/tags/block/needs_diamond_tool.json
 d9e15ce9b2ca23ead68d81403e1110a024d0223b data/minecraft/tags/block/base_stone_overworld.json
 5414468d10c10b26f20adbd564c43f4e3688bc2c data/minecraft/tags/block/fence_gates.json
-249613cddbaad427b6bd6e31cb3850e8c71506e1 data/terrium/tags/block/needs_netherite_tool.json
 d9e15ce9b2ca23ead68d81403e1110a024d0223b data/minecraft/tags/block/deepslate_ore_replaceables.json
+249613cddbaad427b6bd6e31cb3850e8c71506e1 data/terrium/tags/block/needs_netherite_tool.json
 082000ad35de306d61f70d713075cee4b37cb2c6 data/minecraft/tags/block/wooden_fences.json
 944c7a3c4c866c38de169688a549d72091912169 data/terrium/tags/block/abyss_growables.json
 07349f73697318aecea87074a108a899d3ad9fe0 data/minecraft/tags/block/logs_that_burn.json

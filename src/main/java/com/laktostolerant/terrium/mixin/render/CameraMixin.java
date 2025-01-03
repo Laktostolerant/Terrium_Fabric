@@ -1,6 +1,6 @@
-package com.laktostolerant.terrium.mixin;
+package com.laktostolerant.terrium.mixin.render;
 
-import com.laktostolerant.terrium.fluid.GoopFluid;
+import com.laktostolerant.terrium.mixin.accessors.CameraAccessor;
 import net.minecraft.block.enums.CameraSubmersionType;
 import net.minecraft.client.render.Camera;
 import net.minecraft.fluid.FluidState;
@@ -10,8 +10,6 @@ import net.minecraft.world.BlockView;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Camera.class)

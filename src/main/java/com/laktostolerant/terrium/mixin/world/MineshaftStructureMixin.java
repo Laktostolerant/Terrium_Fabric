@@ -1,4 +1,4 @@
-package com.laktostolerant.terrium.mixin;
+package com.laktostolerant.terrium.mixin.world;
 
 
 import net.minecraft.world.gen.structure.MineshaftStructure;

@@ -20,7 +20,22 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class ModBlocks {
+
+
+    public static final Set<Block> SPECIAL_BLOCKS = new HashSet<>();
+    static {
+        SPECIAL_BLOCKS.add(Blocks.REDSTONE_LAMP);
+    }
+    public static boolean isSpecialBlock(Block block){
+        return SPECIAL_BLOCKS.contains(block);
+    }
+
+
+
     public static final Block PURSHALE = registerBlock("purshale",
             new PillarBlock(AbstractBlock.Settings.create()
                     .strength(4f, 7)
@@ -110,7 +125,7 @@ public class ModBlocks {
                     .replaceable()
                     .noCollision()
                     .breakInstantly()
-                    .luminance(state -> 6)
+                    .luminance(state -> 11)
                     .sounds(BlockSoundGroup.GRASS)
                     .offset(AbstractBlock.OffsetType.XZ)
                     .pistonBehavior(PistonBehavior.DESTROY)
