@@ -19,11 +19,7 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
     private DuskweedLightStorage getDuskweedStorage() {
         return (DuskweedLightStorage) this.lightStorage;
     }
-    /**
-     * Usually called "checkNode" or "checkBlock" to re-check a block's brightness.
-     * We'll do a minimal example that: if the block is DUSKWEED, set light to some level
-     * and mark it "duskweedLit."
-     */
+    //checknode in mojmap
     @Override
     protected void method_51529(long blockPos) {
         ChunkBlockLightProviderAccessor accessor = (ChunkBlockLightProviderAccessor) this;
@@ -36,32 +32,24 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
 
             this.method_51566(blockPos,
                     ChunkLightProvider.class_8531.method_51573(
-                            15, // light level
+                            15,
                             isTrivialForLighting(state)
                     )
             );
         }
         super.method_51529(blockPos);
     }
-
-
-    /**
-     * "propagateIncrease" method 51531
-     */
+    // propagateIncrease in mojmap, otherwise 31
     @Override
     protected void method_51531(long blockPos, long flags, int lightLevel) {
-        // handle propagation
         DuskweedLightStorage storage = getDuskweedStorage();
         boolean sourceIsDuskweedLit = storage.isDuskweedLit(blockPos);
         super.method_51531(blockPos, flags, lightLevel-8);
-
-        // if from neighbor then provide new color
         if (sourceIsDuskweedLit && lightLevel > 1) {
             for (Direction dir : Direction.values()) {
                 if (ChunkLightProvider.class_8531.isDirectionBitSet(flags, dir)) {
                     long neighborPos = BlockPos.offset(blockPos, dir);
                     int neighborLevel = storage.get(neighborPos);
-                    // neighbor detection
                     if (neighborLevel >= (lightLevel - 1)) {
                         storage.setDuskweedLit(neighborPos);
                     }
@@ -69,11 +57,7 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
             }
         }
     }
-
-    /**
-     * "propagateDecrease" ~ called when a block's brightness is lowered.
-     * We can clear the duskweed flag if it goes below 1, or if it's overshadowed, etc.
-     */
+    //propagaeDecrease in mojmap
     @Override
     protected void method_51530(long blockPos, long flags) {
         super.method_51530(blockPos, flags);

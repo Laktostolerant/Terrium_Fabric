@@ -61,5 +61,6 @@ public abstract class WorldRendererMixin {
             cir.cancel();
         }
     }
+
 }
 

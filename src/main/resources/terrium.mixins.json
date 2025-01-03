@@ -21,6 +21,7 @@
     "accessors.LightmapTextureManagerAccessor",
     "render.LightmapTextureManagerMixin",
     "render.WorldRendererMixin",
+    "render.WorldChunkMixin",
     "sodiummixins.SodiumBlockColorsMixin",
     "world.SurfaceRulesMixin"
   ],
