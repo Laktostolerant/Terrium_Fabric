@@ -23,6 +23,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSingleton(ModBlocks.WATCHFUL_PURSHALE, TexturedModel.CUBE_BOTTOM_TOP);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HELLITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NATURAL_ASTRALITE);
 
         blockStateModelGenerator.registerRotatable(ModBlocks.PURSHALE_BRICKS);
         blockStateModelGenerator.registerRotatable(ModBlocks.COBBLED_PURSHALE);

@@ -68,6 +68,11 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
                 }
             }
         }
+        else
+        {
+            super.method_51531(blockPos, flags, lightLevel);
+        }
+
     }
 
     /**

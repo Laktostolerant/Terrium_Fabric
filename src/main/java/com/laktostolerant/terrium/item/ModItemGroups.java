@@ -87,6 +87,8 @@ public class ModItemGroups {
                         entries.add(ModItems.GOOP_BUCKET);
 
                         entries.add(ModItems.SNOWY_GRASS);
+
+                        entries.add(ModBlocks.NATURAL_ASTRALITE);
                     })
 
                     .build()
