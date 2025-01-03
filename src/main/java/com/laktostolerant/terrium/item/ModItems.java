@@ -19,6 +19,8 @@ public class ModItems {
     public static final Item RAW_HELLITE = registerItem("raw_hellite", new Item(new Item.Settings()));
     public static final Item HELLITE_NUGGET = registerItem("hellite_nugget", new Item(new Item.Settings()));
 
+    public static final Item ASTRALITE_SHARD = registerItem("astralite_shard", new Item(new Item.Settings()));
+
     public static final Item PINECONE = registerItem("pinecone", new Item(new Item.Settings()));
     public static final Item PINECONE_JAM = registerItem("pinecone_jam", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.PINECONE_JAM)));
 
@@ -41,6 +43,26 @@ public class ModItems {
             .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(45))));
     public static final Item HELLITE_BOOTS = registerItem("hellite_boots", new ArmorItem(ModArmorMaterials.HELLITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
             .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(45))));
+
+    public static final Item ASTRALITE_HELMET = registerItem("astralite_helmet", new ArmorItem(ModArmorMaterials.ASTRALITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(60))));
+    public static final Item ASTRALITE_CHESTPLATE = registerItem("astralite_chestplate", new ArmorItem(ModArmorMaterials.ASTRALITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+            .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(60))));
+    public static final Item ASTRALITE_LEGGINGS = registerItem("astralite_leggings", new ArmorItem(ModArmorMaterials.ASTRALITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+            .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(60))));
+    public static final Item ASTRALITE_BOOTS = registerItem("astralite_boots", new ArmorItem(ModArmorMaterials.ASTRALITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+            .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(60))));
+
+    public static final Item ASTRALITE_SWORD = registerItem("astralite_sword", new SwordItem(ModToolMaterials.HELLITE, new Item.Settings()
+            .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 4, -2.4f))));
+    public static final Item ASTRALITE_PICKAXE = registerItem("astralite_pickaxe", new PickaxeItem(ModToolMaterials.HELLITE, new Item.Settings()
+            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 5, -2.8f))));
+    public static final Item ASTRALITE_AXE = registerItem("astralite_axe", new AxeItem(ModToolMaterials.HELLITE, new Item.Settings()
+            .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 6f, -3.2f))));
+    public static final Item ASTRALITE_SHOVEL = registerItem("astralite_shovel", new ShovelItem(ModToolMaterials.HELLITE, new Item.Settings()
+            .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 2.5f, -3.0f))));
+    public static final Item ASTRALITE_HOE = registerItem("astralite_hoe", new HoeItem(ModToolMaterials.HELLITE, new Item.Settings()
+            .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, -4, -3f))));
 
 
     public static final Item PINECANNON = registerItem("pinecannon", new ModCustomBow(new Item.Settings()
@@ -80,6 +102,8 @@ public class ModItems {
             entries.add(HELLITE_INGOT);
             entries.add(RAW_HELLITE);
             entries.add(HELLITE_NUGGET);
+
+            entries.add(ASTRALITE_SHARD);
 
             entries.add(PINECONE);
             entries.add(PINECANNON);

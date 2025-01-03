@@ -13,8 +13,10 @@ public class ModTags {
 
         public static final TagKey<Block> NEEDS_HELLITE_TOOL = createTag("needs_hellite_tool");
         public static final TagKey<Block> INCORRECT_FOR_HELLITE_TOOL = createTag("incorrect_for_hellite_tool");
+        public static final TagKey<Block> INCORRECT_FOR_ASTRALITE_TOOL = createTag("incorrect_for_astralite_tool");
 
         public static final TagKey<Block> ABYSS_GROWABLES = createTag("abyss_growables");
+        public static final TagKey<Block> DEEP_JUNGLE_GROWABLES = createTag("deep_jungle_growables");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Terrium.MOD_ID, name));

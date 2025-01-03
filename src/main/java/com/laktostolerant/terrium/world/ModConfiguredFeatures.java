@@ -3,6 +3,7 @@ package com.laktostolerant.terrium.world;
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.util.ModTags;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CaveVines;
@@ -46,6 +47,9 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> ABYSS_ROOTS_KEY = registerKey("abyss_roots");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROSE_TREE_KEY = registerKey("rose");
+
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_GROUP = registerKey("deep_jungle_group");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_PLANTS_KEY = registerKey("deep_jungle_plants_key");
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -125,6 +129,37 @@ public class ModConfiguredFeatures {
                         0.2F,
                         UniformIntProvider.create(2, 4),
                         0.25F)
+        );
+
+        register(
+                context,
+                DEEP_JUNGLE_GROUP,
+                Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(
+                        new WeightedBlockStateProvider(
+                                DataPool.<BlockState>builder() // Explicitly specify BlockState
+                                        .add(Blocks.TALL_GRASS.getDefaultState(), 4)
+                                        .add(Blocks.SHORT_GRASS.getDefaultState(), 1)
+                                        .build()
+                        )
+                )
+        );
+
+        register(
+                context,
+                DEEP_JUNGLE_PLANTS_KEY,
+                Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(
+                        ModTags.Blocks.DEEP_JUNGLE_GROWABLES,
+                        BlockStateProvider.of(Blocks.GRASS_BLOCK),
+                        PlacedFeatures.createEntry(registryEntryLookup.getOrThrow(DEEP_JUNGLE_GROUP),
+                                new PlacementModifier[0]), VerticalSurfaceType.FLOOR,
+                        ConstantIntProvider.create(1),
+                        0.0F,
+                        10,
+                        0.5F,
+                        UniformIntProvider.create(6, 9),
+                        0.4F)
         );
 
         register(context, ROSE_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(

@@ -10,7 +10,7 @@
   "effects": {
     "fog_color": 2269670,
     "foliage_color": 13763580,
-    "grass_color": 3080751,
+    "grass_color": 11242819,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -87,7 +87,8 @@
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
       "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
+      "minecraft:patch_pumpkin",
+      "terrium:deep_jungle_plants_placed_key"
     ],
     [
       "minecraft:freeze_top_layer"

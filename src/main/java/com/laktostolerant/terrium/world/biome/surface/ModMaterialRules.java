@@ -11,6 +11,7 @@ import static net.minecraft.world.gen.surfacebuilder.MaterialRules.stoneDepth;
 
 public class ModMaterialRules {
     private static final MaterialRules.MaterialRule DIRT = makeStateRule(Blocks.DIRT);
+    private static final MaterialRules.MaterialRule GRASS = makeStateRule(Blocks.GRASS_BLOCK);
     private static final MaterialRules.MaterialRule GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     private static final MaterialRules.MaterialRule LOAMSTONE = makeStateRule(ModBlocks.LOAMSTONE);
     private static final MaterialRules.MaterialRule PURSHALE = makeStateRule(ModBlocks.PURSHALE);
@@ -28,8 +29,11 @@ public class ModMaterialRules {
 
         return MaterialRules.sequence(
                 MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.DEEP_JUNGLE),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, LOAMSTONE)),
+                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, GRASS)),
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, LOAMSTONE)),
+
+                MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.DEEP_JUNGLE),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, DIRT)),
 
                 MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.ABYSS_BIOME),
                         MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, PURSHALE)),
@@ -41,7 +45,7 @@ public class ModMaterialRules {
 
                 // Default to a grass and dirt surface
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
-        );
+        ));
     }
 
     private static MaterialRules.MaterialRule makeStateRule(Block block) {
