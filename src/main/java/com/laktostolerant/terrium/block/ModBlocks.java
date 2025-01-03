@@ -77,6 +77,15 @@ public class ModBlocks {
             )
     );
 
+    public static final Block NATURAL_ASTRALITE = registerBlock("natural_astralite",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create()
+                            .strength(5f, 4)
+                            .requiresTool()
+                            .sounds(BlockSoundGroup.DEEPSLATE)
+            )
+    );
+
     public static final Block LOAMSTONE = registerBlock("loamstone",
             new Block(AbstractBlock.Settings.create()
                             .strength(0.4f)
