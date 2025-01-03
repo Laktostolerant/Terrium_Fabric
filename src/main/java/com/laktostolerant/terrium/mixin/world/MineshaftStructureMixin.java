@@ -17,7 +17,7 @@ public class MineshaftStructureMixin {
                     target = "Lnet/minecraft/world/gen/chunk/ChunkGenerator;getMinimumY()I"
             )
     )
-    private static int redirectGetMinimumY(ChunkGenerator generator) {
+    private int redirectGetMinimumY(ChunkGenerator generator) {
         int original = generator.getMinimumY();
         return Math.max(original, -60);
     }
