@@ -21,6 +21,8 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_HELLITE);
                         entries.add(ModItems.HELLITE_NUGGET);
 
+                        entries.add(ModItems.ASTRALITE_SHARD);
+
                         entries.add(ModItems.HELLITE_SWORD);
                         entries.add(ModItems.HELLITE_PICKAXE);
                         entries.add(ModItems.HELLITE_AXE);
@@ -31,6 +33,17 @@ public class ModItemGroups {
                         entries.add(ModItems.HELLITE_CHESTPLATE);
                         entries.add(ModItems.HELLITE_LEGGINGS);
                         entries.add(ModItems.HELLITE_BOOTS);
+
+                        entries.add(ModItems.ASTRALITE_HELMET);
+                        entries.add(ModItems.ASTRALITE_CHESTPLATE);
+                        entries.add(ModItems.ASTRALITE_LEGGINGS);
+                        entries.add(ModItems.ASTRALITE_BOOTS);
+
+                        entries.add(ModItems.ASTRALITE_SWORD);
+                        entries.add(ModItems.ASTRALITE_PICKAXE);
+                        entries.add(ModItems.ASTRALITE_AXE);
+                        entries.add(ModItems.ASTRALITE_SHOVEL);
+                        entries.add(ModItems.ASTRALITE_HOE);
 
                         entries.add(ModItems.PINECONE);
                         entries.add(ModItems.PINECANNON);

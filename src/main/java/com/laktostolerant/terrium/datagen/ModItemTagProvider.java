@@ -37,16 +37,20 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.HELLITE_HOE);
 
         getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
-                .add(ModItems.HELLITE_HELMET);
+                .add(ModItems.HELLITE_HELMET)
+                .add(ModItems.ASTRALITE_HELMET);
 
         getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
-                .add(ModItems.HELLITE_CHESTPLATE);
+                .add(ModItems.HELLITE_CHESTPLATE)
+                .add(ModItems.ASTRALITE_CHESTPLATE);
 
         getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
-                .add(ModItems.HELLITE_LEGGINGS);
+                .add(ModItems.HELLITE_LEGGINGS)
+                .add(ModItems.ASTRALITE_LEGGINGS );
 
         getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
-                .add(ModItems.HELLITE_BOOTS);
+                .add(ModItems.HELLITE_BOOTS)
+                .add(ModItems.ASTRALITE_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.HELLITE_HELMET)

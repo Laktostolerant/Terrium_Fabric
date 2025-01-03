@@ -54,5 +54,19 @@
 
   "item.terrium.goop_bucket": "Goop Bucket",
 
+  "item.terrium.astralite_shard": "Astralite Shard",
+
+  "item.terrium.astralite_sword": "Astralite Sword",
+  "item.terrium.astralite_pickaxe": "Astralite Pickaxe",
+  "item.terrium.astralite_axe": "Astralite Axe",
+  "item.terrium.astralite_shovel": "Astralite Shovel",
+  "item.terrium.astralite_hoe": "Astralite Hoe",
+
+  "item.terrium.astralite_helmet": "Astralite Helmet",
+  "item.terrium.astralite_chestplate": "Astralite Chestplate",
+  "item.terrium.astralite_leggings": "Astralite Leggings",
+  "item.terrium.astralite_boots": "Astralite Boots",
+
+
   "itemgroup.terrium.terrium_items": "Terrium"
 }

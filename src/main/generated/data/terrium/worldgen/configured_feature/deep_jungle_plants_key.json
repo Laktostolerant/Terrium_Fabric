@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:vegetation_patch",
+  "config": {
+    "depth": 1,
+    "extra_bottom_block_chance": 0.0,
+    "extra_edge_column_chance": 0.4,
+    "ground_state": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:grass_block",
+        "Properties": {
+          "snowy": "false"
+        }
+      }
+    },
+    "replaceable": "#terrium:deep_jungle_growables",
+    "surface": "floor",
+    "vegetation_chance": 0.5,
+    "vegetation_feature": {
+      "feature": "terrium:deep_jungle_group",
+      "placement": []
+    },
+    "vertical_range": 10,
+    "xz_radius": {
+      "type": "minecraft:uniform",
+      "max_inclusive": 9,
+      "min_inclusive": 6
+    }
+  }
+}

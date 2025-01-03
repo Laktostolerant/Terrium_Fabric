@@ -115,6 +115,7 @@ public class ModBiomes {
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEEP_JUNGLE_PLANTS_PLACED_KEY);
 
 
         return new Biome.Builder()
@@ -127,7 +128,7 @@ public class ModBiomes {
                         .waterColor(0xf68ad1)
                         .waterFogColor(0xbf1b26)
                         .skyColor(0x30c918)
-                        .grassColor(0x2f022f)
+                        .grassColor(0xab8d43)
                         .foliageColor(0xd203fc)
                         .fogColor(0x22a1e6)
                         .moodSound(BiomeMoodSound.CAVE)

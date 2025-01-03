@@ -76,6 +76,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HELLITE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_HELLITE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.ASTRALITE_SHARD, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.HELLITE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.HELLITE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.HELLITE_AXE, Models.HANDHELD);
@@ -87,9 +89,20 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HELLITE_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HELLITE_BOOTS);
 
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ASTRALITE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ASTRALITE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ASTRALITE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.ASTRALITE_BOOTS);
+
         itemModelGenerator.register(ModItems.DARKELP, Models.GENERATED);
         itemModelGenerator.register(ModItems.DUSKWEED, Models.GENERATED);
         itemModelGenerator.register(ModItems.MURKROOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNOWY_GRASS, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.ASTRALITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ASTRALITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ASTRALITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ASTRALITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ASTRALITE_HOE, Models.HANDHELD);
     }
 }
