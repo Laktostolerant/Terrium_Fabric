@@ -26,16 +26,6 @@ public class TerriumClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROSE_SAPLING, RenderLayer.getCutout());
 
-        /*
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.GOOP_STILL,
-                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
-                        SimpleFluidRenderHandler.WATER_FLOWING,
-                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xe9860c));
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.GOOP_FLOWING,
-                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
-                        SimpleFluidRenderHandler.WATER_FLOWING,
-                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xe9860c));
-*/
 
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.GOOP_STILL, ModFluids.GOOP_FLOWING, new SimpleFluidRenderHandler(
                 Identifier.of("minecraft:block/water_still"),

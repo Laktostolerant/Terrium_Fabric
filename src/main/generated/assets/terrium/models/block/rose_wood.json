@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "terrium:block/rose_log",
-    "side": "terrium:block/rose_log"
-  }
-}

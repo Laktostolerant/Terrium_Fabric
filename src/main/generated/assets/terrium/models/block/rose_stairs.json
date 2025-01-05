@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "terrium:block/rose_planks",
-    "side": "terrium:block/rose_planks",
-    "top": "terrium:block/rose_planks"
-  }
-}

@@ -77,6 +77,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HELLITE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_HELLITE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.ASTRALITE_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASTRALITE_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.HELLITE_SWORD, Models.HANDHELD);

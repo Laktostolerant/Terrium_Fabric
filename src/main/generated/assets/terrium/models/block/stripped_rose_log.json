@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "terrium:block/stripped_rose_log_top",
-    "side": "terrium:block/stripped_rose_log"
-  }
-}

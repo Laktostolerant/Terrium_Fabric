@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_HELLITE);
                         entries.add(ModItems.HELLITE_NUGGET);
 
+                        entries.add(ModItems.ASTRALITE_DUST);
                         entries.add(ModItems.ASTRALITE_SHARD);
 
                         entries.add(ModItems.HELLITE_SWORD);

@@ -6,6 +6,7 @@ import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.item.custom.ModCustomCrossbow;
 import com.laktostolerant.terrium.item.custom.ModDrinkItem;
 import com.laktostolerant.terrium.item.custom.ModCustomBow;
+import com.laktostolerant.terrium.util.ModTags;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -19,6 +20,7 @@ public class ModItems {
     public static final Item RAW_HELLITE = registerItem("raw_hellite", new Item(new Item.Settings()));
     public static final Item HELLITE_NUGGET = registerItem("hellite_nugget", new Item(new Item.Settings()));
 
+    public static final Item ASTRALITE_DUST = registerItem("astralite_dust", new Item(new Item.Settings()));
     public static final Item ASTRALITE_SHARD = registerItem("astralite_shard", new Item(new Item.Settings()));
 
     public static final Item PINECONE = registerItem("pinecone", new Item(new Item.Settings()));
@@ -53,15 +55,15 @@ public class ModItems {
     public static final Item ASTRALITE_BOOTS = registerItem("astralite_boots", new ArmorItem(ModArmorMaterials.ASTRALITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
             .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(60))));
 
-    public static final Item ASTRALITE_SWORD = registerItem("astralite_sword", new SwordItem(ModToolMaterials.HELLITE, new Item.Settings()
+    public static final Item ASTRALITE_SWORD = registerItem("astralite_sword", new SwordItem(ModToolMaterials.ASTRALITE, new Item.Settings()
             .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 4, -2.4f))));
-    public static final Item ASTRALITE_PICKAXE = registerItem("astralite_pickaxe", new PickaxeItem(ModToolMaterials.HELLITE, new Item.Settings()
+    public static final Item ASTRALITE_PICKAXE = registerItem("astralite_pickaxe", new PickaxeItem(ModToolMaterials.ASTRALITE, new Item.Settings()
             .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 5, -2.8f))));
-    public static final Item ASTRALITE_AXE = registerItem("astralite_axe", new AxeItem(ModToolMaterials.HELLITE, new Item.Settings()
+    public static final Item ASTRALITE_AXE = registerItem("astralite_axe", new AxeItem(ModToolMaterials.ASTRALITE, new Item.Settings()
             .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 6f, -3.2f))));
-    public static final Item ASTRALITE_SHOVEL = registerItem("astralite_shovel", new ShovelItem(ModToolMaterials.HELLITE, new Item.Settings()
+    public static final Item ASTRALITE_SHOVEL = registerItem("astralite_shovel", new ShovelItem(ModToolMaterials.ASTRALITE, new Item.Settings()
             .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, 2.5f, -3.0f))));
-    public static final Item ASTRALITE_HOE = registerItem("astralite_hoe", new HoeItem(ModToolMaterials.HELLITE, new Item.Settings()
+    public static final Item ASTRALITE_HOE = registerItem("astralite_hoe", new HoeItem(ModToolMaterials.ASTRALITE, new Item.Settings()
             .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, -4, -3f))));
 
 

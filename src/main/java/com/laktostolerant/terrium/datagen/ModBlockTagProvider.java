@@ -1,14 +1,13 @@
 package com.laktostolerant.terrium.datagen;
 
 import com.laktostolerant.terrium.block.ModBlocks;
-import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,6 +20,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        SetupCustomTiers();
+
         getOrCreateTagBuilder(BlockTags.OVERWORLD_CARVER_REPLACEABLES)
                 .add(ModBlocks.PURSHALE)
                 .add(ModBlocks.WATCHFUL_PURSHALE);
@@ -60,7 +61,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.PYSCORIA)
-                .add(ModBlocks.HELLITE_ORE)
+                .add(ModBlocks.HELLITE_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_ASTRALITE_TOOL)
                 .add(ModBlocks.NATURAL_ASTRALITE);
 
 
@@ -74,5 +77,40 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.ROSE_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
                 .add(ModBlocks.ROSE_GATE);
+    }
+
+    protected void SetupCustomTiers()
+    {
+        getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_HELLITE_TOOL)
+                .addOptionalTag(Identifier.of("terrium", "needs_astralite_tool"));
+
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .addOptionalTag(Identifier.of("terrium", "needs_astralite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_hellite_tool"));
+
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .addOptionalTag(Identifier.of("terrium", "needs_astralite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_hellite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_netherite_tool"));
+
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .addOptionalTag(Identifier.of("terrium", "needs_astralite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_hellite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_netherite_tool"));
+
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .addOptionalTag(Identifier.of("terrium", "needs_astralite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_hellite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_netherite_tool"));
+
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL)
+                .addOptionalTag(Identifier.of("terrium", "needs_astralite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_hellite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_netherite_tool"));
+
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .addOptionalTag(Identifier.of("terrium", "needs_astralite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_hellite_tool"))
+                .addOptionalTag(Identifier.of("terrium", "needs_netherite_tool"));
     }
 }

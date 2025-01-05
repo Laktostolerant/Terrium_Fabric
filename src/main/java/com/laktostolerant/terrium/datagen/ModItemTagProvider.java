@@ -22,19 +22,24 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PINECONE);
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.HELLITE_SWORD);
+                .add(ModItems.HELLITE_SWORD)
+                .add(ModItems.ASTRALITE_SWORD);
 
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.HELLITE_PICKAXE);
+                .add(ModItems.HELLITE_PICKAXE)
+                .add(ModItems.ASTRALITE_PICKAXE);
 
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.HELLITE_AXE);
+                .add(ModItems.HELLITE_AXE)
+                .add(ModItems.ASTRALITE_AXE);
 
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.HELLITE_SHOVEL);
+                .add(ModItems.HELLITE_SHOVEL)
+                .add(ModItems.ASTRALITE_SHOVEL);
 
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.HELLITE_HOE);
+                .add(ModItems.HELLITE_HOE)
+                .add(ModItems.ASTRALITE_HOE);
 
         getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
                 .add(ModItems.HELLITE_HELMET)
