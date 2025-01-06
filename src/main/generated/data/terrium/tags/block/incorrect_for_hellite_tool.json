@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "#terrium:needs_astralite_tool",
+      "required": false
+    }
+  ]
+}

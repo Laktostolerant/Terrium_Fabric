@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "terrium:block/stripped_rose_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "terrium:block/stripped_rose_wood"
+    },
+    "axis=z": {
+      "model": "terrium:block/stripped_rose_wood",
+      "x": 90
+    }
+  }
+}

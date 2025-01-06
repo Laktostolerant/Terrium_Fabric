@@ -20,7 +20,7 @@ import java.util.Set;
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> HELLITE_ORE_PLACED_KEY = registerKey("hellite_ore_placed");
     public static final RegistryKey<PlacedFeature> ABYSS_PLANTS_PLACED_KEY = registerKey("abyss_plants_placed_key");
-    public static final RegistryKey<PlacedFeature> ABYSS_ROOTS_PLACED_KEY = registerKey("abyss_roots_placed_key");
+
     public static final RegistryKey<PlacedFeature> DEEP_JUNGLE_PLANTS_PLACED_KEY = registerKey("deep_jungle_plants_placed_key");
 
     public static final RegistryKey<PlacedFeature> DARKELP_PLACED_KEY = registerKey("darkelp_placed_key");
@@ -50,7 +50,7 @@ public class ModPlacedFeatures {
                 context,
                 ABYSS_PLANTS_PLACED_KEY,
                 abyss_plants_configured_key,
-                CountPlacementModifier.of(50),
+                CountPlacementModifier.of(25),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.BOTTOM_TO_120_RANGE,
                 EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
@@ -63,13 +63,14 @@ public class ModPlacedFeatures {
                 context,
                 DARKELP_PLACED_KEY,
                 darkelp_configured_key,
-                CountPlacementModifier.of(5),
+                CountPlacementModifier.of(100),
                 SquarePlacementModifier.of(),
                 PlacedFeatures.BOTTOM_TO_120_RANGE,
                 EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
                 RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
                 BiomePlacementModifier.of()
         );
+
     }
 
 

@@ -2,20 +2,23 @@ package com.laktostolerant.terrium.world;
 
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
+import com.laktostolerant.terrium.feature.DarkelpFeature;
+import com.laktostolerant.terrium.feature.DarkelpFeatureConfig;
 import com.laktostolerant.terrium.util.ModTags;
 import com.mojang.serialization.Lifecycle;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryEntryLookup;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.*;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.VerticalSurfaceType;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.gen.ProbabilityConfig;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
@@ -26,10 +29,10 @@ import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.util.collection.DataPool;
 import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class ModConfiguredFeatures {
-
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> HELLITE_ORE_KEY = registerKey("hellite_ore");
 
@@ -47,15 +50,17 @@ public class ModConfiguredFeatures {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         RuleTest purshaleOreInDeepslate = new TagMatchRuleTest(ModTags.Blocks.PURSHALE_ORE_REPLACEABLES);
-        List<OreFeatureConfig.Target> helliteOres =
-                List.of(OreFeatureConfig.createTarget(purshaleOreInDeepslate, ModBlocks.HELLITE_ORE.getDefaultState()));
+        List<OreFeatureConfig.Target> helliteOres = List.of(OreFeatureConfig.createTarget(purshaleOreInDeepslate, ModBlocks.HELLITE_ORE.getDefaultState()));
 
 
-
-        context.register(
+        /*
+        register(
+                context,
                 DARKELP_CONFIGURED_KEY,
-                new ConfiguredFeature<>(ModCustomFeatures.DARKELP_FEATURE_CONFIG, FeatureConfig.DEFAULT),
-                Lifecycle.stable());
+                ModCustomFeatures.DARKELP_FEATURE,
+                new DarkelpFeatureConfig(1, 2, 8)
+        );
+         */
 
 
         register(
@@ -64,9 +69,6 @@ public class ModConfiguredFeatures {
                 Feature.ORE,
                 new OreFeatureConfig(helliteOres, 4)
         );
-
-
-
 
         register(
                 context,
@@ -95,7 +97,8 @@ public class ModConfiguredFeatures {
                         10,
                         0.5F,
                         UniformIntProvider.create(6, 9),
-                        0.4F)
+                        0.4F
+                )
         );
 
         register(
@@ -136,7 +139,8 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.ROSE_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), 3),
 
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new TwoLayersFeatureSize(1, 0, 2)).build()
+        );
     }
 
 

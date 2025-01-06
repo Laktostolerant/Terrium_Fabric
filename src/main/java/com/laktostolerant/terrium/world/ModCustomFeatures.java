@@ -1,23 +1,33 @@
 package com.laktostolerant.terrium.world;
 
 import com.laktostolerant.terrium.Terrium;
-import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.feature.DarkelpFeature;
-import com.mojang.serialization.Lifecycle;
-import net.minecraft.registry.Registerable;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import com.laktostolerant.terrium.feature.DarkelpFeatureConfig;
+import net.minecraft.registry.*;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.DefaultFeatureConfig;
-import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.*;
 
-public class ModCustomFeatures {
-    public static final RegistryKey<Feature<?>> DARKELP_FEATURE_KEY = RegistryKey.of(RegistryKeys.FEATURE, Identifier.of(Terrium.MOD_ID, "darkelp_custom_feature_key"));
+public class ModCustomFeatures{
+    public static final Feature<DarkelpFeatureConfig> DARKELP_FEATURE = register("darkelp_feature_config", new DarkelpFeature(DarkelpFeatureConfig.CODEC));
+    public static final RegistryKey<Feature<?>> DARKELP_KEY = registerKey("darkelp_feature_key");
 
 
-    public static final Feature<DefaultFeatureConfig> DARKELP_FEATURE_CONFIG = new DarkelpFeature(DefaultFeatureConfig.CODEC, ModBlocks.DARKELP.getDefaultState(), 5);
+    public static RegistryKey<Feature<?>> registerKey(String name) {
+        return RegistryKey.of(RegistryKeys.FEATURE, Identifier.of(Terrium.MOD_ID, name));
+    }
+
+    private static <C extends FeatureConfig, F extends Feature<C>> F register(String name, F feature) {
+        return Registry.register(Registries.FEATURE, name, feature);
+    }
 
     public static void bootstrap(Registerable<Feature<?>> context) {
-        context.register(DARKELP_FEATURE_KEY, DARKELP_FEATURE_CONFIG, Lifecycle.stable());
+        /*
+        register(
+                context,
+                DARKELP,
+                DARKELP_FEATURE,
+                new DarkelpFeatureConfig(1, 2, 8)
+        );
+         */
     }
 }
