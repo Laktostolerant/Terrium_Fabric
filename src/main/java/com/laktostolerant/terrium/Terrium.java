@@ -4,6 +4,7 @@ import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.item.ModItemGroups;
 import com.laktostolerant.terrium.item.ModItems;
+import com.laktostolerant.terrium.world.ModCustomFeatures;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import com.laktostolerant.terrium.world.biome.ModBiomeModifiers;
 import com.laktostolerant.terrium.world.biome.ModBiomes;
@@ -48,6 +49,8 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.STRIPPED_ROSE_WOOD, 2, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROSE_PLANKS, 3, 10);
 		FlammableBlockRegistry.getDefaultInstance().add(ModBlocks.ROSE_LEAVES, 5, 15);
+
+		ModCustomFeatures.bootstrap();
 	}
 
 	@Override

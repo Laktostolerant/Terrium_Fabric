@@ -1,9 +1,9 @@
-// 1.21.1	2025-01-07T11:37:31.7415802	Terrium/Recipes
+// 1.21.1	2025-01-07T15:51:54.7335687	Terrium/Recipes
 bae9299c33e8bb86907025f93bf91f6e362249e2 data\terrium\advancement\recipes\misc\pinecone_jam.json
 73c015f6f965bc47897333d2a95ed203e1269a20 data\terrium\advancement\recipes\misc\hellite_ingot_from_smelting_hellite_ore.json
 04a2222393fa5e3dd70d9aca76a106fd7382c022 data\terrium\advancement\recipes\misc\hellite_ingot_from_blasting_hellite_ore.json
-b7a94e73f684b82227d13973914bf2b19e5420d7 data\terrium\recipe\hellite_ingot_from_blasting_raw_hellite.json
 4986e960007c3bf385a617ad6cf3865a965ab911 data\terrium\advancement\recipes\building_blocks\hellite_ingot.json
+b7a94e73f684b82227d13973914bf2b19e5420d7 data\terrium\recipe\hellite_ingot_from_blasting_raw_hellite.json
 5dadc37f4e5996a3dd92fca105fcab4e137d98c7 data\terrium\recipe\hellite_ingot_from_smelting_raw_hellite.json
 8b4cbf9fa845ba02493a035c0fd09580d5f2312e data\terrium\recipe\hellite_ingot_from_blasting_hellite_ore.json
 c3b11bedc95ee7089d9de58d160bbf5d3575dae3 data\terrium\advancement\recipes\misc\hellite_ingot_from_blasting_raw_hellite.json

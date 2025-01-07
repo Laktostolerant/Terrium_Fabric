@@ -15,6 +15,7 @@ public class TerriumDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModLootTableProvider::new);
@@ -28,8 +29,6 @@ public class TerriumDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 
 		Terrium.LOGGER.info("Building registries for Terrium");
-		ModCustomFeatures.bootstrap();
-		//registryBuilder.addRegistry(RegistryKeys.FEATURE, ModCustomFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::boostrap);

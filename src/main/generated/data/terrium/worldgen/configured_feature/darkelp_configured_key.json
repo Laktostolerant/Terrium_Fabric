@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:darkelp_feature",
+  "config": {
+    "max_height": 8,
+    "spread_height": 5,
+    "spread_width": 2
+  }
+}
