@@ -28,7 +28,8 @@ public class TerriumDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 
 		Terrium.LOGGER.info("Building registries for Terrium");
-		registryBuilder.addRegistry(RegistryKeys.FEATURE, ModCustomFeatures::bootstrap);
+		ModCustomFeatures.bootstrap();
+		//registryBuilder.addRegistry(RegistryKeys.FEATURE, ModCustomFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::boostrap);

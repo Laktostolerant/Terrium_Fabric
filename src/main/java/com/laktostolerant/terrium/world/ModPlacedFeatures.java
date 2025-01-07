@@ -21,8 +21,6 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> HELLITE_ORE_PLACED_KEY = registerKey("hellite_ore_placed");
     public static final RegistryKey<PlacedFeature> ABYSS_PLANTS_PLACED_KEY = registerKey("abyss_plants_placed_key");
 
-    public static final RegistryKey<PlacedFeature> DEEP_JUNGLE_PLANTS_PLACED_KEY = registerKey("deep_jungle_plants_placed_key");
-
     public static final RegistryKey<PlacedFeature> DARKELP_PLACED_KEY = registerKey("darkelp_placed_key");
 
 
@@ -37,6 +35,7 @@ public class ModPlacedFeatures {
     public static void boostrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
         RegistryEntry<ConfiguredFeature<?, ?>> abyss_plants_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.ABYSS_PLANTS_KEY);
+
         RegistryEntry<ConfiguredFeature<?, ?>> darkelp_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DARKELP_CONFIGURED_KEY);
 
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);

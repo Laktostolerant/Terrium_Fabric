@@ -8,9 +8,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
 
 public class ModCustomFeatures{
-    public static final Feature<DarkelpFeatureConfig> DARKELP_FEATURE = register("darkelp_feature_config", new DarkelpFeature(DarkelpFeatureConfig.CODEC));
-    public static final RegistryKey<Feature<?>> DARKELP_KEY = registerKey("darkelp_feature_key");
-
+    public static final Feature<DarkelpFeatureConfig> DARKELP_FEATURE = new DarkelpFeature(DarkelpFeatureConfig.CODEC);
+    // static final RegistryKey<Feature<?>> DARKELP_KEY = registerKey("darkelp_feature_key");
 
     public static RegistryKey<Feature<?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.FEATURE, Identifier.of(Terrium.MOD_ID, name));
@@ -20,7 +19,11 @@ public class ModCustomFeatures{
         return Registry.register(Registries.FEATURE, name, feature);
     }
 
-    public static void bootstrap(Registerable<Feature<?>> context) {
+    public static void bootstrap() {
+        Terrium.LOGGER.info("BOOTSTRAPPING FEATURES");
+
+        //Registry.register(Registries.FEATURE, Identifier.of("terrium", "darkelp_feature"), DARKELP_FEATURE);
+
         /*
         register(
                 context,
@@ -28,6 +31,6 @@ public class ModCustomFeatures{
                 DARKELP_FEATURE,
                 new DarkelpFeatureConfig(1, 2, 8)
         );
-         */
+        */
     }
 }

@@ -43,7 +43,7 @@ public class DarkelpFeature extends Feature<DarkelpFeatureConfig> {
                         m = 1;
                     }
 
-                    generateVineColumn(structureWorldAccess, random, mutable, m, 17, 25);
+                    generateDarkelpColumn(structureWorldAccess, random, mutable, m, 17, 25);
                 }
             }
 
@@ -63,7 +63,7 @@ public class DarkelpFeature extends Feature<DarkelpFeatureConfig> {
         return true;
     }
 
-    public static void generateVineColumn(WorldAccess world, Random random, BlockPos.Mutable pos, int maxLength, int minAge, int maxAge) {
+    public static void generateDarkelpColumn(WorldAccess world, Random random, BlockPos.Mutable pos, int maxLength, int minAge, int maxAge) {
         for(int i = 1; i <= maxLength; ++i) {
             if (world.isAir(pos)) {
                 if (i == maxLength || !world.isAir(pos.up())) {

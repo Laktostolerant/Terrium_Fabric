@@ -25,21 +25,7 @@
     "water_color": 16157393,
     "water_fog_color": 12524326
   },
-  "features": [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [
-      "terrium:abyss_plants_placed_key",
-      "terrium:darkelp_placed_key"
-    ]
-  ],
+  "features": [],
   "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
