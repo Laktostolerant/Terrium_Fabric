@@ -54,9 +54,8 @@ public class ModConfiguredFeatures {
                 context,
                 DARKELP_CONFIGURED_KEY,
                 ModCustomFeatures.DARKELP_FEATURE,
-                new DarkelpFeatureConfig(2, 5, 8)
+                new DarkelpFeatureConfig(5, 5, 8)
         );
-
 
         register(
                 context,
