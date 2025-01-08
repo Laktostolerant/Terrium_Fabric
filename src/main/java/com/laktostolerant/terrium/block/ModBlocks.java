@@ -104,7 +104,7 @@ public class ModBlocks {
                     .pistonBehavior(PistonBehavior.DESTROY),
 
                     Direction.UP, // Growth direction
-                    Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 9.0, 16.0),
+                    Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0),
                     false // Does not tick water
             )
     );
