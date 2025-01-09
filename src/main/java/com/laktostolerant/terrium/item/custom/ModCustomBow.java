@@ -77,9 +77,8 @@ public class ModCustomBow extends RangedWeaponItem {
             if (remainingShards > 0) {
                 if (world instanceof ServerWorld) {
                     PineconeShardEntity shard = new PineconeShardEntity(world, user);
-                    shard.setVelocity(user, user.getPitch(), user.getYaw(), 1.0f, 2.5f, 0f);
+                    shard.setVelocity(user, user.getPitch(), user.getYaw(), 1.0f, 3f, 0f);
                     world.spawnEntity(shard);
-                    //this.shoot(user, shard, 1, 5, 1, 1, (LivingEntity)null  );
                 }
                 remainingShards--;
 

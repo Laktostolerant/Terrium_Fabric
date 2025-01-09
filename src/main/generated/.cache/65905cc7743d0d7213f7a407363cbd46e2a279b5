@@ -1,7 +1,7 @@
-// 1.21.1	2025-01-09T19:51:59.2286138	Terrium/Tags for minecraft:block
+// 1.21.1	2025-01-09T22:07:09.0184775	Terrium/Tags for minecraft:block
 07349f73697318aecea87074a108a899d3ad9fe0 data\minecraft\tags\block\logs_that_burn.json
-3c11845da1752375a11f1ac26185c7859e9fe59f data\terrium\tags\block\needs_astralite_tool.json
 9add3df9de65d41c5a5083dc7a1d27a39ce2744c data\minecraft\tags\block\mineable\pickaxe.json
+3c11845da1752375a11f1ac26185c7859e9fe59f data\terrium\tags\block\needs_astralite_tool.json
 d9e15ce9b2ca23ead68d81403e1110a024d0223b data\minecraft\tags\block\deepslate_ore_replaceables.json
 ae71a2de8e73b2ec1e2fcb9cc314f39d9a6b99e5 data\terrium\tags\block\incorrect_for_hellite_tool.json
 944c7a3c4c866c38de169688a549d72091912169 data\minecraft\tags\block\overworld_carver_replaceables.json

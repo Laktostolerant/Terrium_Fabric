@@ -25,7 +25,7 @@ public class PineconeShardProjectileRenderer extends EntityRenderer<PineconeShar
     public void render(PineconeShardEntity entity, float yaw, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
         matrices.push();
 
-        matrices.translate(0, -1.0F, 0);
+        matrices.translate(0, -1.5F, 0);
 
         VertexConsumer vertexconsumer = ItemRenderer.getDirectItemGlintConsumer(vertexConsumers,
                 this.model.getLayer(Identifier.of(Terrium.MOD_ID, "textures/entity/pinecone_shard/pinecone_shard.png")), false, false);

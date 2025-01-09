@@ -48,14 +48,6 @@ public class PineconeShardEntity extends PersistentProjectileEntity {
         return null;
     }
 
-    public float getRenderingRotation() {
-        rotation += 0.5f;
-        if(rotation >= 360) {
-            rotation = 0;
-        }
-        return rotation;
-    }
-
     public boolean isGrounded() {
         return inGround;
     }
@@ -68,22 +60,23 @@ public class PineconeShardEntity extends PersistentProjectileEntity {
         mc.inGameHud.getChatHud().addMessage(Text.literal("i hit a player"));
 
         Entity entity = entityHitResult.getEntity();
-        entity.damage(this.getDamageSources().thrown(this, this.getOwner()), 4);
-
-        if (!this.getWorld().isClient()) {
-            this.getWorld().sendEntityStatus(this, (byte)3);
-            this.discard();
-        }
+        entity.damage(this.getDamageSources().thrown(this, this.getOwner()), 1);
     }
 
     protected void onCollision(HitResult hitResult) {
         MinecraftClient mc = MinecraftClient.getInstance();
+        if(hitResult.getType() == HitResult.Type.MISS)
+            return;
+
         super.onCollision(hitResult);
         if (!this.getWorld().isClient) {
+            this.getWorld().addParticle(ParticleTypes.CRIT,
+                    hitResult.getPos().getX(), hitResult.getPos().getY() + 1F, hitResult.getPos().getZ(),
+                    0.0, 0.0, 0.0); // Add velocity to particles if needed
+
             mc.inGameHud.getChatHud().addMessage(Text.literal("i hit this " + hitResult));
             this.getWorld().sendEntityStatus(this, (byte)3);
-            //this.discard();
+            this.discard();
         }
-
     }
 }
