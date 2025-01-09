@@ -69,7 +69,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.PINECONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINECANNON, Models.HANDHELD_MACE);
+        itemModelGenerator.register(ModItems.PINECANNON, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINECANNON_CROSSBOW, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINECONE_JAM, Models.GENERATED);
 

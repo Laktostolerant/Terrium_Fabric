@@ -8,10 +8,12 @@ import com.laktostolerant.terrium.item.custom.ModDrinkItem;
 import com.laktostolerant.terrium.item.custom.ModCustomBow;
 import com.laktostolerant.terrium.util.ModTags;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.UseAction;
 
 public class ModItems {
@@ -20,8 +22,8 @@ public class ModItems {
     public static final Item RAW_HELLITE = registerItem("raw_hellite", new Item(new Item.Settings()));
     public static final Item HELLITE_NUGGET = registerItem("hellite_nugget", new Item(new Item.Settings()));
 
-    public static final Item ASTRALITE_DUST = registerItem("astralite_dust", new Item(new Item.Settings()));
-    public static final Item ASTRALITE_SHARD = registerItem("astralite_shard", new Item(new Item.Settings()));
+    public static final Item ASTRALITE_DUST = registerItem("astralite_dust", new Item(new Item.Settings().rarity(Rarity.UNCOMMON).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
+    public static final Item ASTRALITE_SHARD = registerItem("astralite_shard", new Item(new Item.Settings().rarity(Rarity.UNCOMMON).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
     public static final Item PINECONE = registerItem("pinecone", new Item(new Item.Settings()));
     public static final Item PINECONE_JAM = registerItem("pinecone_jam", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.PINECONE_JAM)));
@@ -68,11 +70,12 @@ public class ModItems {
 
 
     public static final Item PINECANNON = registerItem("pinecannon", new ModCustomBow(new Item.Settings()
-            .maxDamage(1)
             .maxCount(1),
 
+
             50,
-            10
+            10,
+            6
             )
     );
 

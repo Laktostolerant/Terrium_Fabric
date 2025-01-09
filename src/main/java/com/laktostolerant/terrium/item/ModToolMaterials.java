@@ -14,8 +14,8 @@ import java.util.function.Supplier;
 
 
 public enum ModToolMaterials implements ToolMaterial {
-    HELLITE(ModTags.Blocks.INCORRECT_FOR_HELLITE_TOOL, 3200, 11.0F, 5.0F, 18, () -> Ingredient.ofItems(ModItems.HELLITE_INGOT)),
-    ASTRALITE(ModTags.Blocks.INCORRECT_FOR_ASTRALITE_TOOL, 4500, 12.0F, 6.0F, 21, () -> Ingredient.ofItems(ModItems.ASTRALITE_SHARD));
+    HELLITE(ModTags.Blocks.INCORRECT_FOR_HELLITE_TOOL, 3200, 12.0F, 5.0F, 18, () -> Ingredient.ofItems(ModItems.HELLITE_INGOT)),
+    ASTRALITE(ModTags.Blocks.INCORRECT_FOR_ASTRALITE_TOOL, 4500, 13.0F, 6.0F, 21, () -> Ingredient.ofItems(ModItems.ASTRALITE_SHARD));
 
 
     private final TagKey<Block> inverseTag;

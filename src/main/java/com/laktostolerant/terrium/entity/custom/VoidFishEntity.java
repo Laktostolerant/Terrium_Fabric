@@ -48,7 +48,7 @@ public class VoidFishEntity extends FlyingEntity {
             this.move(MovementType.SELF, this.getVelocity());
             this.setVelocity(this.getVelocity().multiply(0.9));
             if (this.getTarget() == null) {
-                this.setVelocity(this.getVelocity().add(0.0, -0.005, 0.0));
+                this.setVelocity(this.getVelocity().add(0.0, -0.001, 0.0));
             }
         } else {
             super.travel(movementInput);
@@ -89,9 +89,6 @@ public class VoidFishEntity extends FlyingEntity {
         }
 
         public void tick() {
-            MinecraftClient mc = MinecraftClient.getInstance();
-            mc.inGameHud.getChatHud().addMessage(Text.literal("my state is " + this.state));
-
             if (this.state == State.MOVE_TO) {
                 if (this.collisionCheckCooldown-- <= 0) {
                     this.collisionCheckCooldown += this.fish.getRandom().nextInt(5) + 2;
@@ -172,9 +169,6 @@ public class VoidFishEntity extends FlyingEntity {
         private final VoidFishEntity fish;
         private BlockPos targetTorch;
 
-        private long startTime;
-        float huntTimer = 0;
-
         public BreakTorchGoal(VoidFishEntity fish) {
             this.fish = fish;
             this.setControls(EnumSet.of(Control.MOVE));
@@ -183,7 +177,7 @@ public class VoidFishEntity extends FlyingEntity {
         @Override
         public boolean canStart() {
             // Random chance to start
-            if (Random.create().nextFloat() < 0.01) { // 5% chance each tick
+            if (Random.create().nextFloat() < 0.005) { // 1% chance each tick
                 this.targetTorch = this.findNearbyTorch();
                 return this.targetTorch != null;
             }
@@ -223,7 +217,7 @@ public class VoidFishEntity extends FlyingEntity {
 
         private BlockPos findNearbyTorch() {
             BlockPos fishPos = this.fish.getBlockPos();
-            int radius = 10; // Search radius
+            int radius = 10;
 
             for (BlockPos pos : BlockPos.iterate(fishPos.add(-radius, -radius, -radius), fishPos.add(radius, radius, radius))) {
                 if (this.fish.getWorld().getBlockState(pos).getBlock() instanceof TorchBlock) {
@@ -231,11 +225,6 @@ public class VoidFishEntity extends FlyingEntity {
                 }
             }
             return null;
-        }
-
-        private long getElapsedTime() {
-            // Return the elapsed time in ticks since the hunt started
-            return this.fish.getWorld().getTime() - this.startTime;
         }
     }
 }
