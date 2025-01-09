@@ -1,21 +1,28 @@
 package com.laktostolerant.terrium.item.custom;
 
+import com.laktostolerant.terrium.entity.ModEntities;
+import com.laktostolerant.terrium.entity.custom.PineconeShardEntity;
 import com.laktostolerant.terrium.item.ModItems;
+import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.ChargedProjectilesComponent;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -68,7 +75,12 @@ public class ModCustomBow extends RangedWeaponItem {
             user.setCurrentHand(hand);
 
             if (remainingShards > 0) {
-                this.shoot(user, projectile, 0, DEFAULT_SPEED, 1.0F, 0.0F, null);
+                if (world instanceof ServerWorld) {
+                    PineconeShardEntity shard = new PineconeShardEntity(world, user);
+                    shard.setVelocity(user, user.getPitch(), user.getYaw(), 1.0f, 2.5f, 0f);
+                    world.spawnEntity(shard);
+                    //this.shoot(user, shard, 1, 5, 1, 1, (LivingEntity)null  );
+                }
                 remainingShards--;
 
                 mc.inGameHud.getChatHud().addMessage(Text.literal("remaining pinecone shards " + remainingShards));
@@ -135,29 +147,6 @@ public class ModCustomBow extends RangedWeaponItem {
     }
 
 
-    protected void shoot(LivingEntity shooter, ProjectileEntity projectile, int index, float speed, float divergence, float yaw, @Nullable LivingEntity target) {
-        MinecraftClient mc = MinecraftClient.getInstance();
-        mc.inGameHud.getChatHud().addMessage(Text.literal("shots fired"));
-
-        Vector3f vector3f;
-        if (target != null) {
-            double d = target.getX() - shooter.getX();
-            double e = target.getZ() - shooter.getZ();
-            double f = Math.sqrt(d * d + e * e);
-            double g = target.getBodyY(0.3333333333333333) - projectile.getY() + f * 0.20000000298023224;
-            vector3f = calcVelocity(shooter, new Vec3d(d, g, e), yaw);
-        } else {
-            Vec3d vec3d = shooter.getOppositeRotationVector(1.0F);
-            Quaternionf quaternionf = (new Quaternionf()).setAngleAxis((double)(yaw * 0.017453292F), vec3d.x, vec3d.y, vec3d.z);
-            Vec3d vec3d2 = shooter.getRotationVec(1.0F);
-            vector3f = vec3d2.toVector3f().rotate(quaternionf);
-        }
-
-        projectile.setVelocity((double)vector3f.x(), (double)vector3f.y(), (double)vector3f.z(), speed, divergence);
-        float h = getSoundPitch(shooter.getRandom(), index);
-        shooter.getWorld().playSound((PlayerEntity)null, shooter.getX(), shooter.getY(), shooter.getZ(), SoundEvents.ITEM_CROSSBOW_SHOOT, shooter.getSoundCategory(), 1.0F, h);
-    }
-
     public int getMaxUseTime(ItemStack stack, LivingEntity user) {
         return getPullTime(stack, user) + 3;
     }
@@ -197,6 +186,11 @@ public class ModCustomBow extends RangedWeaponItem {
     @Override
     public int getRange() {
         return 50;
+    }
+
+    @Override
+    protected void shoot(LivingEntity shooter, ProjectileEntity projectile, int index, float speed, float divergence, float yaw, @Nullable LivingEntity target) {
+
     }
 
     @Override
