@@ -5,10 +5,11 @@ import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.fluid.ModFluids;
 import com.laktostolerant.terrium.item.custom.ModCustomCrossbow;
 import com.laktostolerant.terrium.item.custom.ModDrinkItem;
-import com.laktostolerant.terrium.item.custom.ModCustomBow;
-import com.laktostolerant.terrium.util.ModTags;
+import com.laktostolerant.terrium.item.custom.ModCustomCannon;
+import com.laktostolerant.terrium.item.custom.RecallItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -27,6 +28,7 @@ public class ModItems {
 
     public static final Item PINECONE = registerItem("pinecone", new Item(new Item.Settings()));
     public static final Item PINECONE_JAM = registerItem("pinecone_jam", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.PINECONE_JAM)));
+    public static final Item POTION_OF_RECALL = registerItem("potion_of_recall", new RecallItem(new Item.Settings().food(ModFoodComponents.PINECONE_JAM)));
 
     public static final Item HELLITE_SWORD = registerItem("hellite_sword", new SwordItem(ModToolMaterials.HELLITE, new Item.Settings()
             .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.HELLITE, 3, -2.4f))));
@@ -69,7 +71,7 @@ public class ModItems {
             .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterials.ASTRALITE, -4, -3f))));
 
 
-    public static final Item PINECANNON = registerItem("pinecannon", new ModCustomBow(new Item.Settings()
+    public static final Item PINECANNON = registerItem("pinecannon", new ModCustomCannon(new Item.Settings()
             .maxCount(1),
 
 

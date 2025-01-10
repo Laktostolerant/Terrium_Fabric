@@ -72,6 +72,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINECANNON, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINECANNON_CROSSBOW, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINECONE_JAM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_RECALL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.HELLITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.HELLITE_NUGGET, Models.GENERATED);

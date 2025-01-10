@@ -14,13 +14,17 @@ public class ModEntities {
             Registries.ENTITY_TYPE,
             Identifier.of(Terrium.MOD_ID, "void_fish"),
             EntityType.Builder.create(VoidFishEntity::new, SpawnGroup.CREATURE)
-                    .dimensions(0.3F, 0.3F).build()
+                    .dimensions(0.3F, 0.3F)
+
+                    .build()
     );
 
     public static final EntityType<PineconeShardEntity> PINECONE_SHARD = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(Terrium.MOD_ID, "pinecone_shard"),
             EntityType.Builder.<PineconeShardEntity>create(PineconeShardEntity::new, SpawnGroup.MISC)
-                    .dimensions(0.1f, 0.1f).build());
+                    .dimensions(0.2f, 0.2f)
+
+                    .build());
 
     public static void registerModEntities() {
         Terrium.LOGGER.info("Registering Mod Entities for " + Terrium.MOD_ID);

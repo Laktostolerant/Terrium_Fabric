@@ -1,28 +1,22 @@
 package com.laktostolerant.terrium.item.custom;
 
-import com.laktostolerant.terrium.entity.ModEntities;
 import com.laktostolerant.terrium.entity.custom.PineconeShardEntity;
 import com.laktostolerant.terrium.item.ModItems;
-import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.EnchantmentEffectComponentTypes;
 import net.minecraft.component.type.ChargedProjectilesComponent;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -32,14 +26,13 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-public class ModCustomBow extends RangedWeaponItem {
+public class ModCustomCannon extends RangedWeaponItem {
 
     public static int RANGE;
     public static float DRAW_SPEED;
@@ -58,7 +51,7 @@ public class ModCustomBow extends RangedWeaponItem {
     private int remainingShards = 0;
     private boolean isLoaded = false;
 
-    public ModCustomBow(Settings settings, int range, float drawSpeed, int maxAmmo) {
+    public ModCustomCannon(Settings settings, int range, float drawSpeed, int maxAmmo) {
         super(settings);
 
         RANGE = range;
@@ -69,23 +62,19 @@ public class ModCustomBow extends RangedWeaponItem {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
 
-        MinecraftClient mc = MinecraftClient.getInstance();
-
         if (!user.getProjectileType(itemStack).isEmpty() && world instanceof ServerWorld serverWorld) {
             user.setCurrentHand(hand);
 
             if (remainingShards > 0) {
                 if (world instanceof ServerWorld) {
                     PineconeShardEntity shard = new PineconeShardEntity(world, user);
-                    shard.setVelocity(user, user.getPitch(), user.getYaw(), 1.0f, 3f, 0f);
+                    shard.setVelocity(user, user.getPitch(), user.getYaw(), 0.0f, 4f, 0f);
                     world.spawnEntity(shard);
                 }
                 remainingShards--;
 
-                mc.inGameHud.getChatHud().addMessage(Text.literal("remaining pinecone shards " + remainingShards));
-                return TypedActionResult.success(itemStack); // Firing when there is ammo left
+                return TypedActionResult.consume(itemStack); // Firing when there is ammo left
             } else {
-                mc.inGameHud.getChatHud().addMessage(Text.literal("no pinecone shards left"));
                 return TypedActionResult.consume(itemStack); // Out of ammo
             }
         } else {
@@ -95,7 +84,7 @@ public class ModCustomBow extends RangedWeaponItem {
 
 
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
-        if (!world.isClient && remainingShards == 0) {
+        if (!world.isClient && remainingShards == 0 && !isLoaded) {
             CrossbowItem.LoadingSounds loadingSounds = this.getLoadingSounds(stack);
             float f = (float)(stack.getMaxUseTime(user) - remainingUseTicks) / (float)getPullTime(stack, user);
 
@@ -106,7 +95,7 @@ public class ModCustomBow extends RangedWeaponItem {
             }
 
             if (f >= 0.9F && remainingShards < 1) {
-                remainingShards = 6;
+                remainingShards = maxAmmo;
                 loadingSounds.mid().ifPresent((sound) -> {
                     world.playSound((PlayerEntity)null, user.getX(), user.getY(), user.getZ(), (SoundEvent)sound.value(), SoundCategory.PLAYERS, 0.5F, 1.0F);
                 });
@@ -153,16 +142,20 @@ public class ModCustomBow extends RangedWeaponItem {
         //float f = EnchantmentHelper.getCrossbowChargeTime(stack, user, 1.25F);
         return MathHelper.floor(10);
     }
+
     @Override
     public UseAction getUseAction(ItemStack stack) {
         return isLoaded ? UseAction.NONE : UseAction.BOW;
     }
+
     CrossbowItem.LoadingSounds getLoadingSounds(ItemStack stack) {
         return (CrossbowItem.LoadingSounds)EnchantmentHelper.getEffect(stack, EnchantmentEffectComponentTypes.CROSSBOW_CHARGING_SOUNDS).orElse(DEFAULT_LOADING_SOUNDS);
     }
+
     public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.translatable("Loaded Ammo: " + this.remainingShards));
+        tooltip.add(Text.translatable("Loaded Shards: " + this.remainingShards));
     }
+
     public boolean isUsedOnRelease(ItemStack stack) {
         return stack.isOf(this);
     }
@@ -174,9 +167,11 @@ public class ModCustomBow extends RangedWeaponItem {
 
         return f;
     }
+
     private static float getSoundPitch(Random random, int index) {
         return index == 0 ? 1.0F : getSoundPitch((index & 1) == 1, random);
     }
+
     private static float getSoundPitch(boolean flag, Random random) {
         float f = flag ? 0.63F : 0.43F;
         return 1.0F / (random.nextFloat() * 0.5F + 1.8F) + f;

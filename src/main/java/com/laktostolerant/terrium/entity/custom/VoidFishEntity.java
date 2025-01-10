@@ -152,9 +152,12 @@ public class VoidFishEntity extends FlyingEntity {
             }
         }
 
+        /*
         public boolean shouldContinue() {
-            return false;
+            return true;
         }
+
+         */
 
         public void start() {
             Random random = this.fish.getRandom();

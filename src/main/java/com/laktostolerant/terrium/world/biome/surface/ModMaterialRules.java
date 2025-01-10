@@ -15,6 +15,7 @@ public class ModMaterialRules {
     private static final MaterialRules.MaterialRule GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     private static final MaterialRules.MaterialRule LOAMSTONE = makeStateRule(ModBlocks.LOAMSTONE);
     private static final MaterialRules.MaterialRule PURSHALE = makeStateRule(ModBlocks.PURSHALE);
+    private static final MaterialRules.MaterialRule CEILING_ROCK = makeStateRule(Blocks.TUFF);
 
     private  static final MaterialRules.MaterialRule WOOL_1 = makeStateRule(Blocks.RED_WOOL);
     private  static final MaterialRules.MaterialRule WOOL_2 = makeStateRule(Blocks.BLUE_WOOL);
@@ -33,7 +34,7 @@ public class ModMaterialRules {
                 MaterialRules.condition(MaterialRules.biome(ModBiomes.DEEP_JUNGLE),
                         MaterialRules.sequence(
                                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, GRASS),
-                                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, LOAMSTONE),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, CEILING_ROCK),
                                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, DIRT)
                         )
                 ),

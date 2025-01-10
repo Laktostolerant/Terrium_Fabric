@@ -54,17 +54,13 @@ public class PineconeShardEntity extends PersistentProjectileEntity {
 
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
-        super.onEntityHit(entityHitResult);
-
-        MinecraftClient mc = MinecraftClient.getInstance();
-        mc.inGameHud.getChatHud().addMessage(Text.literal("i hit a player"));
+        //super.onEntityHit(entityHitResult);
 
         Entity entity = entityHitResult.getEntity();
-        entity.damage(this.getDamageSources().thrown(this, this.getOwner()), 1);
+        entity.damage(this.getDamageSources().thrown(this, this.getOwner()), 2);
     }
 
     protected void onCollision(HitResult hitResult) {
-        MinecraftClient mc = MinecraftClient.getInstance();
         if(hitResult.getType() == HitResult.Type.MISS)
             return;
 
@@ -74,7 +70,6 @@ public class PineconeShardEntity extends PersistentProjectileEntity {
                     hitResult.getPos().getX(), hitResult.getPos().getY() + 1F, hitResult.getPos().getZ(),
                     0.0, 0.0, 0.0); // Add velocity to particles if needed
 
-            mc.inGameHud.getChatHud().addMessage(Text.literal("i hit this " + hitResult));
             this.getWorld().sendEntityStatus(this, (byte)3);
             this.discard();
         }

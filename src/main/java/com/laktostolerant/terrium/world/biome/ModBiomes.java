@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium.world.biome;
 
 import com.laktostolerant.terrium.Terrium;
+import com.laktostolerant.terrium.entity.ModEntities;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.entity.EntityType;
@@ -65,7 +66,7 @@ public class ModBiomes {
     public static Biome abyssBiome(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.TROPICAL_FISH, 5, 4, 4));
+        //spawnBuilder.spawn(SpawnGroup.AMBIENT, new SpawnSettings.SpawnEntry(ModEntities.VOID_FISH, 20, 10, 15));
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),

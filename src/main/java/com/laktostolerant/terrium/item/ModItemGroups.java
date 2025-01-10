@@ -90,6 +90,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SNOWY_GRASS);
 
                         entries.add(ModBlocks.NATURAL_ASTRALITE);
+
+                        entries.add(ModItems.POTION_OF_RECALL);
                     })
 
                     .build()
