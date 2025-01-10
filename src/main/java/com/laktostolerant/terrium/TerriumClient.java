@@ -2,10 +2,7 @@ package com.laktostolerant.terrium;
 
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.entity.ModEntities;
-import com.laktostolerant.terrium.entity.client.PineconeShardProjectileModel;
-import com.laktostolerant.terrium.entity.client.PineconeShardProjectileRenderer;
-import com.laktostolerant.terrium.entity.client.VoidFishModel;
-import com.laktostolerant.terrium.entity.client.VoidFishRenderer;
+import com.laktostolerant.terrium.entity.client.*;
 import com.laktostolerant.terrium.fluid.ModFluids;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -44,6 +41,9 @@ public class TerriumClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(VoidFishModel.VOID_FISH, VoidFishModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.VOID_FISH, VoidFishRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(CrawlerModel.CRAWLER, CrawlerModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.CRAWLER, CrawlerRenderer::new);
 
         EntityModelLayerRegistry.registerModelLayer(PineconeShardProjectileModel.PINECONE_SHARD, PineconeShardProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.PINECONE_SHARD, PineconeShardProjectileRenderer::new);

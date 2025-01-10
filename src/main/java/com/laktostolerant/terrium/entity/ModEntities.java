@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium.entity;
 
 import com.laktostolerant.terrium.Terrium;
+import com.laktostolerant.terrium.entity.custom.CrawlerEntity;
 import com.laktostolerant.terrium.entity.custom.PineconeShardEntity;
 import com.laktostolerant.terrium.entity.custom.VoidFishEntity;
 import net.minecraft.entity.EntityType;
@@ -15,6 +16,15 @@ public class ModEntities {
             Identifier.of(Terrium.MOD_ID, "void_fish"),
             EntityType.Builder.create(VoidFishEntity::new, SpawnGroup.CREATURE)
                     .dimensions(0.3F, 0.3F)
+
+                    .build()
+    );
+
+    public static final EntityType<CrawlerEntity> CRAWLER = Registry.register(
+            Registries.ENTITY_TYPE,
+            Identifier.of(Terrium.MOD_ID, "crawler"),
+            EntityType.Builder.create(CrawlerEntity::new, SpawnGroup.CREATURE)
+                    .dimensions(1F, 1F)
 
                     .build()
     );
