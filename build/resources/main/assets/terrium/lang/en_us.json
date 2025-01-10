@@ -52,8 +52,11 @@
 
   "block.terrium.blackrock_pillar": "Blackrock Pillar",
 
+  "block.terrium.natural_astralite": "Natural Astralite",
+
   "item.terrium.goop_bucket": "Goop Bucket",
 
+  "item.terrium.astralite_dust": "Astralite Dust",
   "item.terrium.astralite_shard": "Astralite Shard",
 
   "item.terrium.astralite_sword": "Astralite Sword",
@@ -66,6 +69,8 @@
   "item.terrium.astralite_chestplate": "Astralite Chestplate",
   "item.terrium.astralite_leggings": "Astralite Leggings",
   "item.terrium.astralite_boots": "Astralite Boots",
+
+  "item.terrium.potion_of_recall": "Potion of Recall",
 
 
   "itemgroup.terrium.terrium_items": "Terrium"

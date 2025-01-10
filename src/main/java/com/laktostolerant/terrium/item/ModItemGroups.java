@@ -21,6 +21,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_HELLITE);
                         entries.add(ModItems.HELLITE_NUGGET);
 
+                        entries.add(ModItems.ASTRALITE_DUST);
                         entries.add(ModItems.ASTRALITE_SHARD);
 
                         entries.add(ModItems.HELLITE_SWORD);
@@ -89,6 +90,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SNOWY_GRASS);
 
                         entries.add(ModBlocks.NATURAL_ASTRALITE);
+
+                        entries.add(ModItems.POTION_OF_RECALL);
                     })
 
                     .build()

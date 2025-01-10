@@ -15,6 +15,7 @@ public class ModMaterialRules {
     private static final MaterialRules.MaterialRule GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     private static final MaterialRules.MaterialRule LOAMSTONE = makeStateRule(ModBlocks.LOAMSTONE);
     private static final MaterialRules.MaterialRule PURSHALE = makeStateRule(ModBlocks.PURSHALE);
+    private static final MaterialRules.MaterialRule CEILING_ROCK = makeStateRule(Blocks.TUFF);
 
     private  static final MaterialRules.MaterialRule WOOL_1 = makeStateRule(Blocks.RED_WOOL);
     private  static final MaterialRules.MaterialRule WOOL_2 = makeStateRule(Blocks.BLUE_WOOL);
@@ -27,25 +28,36 @@ public class ModMaterialRules {
 
         MaterialRules.MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
 
+
         return MaterialRules.sequence(
-                MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.DEEP_JUNGLE),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, GRASS)),
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, LOAMSTONE)),
+                // Deep Jungle Biome Rules
+                MaterialRules.condition(MaterialRules.biome(ModBiomes.DEEP_JUNGLE),
+                        MaterialRules.sequence(
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, GRASS),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, CEILING_ROCK),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, DIRT)
+                        )
+                ),
 
-                MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.DEEP_JUNGLE),
-                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, DIRT)),
+                // Abyss Biome Rules
+                MaterialRules.condition(MaterialRules.biome(ModBiomes.ABYSS_BIOME),
+                        MaterialRules.sequence(
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6, PURSHALE),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, PURSHALE)
+                        )
+                ),
 
-                MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.ABYSS_BIOME),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, PURSHALE)),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, PURSHALE)),
-
-                MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.TEST_BIOME),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, WOOL_1)),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, WOOL_2)),
+                // Test Biome Rules
+                MaterialRules.condition(MaterialRules.biome(ModBiomes.TEST_BIOME),
+                        MaterialRules.sequence(
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH, WOOL_1),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, WOOL_2)
+                        )
+                ),
 
                 // Default to a grass and dirt surface
                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
-        ));
+        );
     }
 
     private static MaterialRules.MaterialRule makeStateRule(Block block) {

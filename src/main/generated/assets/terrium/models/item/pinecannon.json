@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/handheld_mace",
+  "parent": "minecraft:item/handheld",
   "textures": {
     "layer0": "terrium:item/pinecannon"
   }

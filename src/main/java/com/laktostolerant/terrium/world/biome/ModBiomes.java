@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium.world.biome;
 
 import com.laktostolerant.terrium.Terrium;
+import com.laktostolerant.terrium.entity.ModEntities;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.entity.EntityType;
@@ -65,13 +66,14 @@ public class ModBiomes {
     public static Biome abyssBiome(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.TROPICAL_FISH, 5, 4, 4));
+        //spawnBuilder.spawn(SpawnGroup.AMBIENT, new SpawnSettings.SpawnEntry(ModEntities.VOID_FISH, 20, 10, 15));
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
-        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ABYSS_PLANTS_PLACED_KEY);
+        //biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ABYSS_PLANTS_PLACED_KEY);
+
         biomeBuilder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CAVE_EXTRA_UNDERGROUND);
 
         return new Biome.Builder()
@@ -84,7 +86,7 @@ public class ModBiomes {
                         .waterColor(0xf68ad1)
                         .waterFogColor(0xbf1b26)
                         .skyColor(0x30c918)
-                        .grassColor(0x7f03fc)
+                        .grassColor(0x418dbe)
                         .foliageColor(0xd203fc)
                         .fogColor(0x22a1e6)
                         .moodSound(BiomeMoodSound.CAVE)
@@ -115,7 +117,7 @@ public class ModBiomes {
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
 
-        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEEP_JUNGLE_PLANTS_PLACED_KEY);
+        //biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEEP_JUNGLE_PLANTS_PLACED_KEY);
 
 
         return new Biome.Builder()
@@ -125,7 +127,7 @@ public class ModBiomes {
                 .generationSettings(biomeBuilder.build())
                 .spawnSettings(spawnBuilder.build())
                 .effects((new BiomeEffects.Builder())
-                        .waterColor(0xf68ad1)
+                        .waterColor(0x629d89)
                         .waterFogColor(0xbf1b26)
                         .skyColor(0x30c918)
                         .grassColor(0xab8d43)

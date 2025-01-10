@@ -1,6 +1,5 @@
 package com.laktostolerant.terrium.world.biome;
 
-import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -21,7 +20,7 @@ public class ModBiomeModifiers {
         BiomeModifications.addFeature(
                 BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), // Select all Overworld biomes
                 GenerationStep.Feature.UNDERGROUND_DECORATION,
-                ModPlacedFeatures.ABYSS_ROOTS_PLACED_KEY
+                ModPlacedFeatures.DARKELP_PLACED_KEY
         );
     }
 }

@@ -10,8 +10,9 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_NETHERITE_TOOL = createTag("needs_netherite_tool");
-
         public static final TagKey<Block> NEEDS_HELLITE_TOOL = createTag("needs_hellite_tool");
+        public static final TagKey<Block> NEEDS_ASTRALITE_TOOL = createTag("needs_astralite_tool");
+
         public static final TagKey<Block> INCORRECT_FOR_HELLITE_TOOL = createTag("incorrect_for_hellite_tool");
         public static final TagKey<Block> INCORRECT_FOR_ASTRALITE_TOOL = createTag("incorrect_for_astralite_tool");
 

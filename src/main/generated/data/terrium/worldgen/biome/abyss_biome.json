@@ -6,7 +6,7 @@
   "effects": {
     "fog_color": 2269670,
     "foliage_color": 13763580,
-    "grass_color": 8324092,
+    "grass_color": 4296126,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -25,33 +25,13 @@
     "water_color": 16157393,
     "water_fog_color": 12524326
   },
-  "features": [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [
-      "terrium:abyss_plants_placed_key"
-    ]
-  ],
+  "features": [],
   "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:tropical_fish",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 5
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [],
     "underground_water_creature": [],

@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#terrium:needs_astralite_tool",
+      "required": false
+    },
+    {
+      "id": "#terrium:needs_hellite_tool",
+      "required": false
+    },
+    {
+      "id": "#terrium:needs_netherite_tool",
+      "required": false
+    }
+  ]
+}

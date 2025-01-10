@@ -69,14 +69,16 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.PINECONE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PINECANNON, Models.HANDHELD_MACE);
+        itemModelGenerator.register(ModItems.PINECANNON, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINECANNON_CROSSBOW, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINECONE_JAM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.POTION_OF_RECALL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.HELLITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.HELLITE_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_HELLITE, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.ASTRALITE_DUST, Models.GENERATED);
         itemModelGenerator.register(ModItems.ASTRALITE_SHARD, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.HELLITE_SWORD, Models.HANDHELD);
