@@ -1,4 +1,4 @@
-package com.laktostolerant.terrium.mixin.render;
+/*package com.laktostolerant.terrium.mixin.render;
 
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.texture.NativeImage;
@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.laktostolerant.terrium.mixin.accessors.LightmapTextureManagerAccessor; // An accessor for private fields
+import com.laktostolerant.terrium.mixin.accessors.LightmapTextureManagerAccessor;
 
 @Mixin(LightmapTextureManager.class)
 public abstract class LightmapTextureManagerMixin {
@@ -22,4 +22,4 @@ public abstract class LightmapTextureManagerMixin {
         int purple = 0xFFFF00FF;
         image.setColor(x, y, purple);
     }
-}
+}*/

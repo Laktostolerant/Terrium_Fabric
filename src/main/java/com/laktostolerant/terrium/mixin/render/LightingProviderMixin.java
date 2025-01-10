@@ -11,10 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(LightingProvider.class)
 public abstract class LightingProviderMixin {
 
-    /**
-     * Intercept the 'new' call that creates ChunkBlockLightProvider
-     * and replace it with our DuskweedBlockLightProvider.
-     */
     @Redirect(
             method = "<init>(Lnet/minecraft/world/chunk/ChunkProvider;ZZ)V",
             at = @At(

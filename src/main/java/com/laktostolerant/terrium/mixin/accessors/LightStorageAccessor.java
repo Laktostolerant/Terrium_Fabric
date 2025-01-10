@@ -10,4 +10,6 @@ public interface LightStorageAccessor {
     void InvokeSet(long blockPos, int value);
     @Invoker("get")
     int InvokeGet(long blockPos);
+    @Invoker("hasSection")
+    boolean sectionContains(long sectionPos);
 }

@@ -1,4 +1,4 @@
-package com.laktostolerant.terrium.mixin.render;
+/*package com.laktostolerant.terrium.mixin.render;
 
 import com.laktostolerant.terrium.util.DuskweedBlockLightProvider;
 import com.laktostolerant.terrium.util.DuskweedLightStorage;
@@ -64,3 +64,4 @@ public abstract class WorldRendererMixin {
 
 }
 
+*/

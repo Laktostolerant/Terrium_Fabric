@@ -27,18 +27,12 @@ public abstract class WorldChunkMixin {
      */
     @Inject(method = "setLoadedToWorld(Z)V", at = @At("TAIL"))
     private void onSetLoadedToWorld(boolean loadedToWorld, CallbackInfo ci) {
-        // If the chunk is now loaded, let's do our check
         if (!loadedToWorld) {
             return;
         }
 
         WorldChunk self = (WorldChunk) (Object) this;
         World world = self.getWorld();
-
-        // If you're only applying logic server-side, skip if it's client:
-        // if (world.isClient) return;
-
-        // Check if we actually have our DuskweedBlockLightProvider
         LightingProvider lightingProvider = world.getLightingProvider();
         if (!(lightingProvider.get(LightType.BLOCK) instanceof DuskweedBlockLightProvider duskweedProvider)) {
             return; // Not our custom provider, do nothing
