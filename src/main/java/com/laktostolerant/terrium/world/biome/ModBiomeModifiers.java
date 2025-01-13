@@ -18,9 +18,18 @@ public class ModBiomeModifiers {
         );
 
         BiomeModifications.addFeature(
-                BiomeSelectors.tag(BiomeTags.IS_OVERWORLD), // Select all Overworld biomes
+                BiomeSelectors.tag(BiomeTags.IS_OVERWORLD),
                 GenerationStep.Feature.UNDERGROUND_DECORATION,
                 ModPlacedFeatures.DARKELP_PLACED_KEY
         );
+
+        /*
+        BiomeModifications.addFeature(
+                BiomeSelectors.includeByKey(ModBiomes.DEEP_JUNGLE),
+                GenerationStep.Feature.UNDERGROUND_DECORATION,
+                ModPlacedFeatures.DEEP_JUNGLE_PLACED_KEY
+        );
+
+         */
     }
 }

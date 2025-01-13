@@ -2,6 +2,7 @@ package com.laktostolerant.terrium.entity;
 
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.entity.custom.CrawlerEntity;
+import com.laktostolerant.terrium.entity.custom.DynamiteEntity;
 import com.laktostolerant.terrium.entity.custom.PineconeShardEntity;
 import com.laktostolerant.terrium.entity.custom.VoidFishEntity;
 import net.minecraft.entity.EntityType;
@@ -32,6 +33,13 @@ public class ModEntities {
     public static final EntityType<PineconeShardEntity> PINECONE_SHARD = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(Terrium.MOD_ID, "pinecone_shard"),
             EntityType.Builder.<PineconeShardEntity>create(PineconeShardEntity::new, SpawnGroup.MISC)
+                    .dimensions(0.2f, 0.2f)
+
+                    .build());
+
+    public static final EntityType<DynamiteEntity> DYNAMITE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(Terrium.MOD_ID, "dynamite"),
+            EntityType.Builder.<DynamiteEntity>create(DynamiteEntity::new, SpawnGroup.MISC)
                     .dimensions(0.2f, 0.2f)
 
                     .build());

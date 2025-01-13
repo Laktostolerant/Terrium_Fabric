@@ -107,5 +107,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ASTRALITE_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ASTRALITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ASTRALITE_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.DYNAMITE, Models.GENERATED);
     }
 }

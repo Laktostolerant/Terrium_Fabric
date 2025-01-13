@@ -2,17 +2,14 @@ package com.laktostolerant.terrium.datagen;
 
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.item.ModItems;
-import io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueue;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ModLootTableProvider extends FabricBlockLootTableProvider {
-    public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+public class ModBlockLootTableProvider extends FabricBlockLootTableProvider {
+    public ModBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
@@ -42,6 +39,5 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.ROSE_SLAB, slabDrops(ModBlocks.ROSE_SLAB));
         addDrop(ModBlocks.ROSE_DOOR, doorDrops(ModBlocks.ROSE_DOOR));
-
     }
 }

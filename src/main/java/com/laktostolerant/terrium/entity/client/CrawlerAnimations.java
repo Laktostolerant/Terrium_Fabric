@@ -6,8 +6,7 @@ import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
 public class CrawlerAnimations {
-
-    public static final Animation IDLE = Animation.Builder.create(1f).looping()
+    public static final Animation CRAWL = Animation.Builder.create(1f).looping()
             .addBoneAnimation("spikes_left",
                     new Transformation(Transformation.Targets.TRANSLATE,
                             new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 0f, 0f),
@@ -48,7 +47,7 @@ public class CrawlerAnimations {
                                     Transformation.Interpolations.LINEAR),
                             new Keyframe(1f, AnimationHelper.createRotationalVector(0f, 0f, 0f),
                                     Transformation.Interpolations.LINEAR))).build();
-    public static final Animation CRAWL = Animation.Builder.create(1f).looping()
+    public static final Animation IDLE = Animation.Builder.create(1f).looping()
             .addBoneAnimation("tail",
                     new Transformation(Transformation.Targets.TRANSLATE,
                             new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 0f, 0f),

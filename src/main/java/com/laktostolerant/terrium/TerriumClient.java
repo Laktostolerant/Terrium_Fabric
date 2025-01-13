@@ -14,6 +14,8 @@ import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
 
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
+
 public class TerriumClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
@@ -47,5 +49,7 @@ public class TerriumClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(PineconeShardProjectileModel.PINECONE_SHARD, PineconeShardProjectileModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.PINECONE_SHARD, PineconeShardProjectileRenderer::new);
+
+        EntityRendererRegistry.register(ModEntities.DYNAMITE, FlyingItemEntityRenderer::new);
     }
 }

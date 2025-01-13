@@ -56,7 +56,7 @@ public class CrawlerEntity extends PassiveEntity {
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.BLOCK_PORTAL_AMBIENT;
+        return null;
     }
     protected SoundEvent getHurtSound(DamageSource source) {
         return SoundEvents.ENTITY_ENDERMAN_HURT;

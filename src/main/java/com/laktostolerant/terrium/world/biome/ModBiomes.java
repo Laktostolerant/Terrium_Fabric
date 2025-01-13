@@ -4,6 +4,7 @@ import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.entity.ModEntities;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -18,13 +19,12 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.carver.ConfiguredCarver;
 import net.minecraft.world.gen.carver.ConfiguredCarvers;
-import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.heightprovider.HeightProvider;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
+import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
 import java.util.List;
 import java.util.Set;
@@ -72,8 +72,6 @@ public class ModBiomes {
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
                         context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
 
-        //biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ABYSS_PLANTS_PLACED_KEY);
-
         biomeBuilder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CAVE_EXTRA_UNDERGROUND);
 
         return new Biome.Builder()
@@ -85,7 +83,7 @@ public class ModBiomes {
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0xf68ad1)
                         .waterFogColor(0xbf1b26)
-                        .skyColor(0x30c918)
+                        .skyColor(0x1a0632)
                         .grassColor(0x418dbe)
                         .foliageColor(0xd203fc)
                         .fogColor(0x22a1e6)
@@ -97,8 +95,7 @@ public class ModBiomes {
     public static Biome deepJungle(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.AXOLOTL, 5, 4, 4));
-
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.BOGGED, 5, 1, 1));
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
@@ -110,14 +107,9 @@ public class ModBiomes {
         DefaultBiomeFeatures.addDefaultOres(biomeBuilder);
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
 
-        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
-        DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
-        DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEEP_JUNGLE_PLACED_KEY);
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, UndergroundPlacedFeatures.LUSH_CAVES_VEGETATION);
 
-        DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
-        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
-
-        //biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEEP_JUNGLE_PLANTS_PLACED_KEY);
 
 
         return new Biome.Builder()
@@ -131,7 +123,7 @@ public class ModBiomes {
                         .waterFogColor(0xbf1b26)
                         .skyColor(0x30c918)
                         .grassColor(0xab8d43)
-                        .foliageColor(0xd203fc)
+                        .foliageColor(0x00d52c)
                         .fogColor(0x22a1e6)
                         .moodSound(BiomeMoodSound.CAVE)
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundEvents.BLOCK_AMETHYST_CLUSTER_HIT))).build())

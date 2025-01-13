@@ -1,6 +1,7 @@
 package com.laktostolerant.terrium;
 
 import com.laktostolerant.terrium.block.ModBlocks;
+import com.laktostolerant.terrium.datagen.ModLootTableModifier;
 import com.laktostolerant.terrium.entity.ModEntities;
 import com.laktostolerant.terrium.entity.custom.CrawlerEntity;
 import com.laktostolerant.terrium.entity.custom.VoidFishEntity;
@@ -59,6 +60,8 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.VOID_FISH, VoidFishEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.CRAWLER, CrawlerEntity.createCrawlerAttributes());
+
+		ModLootTableModifier.register();
 	}
 
 	@Override
