@@ -11,6 +11,7 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkProvider;
 import net.minecraft.world.chunk.light.ChunkBlockLightProvider;
+import net.minecraft.world.chunk.light.ChunkLightProvider;
 
 
 public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
@@ -39,31 +40,9 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
     //checknode in mojmap
     @Override
     protected void method_51529(long blockPos) {
-        long lr = ChunkSectionPos.fromBlockPos(blockPos);
-        ChunkBlockLightProviderAccessor accessor = (ChunkBlockLightProviderAccessor) this;
-        BlockPos.Mutable mutablePos = accessor.getMutablePos();
-        BlockState state = getStateForLighting(mutablePos.set(blockPos));
 
-        if (state.isOf(ModBlocks.DUSKWEED)){
-        if (((LightStorageAccessor) this.lightStorage).sectionContains(lr)) {
-            BlockState blockState = this.getStateForLighting(((ChunkBlockLightProviderAccessor) this).getMutablePos().set(blockPos));
-            int i = ((ChunkBlockLightProviderAccessor) this).invokeGetLightSourceLuminance(blockPos, blockState);
-            int j = ((LightStorageAccessor) this.lightStorage).InvokeGet(blockPos);
-            if (i < j) {
-                ((LightStorageAccessor) this.lightStorage).InvokeSet(blockPos, 0);
-                this.method_51565(blockPos, class_8531.packWithAllDirectionsSet(j));
-            } else {
-                this.method_51565(blockPos, field_44731);
-            }
-
-            if (i > 0) {
-                this.method_51566(blockPos, class_8531.method_51573(15, isTrivialForLighting(blockState)));
-            }
-        }
-        }
-        else {
             super.method_51529(blockPos);
-        }
+
     }
     // propagateIncrease in mojmap, otherwise 31
     @Override
@@ -127,30 +106,5 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
     //propagaeDecrease in mojmap
     @Override
     protected void method_51530(long blockPos, long flags) {
-        int i = class_8531.getLightLevel(flags);
-
-        for (Direction direction : DIRECTIONS) {
-            if (class_8531.isDirectionBitSet(flags, direction)) {
-                long m = BlockPos.offset(blockPos, direction);
-                if (((LightStorageAccessor) this.lightStorage).sectionContains (ChunkSectionPos.fromBlockPos(m))) {
-                    int j = this.lightStorage.get(m);
-                    if (j != 0) {
-                        if (j <= i - 1) {
-                            BlockState blockState = this.getStateForLighting(((ChunkBlockLightProviderAccessor) this).getMutablePos().set(blockPos));
-                            int k = ((ChunkBlockLightProviderAccessor) this).invokeGetLightSourceLuminance(m, blockState);
-                            ((LightStorageAccessor) this.lightStorage).InvokeSet(m, 0);
-                            if (k < j) {
-                                this.method_51565(m, class_8531.packWithOneDirectionCleared(j, direction.getOpposite()));
-                            }
-
-                            if (k > 0) {
-                                this.method_51566(m, class_8531.method_51573(k, isTrivialForLighting(blockState)));
-                            }
-                        } else {
-                            this.method_51566(m, class_8531.method_51579(j, false, direction.getOpposite()));
-                        }
-                    }
-                }
-            }
-        }
+       super.method_51530(blockPos, flags);
 }}
