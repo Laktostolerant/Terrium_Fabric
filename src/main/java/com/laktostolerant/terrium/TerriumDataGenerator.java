@@ -2,7 +2,6 @@ package com.laktostolerant.terrium;
 
 import com.laktostolerant.terrium.datagen.*;
 import com.laktostolerant.terrium.world.ModConfiguredFeatures;
-import com.laktostolerant.terrium.world.ModCustomFeatures;
 import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import com.laktostolerant.terrium.world.biome.ModBiomes;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -18,7 +17,7 @@ public class TerriumDataGenerator implements DataGeneratorEntrypoint {
 
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModItemTagProvider::new);
-		pack.addProvider(ModLootTableProvider::new);
+		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModWorldGenerator::new);

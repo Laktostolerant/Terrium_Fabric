@@ -1,5 +1,5 @@
-[21:57:28] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.1 with Fabric Loader 0.16.9
-[21:57:28] [main/INFO] (FabricLoader) Loading 44 mods:
+[19:52:58] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.1 with Fabric Loader 0.16.9
+[19:52:58] [main/INFO] (FabricLoader) Loading 44 mods:
 	- fabric-api 0.102.0+1.21.1
 	- fabric-api-base 0.4.42+6573ed8c6a
 	- fabric-api-lookup-api-v1 1.6.68+b55973446a
@@ -44,52 +44,52 @@
 	- mixinextras 0.4.1
 	- terrablender 4.0.0.2
 	- terrium 1.0.0
-[21:57:28] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/tigom/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
-[21:57:28] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[21:57:28] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[21:57:28] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/BackgroundRenderer (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.BackgroundRenderer in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.BackgroundRenderer was not found terrium.mixins.json:render.BackgroundRendererMixin from mod terrium
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/Camera (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.Camera in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.Camera was not found terrium.mixins.json:render.CameraMixin from mod terrium
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/Camera (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.Camera in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.Camera was not found terrium.mixins.json:accessors.CameraAccessor from mod terrium
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/WorldRenderer (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.WorldRenderer in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.WorldRenderer was not found terrium.mixins.json:render.CustomLightmapMixin from mod terrium
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/LightmapTextureManager (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.LightmapTextureManager in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.LightmapTextureManager was not found terrium.mixins.json:render.CustomLightmapColorMixin from mod terrium
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/LightmapTextureManager (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.LightmapTextureManager in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.LightmapTextureManager was not found terrium.mixins.json:accessors.LightmapTextureManagerAccessor from mod terrium
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/LightmapTextureManager (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.LightmapTextureManager in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.LightmapTextureManager was not found terrium.mixins.json:render.LightmapTextureManagerMixin from mod terrium
-[21:57:29] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/WorldRenderer (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.WorldRenderer in environment type SERVER)
-[21:57:29] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.WorldRenderer was not found terrium.mixins.json:render.WorldRendererMixin from mod terrium
-[21:57:29] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[21:57:35] [main/INFO] (terrablender) Registered region minecraft:overworld to index 0 for type OVERWORLD
-[21:57:35] [main/INFO] (terrablender) Registered region minecraft:nether to index 0 for type NETHER
-[21:57:35] [main/INFO] (terrablender) Registered region terrium:overworld to index 1 for type OVERWORLD
-[21:57:35] [main/INFO] (terrium) Registering Mod Items for terrium
-[21:57:35] [main/INFO] (terrium) Registering Mod Blocks for terrium
-[21:57:35] [main/INFO] (terrium) Registering Mod Fluids for terrium
-[21:57:35] [main/INFO] (terrium) Registering I0tem Groups for terrium
-[21:57:35] [main/INFO] (terrium) Registering Mod Entities for terrium
-[21:57:35] [main/INFO] (terrium) BOOTSTRAPPING FEATURES
-[21:57:35] [main/INFO] (FabricDataGenHelper) Running data generator for terrium
-[21:57:35] [Worker-Main-1/INFO] (terrium) Building registries for Terrium
-[21:57:35] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:block
-[21:57:35] [main/INFO] (Minecraft) Terrium/Tags for minecraft:block finished after 14 ms
-[21:57:35] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:item
-[21:57:35] [main/INFO] (Minecraft) Terrium/Tags for minecraft:item finished after 1 ms
-[21:57:35] [main/INFO] (Minecraft) Starting provider: Terrium/Block Loot Tables
-[21:57:35] [main/INFO] (Minecraft) Terrium/Block Loot Tables finished after 18 ms
-[21:57:35] [main/INFO] (Minecraft) Starting provider: Terrium/Model Definitions
-[21:57:35] [main/INFO] (Minecraft) Terrium/Model Definitions finished after 62 ms
-[21:57:35] [main/INFO] (Minecraft) Starting provider: Terrium/Recipes
-[21:57:35] [main/INFO] (Minecraft) Terrium/Recipes finished after 27 ms
-[21:57:35] [main/INFO] (Minecraft) Starting provider: Terrium/World Gen
-[21:57:35] [ForkJoinPool.commonPool-worker-1/INFO] (terrium) added world datagen
-[21:57:35] [main/INFO] (Minecraft) Terrium/World Gen finished after 8 ms
-[21:57:35] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:fluid
-[21:57:35] [main/INFO] (Minecraft) Terrium/Tags for minecraft:fluid finished after 0 ms
-[21:57:35] [main/INFO] (Minecraft) All providers took: 136 ms
-[21:57:35] [main/INFO] (Minecraft) Caching: total files: 297, old count: 297, new count: 298, removed stale: 0, written: 0
+[19:52:58] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/tigom/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=SERVER
+[19:52:59] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[19:52:59] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[19:52:59] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/BackgroundRenderer (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.BackgroundRenderer in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.BackgroundRenderer was not found terrium.mixins.json:render.BackgroundRendererMixin from mod terrium
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/Camera (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.Camera in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.Camera was not found terrium.mixins.json:render.CameraMixin from mod terrium
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/Camera (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.Camera in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.Camera was not found terrium.mixins.json:accessors.CameraAccessor from mod terrium
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/WorldRenderer (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.WorldRenderer in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.WorldRenderer was not found terrium.mixins.json:render.CustomLightmapMixin from mod terrium
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/LightmapTextureManager (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.LightmapTextureManager in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.LightmapTextureManager was not found terrium.mixins.json:render.CustomLightmapColorMixin from mod terrium
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/LightmapTextureManager (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.LightmapTextureManager in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.LightmapTextureManager was not found terrium.mixins.json:accessors.LightmapTextureManagerAccessor from mod terrium
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/LightmapTextureManager (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.LightmapTextureManager in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.LightmapTextureManager was not found terrium.mixins.json:render.LightmapTextureManagerMixin from mod terrium
+[19:52:59] [main/WARN] (FabricLoader/Mixin) Error loading class: net/minecraft/client/render/WorldRenderer (java.lang.RuntimeException: Cannot load class net.minecraft.client.render.WorldRenderer in environment type SERVER)
+[19:52:59] [main/WARN] (FabricLoader/Mixin) @Mixin target net.minecraft.client.render.WorldRenderer was not found terrium.mixins.json:render.WorldRendererMixin from mod terrium
+[19:52:59] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[19:53:06] [main/INFO] (terrium) Registering Mod Items for terrium
+[19:53:06] [main/INFO] (terrium) Registering Mod Blocks for terrium
+[19:53:06] [main/INFO] (terrium) Registering Mod Fluids for terrium
+[19:53:06] [main/INFO] (terrium) Registering I0tem Groups for terrium
+[19:53:06] [main/INFO] (terrium) Registering Mod Entities for terrium
+[19:53:06] [main/INFO] (terrium) BOOTSTRAPPING FEATURES
+[19:53:06] [main/INFO] (terrablender) Registered region minecraft:overworld to index 0 for type OVERWORLD
+[19:53:06] [main/INFO] (terrablender) Registered region minecraft:nether to index 0 for type NETHER
+[19:53:06] [main/INFO] (terrablender) Registered region terrium:overworld to index 1 for type OVERWORLD
+[19:53:06] [main/INFO] (FabricDataGenHelper) Running data generator for terrium
+[19:53:06] [Worker-Main-1/INFO] (terrium) Building registries for Terrium
+[19:53:06] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:block
+[19:53:06] [main/INFO] (Minecraft) Terrium/Tags for minecraft:block finished after 17 ms
+[19:53:06] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:item
+[19:53:06] [main/INFO] (Minecraft) Terrium/Tags for minecraft:item finished after 1 ms
+[19:53:06] [main/INFO] (Minecraft) Starting provider: Terrium/Block Loot Tables
+[19:53:06] [main/INFO] (Minecraft) Terrium/Block Loot Tables finished after 19 ms
+[19:53:06] [main/INFO] (Minecraft) Starting provider: Terrium/Model Definitions
+[19:53:06] [main/INFO] (Minecraft) Terrium/Model Definitions finished after 58 ms
+[19:53:06] [main/INFO] (Minecraft) Starting provider: Terrium/Recipes
+[19:53:06] [main/INFO] (Minecraft) Terrium/Recipes finished after 27 ms
+[19:53:06] [main/INFO] (Minecraft) Starting provider: Terrium/World Gen
+[19:53:06] [ForkJoinPool.commonPool-worker-1/INFO] (terrium) added world datagen
+[19:53:06] [main/INFO] (Minecraft) Terrium/World Gen finished after 8 ms
+[19:53:06] [main/INFO] (Minecraft) Starting provider: Terrium/Tags for minecraft:fluid
+[19:53:06] [main/INFO] (Minecraft) Terrium/Tags for minecraft:fluid finished after 0 ms
+[19:53:06] [main/INFO] (Minecraft) All providers took: 135 ms
+[19:53:06] [main/INFO] (Minecraft) Caching: total files: 300, old count: 300, new count: 301, removed stale: 0, written: 1

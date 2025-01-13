@@ -92,6 +92,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.NATURAL_ASTRALITE);
 
                         entries.add(ModItems.POTION_OF_RECALL);
+
+                        entries.add(ModItems.DYNAMITE);
                     })
 
                     .build()

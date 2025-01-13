@@ -19,9 +19,11 @@ import java.util.Set;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> HELLITE_ORE_PLACED_KEY = registerKey("hellite_ore_placed");
-    public static final RegistryKey<PlacedFeature> ABYSS_PLANTS_PLACED_KEY = registerKey("abyss_plants_placed_key");
 
+    public static final RegistryKey<PlacedFeature> ABYSS_PLANTS_PLACED_KEY = registerKey("abyss_plants_placed_key");
     public static final RegistryKey<PlacedFeature> DARKELP_PLACED_KEY = registerKey("darkelp_placed_key");
+
+    public static final RegistryKey<PlacedFeature> DEEP_JUNGLE_PLACED_KEY = registerKey("deep_jungle_placed_key");
 
 
     private static final Set<RegistryKey<Biome>> EXCLUDED_BIOMES = Set.of(
@@ -37,6 +39,8 @@ public class ModPlacedFeatures {
         RegistryEntry<ConfiguredFeature<?, ?>> abyss_plants_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.ABYSS_PLANTS_KEY);
 
         RegistryEntry<ConfiguredFeature<?, ?>> darkelp_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DARKELP_CONFIGURED_KEY);
+
+        RegistryEntry<ConfiguredFeature<?, ?>> deep_jungle_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_JUNGLE_TREES);
 
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -69,6 +73,19 @@ public class ModPlacedFeatures {
                 RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
                 BiomePlacementModifier.of()
         );
+
+        register(
+                context,
+                DEEP_JUNGLE_PLACED_KEY,
+                deep_jungle_configured_key,
+                CountPlacementModifier.of(100),
+                PlacedFeatures.BOTTOM_TO_120_RANGE,
+                EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 20),
+                RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
+                BiomePlacementModifier.of()
+        );
+
+
 
     }
 

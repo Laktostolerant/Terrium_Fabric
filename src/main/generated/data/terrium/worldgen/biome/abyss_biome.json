@@ -5,7 +5,7 @@
   "downfall": 0.4,
   "effects": {
     "fog_color": 2269670,
-    "foliage_color": 13763580,
+    "foliage_color": 54572,
     "grass_color": 4296126,
     "mood_sound": {
       "block_search_extent": 8,
@@ -21,7 +21,7 @@
         "sound_id": "minecraft:block.amethyst_cluster.hit"
       }
     },
-    "sky_color": 3197208,
+    "sky_color": 1705522,
     "water_color": 16157393,
     "water_fog_color": 12524326
   },

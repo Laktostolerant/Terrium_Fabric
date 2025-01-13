@@ -3,10 +3,7 @@ package com.laktostolerant.terrium.item;
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.fluid.ModFluids;
-import com.laktostolerant.terrium.item.custom.ModCustomCrossbow;
-import com.laktostolerant.terrium.item.custom.ModDrinkItem;
-import com.laktostolerant.terrium.item.custom.ModCustomCannon;
-import com.laktostolerant.terrium.item.custom.RecallItem;
+import com.laktostolerant.terrium.item.custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FoodComponent;
@@ -28,7 +25,7 @@ public class ModItems {
 
     public static final Item PINECONE = registerItem("pinecone", new Item(new Item.Settings()));
     public static final Item PINECONE_JAM = registerItem("pinecone_jam", new ModDrinkItem(new Item.Settings().food(ModFoodComponents.PINECONE_JAM)));
-    public static final Item POTION_OF_RECALL = registerItem("potion_of_recall", new RecallItem(new Item.Settings().food(ModFoodComponents.PINECONE_JAM)));
+    public static final Item POTION_OF_RECALL = registerItem("potion_of_recall", new RecallItem(new Item.Settings().food(ModFoodComponents.PINECONE_JAM).rarity(Rarity.EPIC).component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
     public static final Item HELLITE_SWORD = registerItem("hellite_sword", new SwordItem(ModToolMaterials.HELLITE, new Item.Settings()
             .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.HELLITE, 3, -2.4f))));
@@ -97,6 +94,13 @@ public class ModItems {
 
     public static final Item GOOP_BUCKET = registerItem("goop_bucket",
             new BucketItem(ModFluids.GOOP_STILL, new Item.Settings()));
+
+    public static final Item DYNAMITE = registerItem("dynamite",
+            new ModCustomThrownExplosive(new Item.Settings()));
+
+
+
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Terrium.MOD_ID, name), item);

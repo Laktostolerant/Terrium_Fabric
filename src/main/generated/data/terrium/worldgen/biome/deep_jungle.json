@@ -81,13 +81,8 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:trees_plains",
-      "minecraft:forest_flowers",
-      "minecraft:patch_large_fern",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_pumpkin"
+      "terrium:deep_jungle_placed_key",
+      "minecraft:lush_caves_vegetation"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -98,16 +93,16 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [
+    "creature": [],
+    "misc": [],
+    "monster": [
       {
-        "type": "minecraft:axolotl",
-        "maxCount": 4,
-        "minCount": 4,
+        "type": "minecraft:bogged",
+        "maxCount": 1,
+        "minCount": 1,
         "weight": 5
       }
     ],
-    "misc": [],
-    "monster": [],
     "underground_water_creature": [],
     "water_ambient": [],
     "water_creature": []

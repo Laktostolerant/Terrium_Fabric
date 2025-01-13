@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-10T21:57:35.7012168	Terrium/Model Definitions
+// 1.21.1	2025-01-13T19:53:06.7254625	Terrium/Model Definitions
 6af8a6bd414ecc2408c89b395f64082807f67182 assets\terrium\models\block\rose_stairs_inner.json
 d0507c5a6773b75fe5a6b4fc41087aa93a04931d assets\terrium\models\item\hellite_boots.json
 f3d034f774caa859398fb8e0a8a7c8ded2772aa8 assets\terrium\models\item\pyscoria.json
@@ -182,6 +182,7 @@ aae9da9d4d58bdeef12bafafff4cf47e1617a038 assets\terrium\models\block\rose_gate_o
 6ec4c75322ff056a90df5ecf3534ba1a341060ff assets\terrium\models\item\astralite_leggings_emerald_trim.json
 4200067704349a3183e50a2d3af282c88f07d454 assets\terrium\models\item\hellite_chestplate_lapis_trim.json
 80b3ad854c590f79f7a2290cccc90915cb9f7ee2 assets\terrium\models\item\astralite_chestplate_redstone_trim.json
+16d37c8a6f29134a21e0155a75a414760e95859f assets\terrium\models\item\dynamite.json
 6dab0990f4c2dc930afb88d24767a63ad8622aeb assets\terrium\models\item\hellite_chestplate_diamond_trim.json
 d39d43502b82bea88197c45664564a44525000ce assets\terrium\models\item\astralite_leggings_diamond_trim.json
 b333e124dc49bd51d67d423a2de01954248c6102 assets\terrium\models\item\hellite_helmet_redstone_trim.json
@@ -214,7 +215,7 @@ f5cbaebaf225cbbd9cbb01101a3444dc03fd26d0 assets\terrium\models\item\hellite_legg
 d9646088479963e1580bc59f8c06ac3c199a16d4 assets\terrium\models\item\hellite_chestplate_netherite_trim.json
 3e1ef82c5f1fa8effdc4e27c36ec2b7bcd0814f6 assets\terrium\blockstates\rose_trapdoor.json
 b6e8451172da1bb0ff2fe5d8ac10845b34385659 assets\terrium\models\item\astralite_chestplate.json
-ea21c14356f02c84d7788c31385a1880deed41ca assets\terrium\models\block\rose_fence_inventory.json
 4d095030f969d5b3ce63d022e5dccdedb46df347 assets\terrium\models\item\astralite_boots.json
+ea21c14356f02c84d7788c31385a1880deed41ca assets\terrium\models\block\rose_fence_inventory.json
 3190f1e96d07961f64eb0948964d4f07a79bfec7 assets\terrium\models\item\hellite_boots_copper_trim.json
 e515e9fe3fa1ba47f629be002b8dee5324234200 assets\terrium\models\item\rose_planks.json

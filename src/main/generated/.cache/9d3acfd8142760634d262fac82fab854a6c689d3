@@ -1,8 +1,8 @@
-// 1.21.1	2025-01-10T21:57:35.699202	Terrium/Tags for minecraft:item
+// 1.21.1	2025-01-13T19:53:06.7229482	Terrium/Tags for minecraft:item
 6f6488ffc2471b71c526f246f730b7bf46f1a63b data\minecraft\tags\item\rabbit_food.json
 709caa1e072c93d90f20eb66bf8465652407ca2e data\minecraft\tags\item\planks.json
-f126d128904fc13701d6dc0167b2e7bf7990f477 data\minecraft\tags\item\hoes.json
 5bef8d15579d4014ddd628c205d7b3d8e351c2d5 data\minecraft\tags\item\head_armor.json
+f126d128904fc13701d6dc0167b2e7bf7990f477 data\minecraft\tags\item\hoes.json
 32b22bc1a30f7fd96e630748a95ac44a2a27b75e data\minecraft\tags\item\shovels.json
 fd43f264e14d69d72841e3f8d3b2efb969d712c0 data\minecraft\tags\item\pickaxes.json
 4155d53496b3728a37ff8d709b1b315400ffe93b data\minecraft\tags\item\swords.json
