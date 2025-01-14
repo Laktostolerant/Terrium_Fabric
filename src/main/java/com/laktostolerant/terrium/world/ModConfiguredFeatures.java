@@ -29,7 +29,6 @@ import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
 
 import java.util.List;
 
-import javax.xml.catalog.CatalogFeatures.Feature;
 
 public class ModConfiguredFeatures {
 
