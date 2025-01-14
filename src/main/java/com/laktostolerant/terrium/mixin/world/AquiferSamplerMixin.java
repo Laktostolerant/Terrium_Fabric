@@ -23,7 +23,7 @@ public class AquiferSamplerMixin {
         if (y >= -90 && y <= -60 && original != null && original.isOf(Blocks.LAVA)) {
             return Blocks.WATER.getDefaultState();
         } else if (y >= -320 && y < -90 && original != null && original.isOf(Blocks.LAVA)) {
-            return ModBlocks.GOOP_FLUID_BLOCK.getDefaultState();
+            return Blocks.WATER.getDefaultState();
         }
         return original;
     }

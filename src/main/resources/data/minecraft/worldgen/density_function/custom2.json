@@ -16,14 +16,14 @@
         "argument2": {
           "type": "minecraft:noise",
           "noise": "minecraft:deepocean",
-          "xz_scale": -5,
-          "y_scale": 1.4
+          "xz_scale": 15,
+          "y_scale": 1
         }
       },
       "argument2": {
         "type": "minecraft:noise",
         "noise": "minecraft:deepocean",
-        "xz_scale": 3,
+        "xz_scale": 14,
         "y_scale": 4
       }
     },
@@ -33,13 +33,13 @@
         "type": "minecraft:y_clamped_gradient",
         "from_y": -170,
         "to_y": -320,
-        "from_value": -3,
-        "to_value": -4
+        "from_value": 6,
+        "to_value": -8
       },
       "argument2": {
         "type": "minecraft:noise",
         "noise": "minecraft:deepocean",
-        "xz_scale": 11,
+        "xz_scale": 9,
         "y_scale": 2.1
       }
     }
@@ -50,8 +50,8 @@
       "type": "minecraft:y_clamped_gradient",
       "from_y": -280,
       "to_y": -360,
-      "from_value": 1,
-      "to_value": 20
+      "from_value": 2,
+      "to_value": 30
     },
     "argument2": {
       "type": "minecraft:noise",
