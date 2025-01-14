@@ -26,5 +26,7 @@ public class ModWorldGeneration {
         ModOreGeneration.generateOres();
 
         ModEntitySpawns.addSpawns();
+
+        //CustomSurfaceBuilder.setupCustomSurface();
     }
 }
