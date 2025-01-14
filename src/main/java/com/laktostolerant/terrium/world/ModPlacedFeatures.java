@@ -19,7 +19,7 @@ import java.util.Set;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> HELLITE_ORE_PLACED_KEY = registerKey("hellite_ore_placed");
-
+    public static final RegistryKey<PlacedFeature> DEEP_SPIKES_PLACED_KEY = registerKey("deep_spikes_placed_key");
     public static final RegistryKey<PlacedFeature> ABYSS_PLANTS_PLACED_KEY = registerKey("abyss_plants_placed_key");
     public static final RegistryKey<PlacedFeature> DARKELP_PLACED_KEY = registerKey("darkelp_placed_key");
 
@@ -39,7 +39,7 @@ public class ModPlacedFeatures {
         RegistryEntry<ConfiguredFeature<?, ?>> abyss_plants_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.ABYSS_PLANTS_KEY);
 
         RegistryEntry<ConfiguredFeature<?, ?>> darkelp_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DARKELP_CONFIGURED_KEY);
-
+        RegistryEntry<ConfiguredFeature<?, ?>> deep_spikes_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_SPIKES_KEY);
         RegistryEntry<ConfiguredFeature<?, ?>> deep_jungle_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_JUNGLE_TREES);
 
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -48,7 +48,17 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(2,  //place per chunks
                         HeightRangePlacementModifier.uniform(YOffset.aboveBottom(5), YOffset.aboveBottom(35))));
 
-
+        register(
+                context,
+                DEEP_SPIKES_PLACED_KEY,
+                deep_spikes_configured_key,
+                CountPlacementModifier.of(50),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.BOTTOM_TO_120_RANGE,
+                EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 10),
+                RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
+                BiomePlacementModifier.of()
+        );
         register(
                 context,
                 ABYSS_PLANTS_PLACED_KEY,

@@ -1,8 +1,7 @@
 package com.laktostolerant.terrium.util;
-
+/*
 import com.laktostolerant.terrium.block.ModBlocks;
-import com.laktostolerant.terrium.mixin.accessors.ChunkBlockLightProviderAccessor;
-import com.laktostolerant.terrium.mixin.accessors.LightStorageAccessor;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
@@ -20,9 +19,10 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
         super(chunkProvider, new DuskweedLightStorage(chunkProvider));
     }
 
-    private DuskweedLightStorage getDuskweedStorage() {
-        return (DuskweedLightStorage) this.lightStorage;
-    }       /* ChunkBlockLightProviderAccessor accessor = (ChunkBlockLightProviderAccessor) this;
+//    private DuskweedLightStorage getDuskweedStorage() {
+//        return (DuskweedLightStorage) this.lightStorage;
+//    }
+    /* ChunkBlockLightProviderAccessor accessor = (ChunkBlockLightProviderAccessor) this;
         BlockPos.Mutable mutablePos = accessor.getMutablePos();
         BlockState state = getStateForLighting(mutablePos.set(blockPos));
 
@@ -37,15 +37,17 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
                     )
             );
         }*/
+/*
     //checknode in mojmap
     @Override
     protected void method_51529(long blockPos) {
 
-            super.method_51529(blockPos);
+        super.method_51529(blockPos);
 
     }
+*/
     // propagateIncrease in mojmap, otherwise 31
-    @Override
+ /*   @Override
     protected void method_51531(long blockPos, long flags, int lightLevel) {
         /*
                DuskweedLightStorage storage = getDuskweedStorage();
@@ -63,32 +65,31 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
 
             }
 
-         */
+         *//*
         ChunkBlockLightProviderAccessor accessor = (ChunkBlockLightProviderAccessor) this;
         BlockPos.Mutable mutablePos = accessor.getMutablePos();
         BlockState state = getStateForLighting(mutablePos.set(blockPos));
 
-        if (state.isOf(ModBlocks.DUSKWEED)){
-                for (Direction direction : DIRECTIONS) {
-                    if (class_8531.isDirectionBitSet(lightLevel, direction)) {
-                        long m = BlockPos.offset(blockPos, direction);
-                        if (((LightStorageAccessor) this).sectionContains(ChunkSectionPos.fromBlockPos(m))) {
-                            int i = ((LightStorageAccessor) this).InvokeGet(m);
-                            int j = lightLevel - 4;
-                            if (j > i) {
-                                ((ChunkBlockLightProviderAccessor) this).getMutablePos().set(m);
-                                BlockState blockState2 = this.getStateForLighting(((ChunkBlockLightProviderAccessor) this).getMutablePos());
-                                int k = lightLevel - this.getOpacity(blockState2, ((ChunkBlockLightProviderAccessor) this).getMutablePos());
-                                if (k > i) {
-                                    if (state == null) {
-                                        state = class_8531.isTrivial(lightLevel) ? Blocks.AIR.getDefaultState() : this.getStateForLighting(((ChunkBlockLightProviderAccessor) this).getMutablePos().set(blockPos));
-                                    }
+        if (state.isOf(ModBlocks.DUSKWEED)) {
+            for (Direction direction : DIRECTIONS) {
+                if (class_8531.isDirectionBitSet(lightLevel, direction)) {
+                    long m = BlockPos.offset(blockPos, direction);
+                    if (((LightStorageAccessor) this).sectionContains(ChunkSectionPos.fromBlockPos(m))) {
+                        int i = ((LightStorageAccessor) this).InvokeGet(m);
+                        int j = lightLevel - 4;
+                        if (j > i) {
+                            ((ChunkBlockLightProviderAccessor) this).getMutablePos().set(m);
+                            BlockState blockState2 = this.getStateForLighting(((ChunkBlockLightProviderAccessor) this).getMutablePos());
+                            int k = lightLevel - this.getOpacity(blockState2, ((ChunkBlockLightProviderAccessor) this).getMutablePos());
+                            if (k > i) {
+                                if (state == null) {
+                                    state = class_8531.isTrivial(lightLevel) ? Blocks.AIR.getDefaultState() : this.getStateForLighting(((ChunkBlockLightProviderAccessor) this).getMutablePos().set(blockPos));
+                                }
 
-                                    if (!this.shapesCoverFullCube(blockPos, state, m, blockState2, direction)) {
-                                        ((LightStorageAccessor) this).InvokeSet(m, k);
-                                        if (k > 1) {
-                                            this.method_51566(m, class_8531.method_51574(k, isTrivialForLighting(blockState2), direction.getOpposite()));
-                                        }
+                                if (!this.shapesCoverFullCube(blockPos, state, m, blockState2, direction)) {
+                                    ((LightStorageAccessor) this).InvokeSet(m, k);
+                                    if (k > 1) {
+                                        this.method_51566(m, class_8531.method_51574(k, isTrivialForLighting(blockState2), direction.getOpposite()));
                                     }
                                 }
                             }
@@ -96,15 +97,16 @@ public class DuskweedBlockLightProvider extends ChunkBlockLightProvider {
                     }
                 }
             }
-
-        else
-        {
+        } else {
             super.method_51531(blockPos, flags, lightLevel);
         }
 
     }
-    //propagaeDecrease in mojmap
+}
+*/
+   /* //propagaeDecrease in mojmap
     @Override
     protected void method_51530(long blockPos, long flags) {
        super.method_51530(blockPos, flags);
 }}
+*/

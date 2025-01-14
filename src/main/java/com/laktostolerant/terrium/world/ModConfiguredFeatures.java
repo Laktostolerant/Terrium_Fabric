@@ -5,6 +5,8 @@ import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.feature.DarkelpFeature;
 import com.laktostolerant.terrium.feature.DarkelpFeatureConfig;
+import com.laktostolerant.terrium.feature.DeepSpikesFeature;
+import com.laktostolerant.terrium.feature.DeepSpikesFeatureConfig;
 import com.laktostolerant.terrium.util.ModTags;
 import com.mojang.serialization.Lifecycle;
 import net.minecraft.block.Block;
@@ -58,7 +60,7 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_GROUP = registerKey("deep_jungle_plants_group");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_KEY = registerKey("deep_jungle_plants_key");
-
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_SPIKES_KEY = registerKey("deep_spikes_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_TREES = registerKey("deep_jungle_trees");
 
     public static void boostrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -67,7 +69,12 @@ public class ModConfiguredFeatures {
         RuleTest purshaleOreInDeepslate = new TagMatchRuleTest(ModTags.Blocks.PURSHALE_ORE_REPLACEABLES);
         List<OreFeatureConfig.Target> helliteOres = List.of(OreFeatureConfig.createTarget(purshaleOreInDeepslate, ModBlocks.HELLITE_ORE.getDefaultState()));
 
-
+        register(
+                context,
+                DEEP_SPIKES_KEY,
+                ModCustomFeatures.DEEP_SPIKES_FEATURE,
+                new DeepSpikesFeatureConfig(4, 8, -270)
+        );
         register(
                 context,
                 DARKELP_CONFIGURED_KEY,

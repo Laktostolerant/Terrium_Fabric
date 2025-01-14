@@ -1,5 +1,5 @@
 package com.laktostolerant.terrium.mixin.render;
-
+/*
 import com.laktostolerant.terrium.block.ModBlocks;
 import com.laktostolerant.terrium.util.DuskweedBlockLightProvider;
 import net.minecraft.block.BlockState;
@@ -14,17 +14,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/**
- * Forces a re-check for pre-existing Duskweed blocks when the chunk is "loaded to world."
- * That way, your DuskweedBlockLightProvider will see them even if they were placed earlier.
- */
+
 @Mixin(WorldChunk.class)
 public abstract class WorldChunkMixin {
 
-    /**
-     * This method is called whenever the chunk's "loadedToWorld" flag becomes true.
-     * We only run the scan if loadedToWorld == true.
-     */
+
     @Inject(method = "setLoadedToWorld(Z)V", at = @At("TAIL"))
     private void onSetLoadedToWorld(boolean loadedToWorld, CallbackInfo ci) {
         if (!loadedToWorld) {
@@ -66,3 +60,4 @@ public abstract class WorldChunkMixin {
         }
     }
 }
+*/

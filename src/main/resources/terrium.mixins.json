@@ -13,12 +13,6 @@
     "render.BackgroundRendererMixin",
     "render.CameraMixin",
     "accessors.CameraAccessor",
-    "render.LightingProviderMixin",
-    "accessors.ChunkBlockLightProviderAccessor",
-    "accessors.LightStorageAccessor",
-    "accessors.LightmapTextureManagerAccessor",
-    "render.WorldChunkMixin",
-    "sodiummixins.SodiumBlockColorsMixin",
     "world.SurfaceRulesMixin"
   ],
   "injectors": {

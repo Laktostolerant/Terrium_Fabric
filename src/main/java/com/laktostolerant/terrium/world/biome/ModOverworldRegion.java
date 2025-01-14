@@ -21,7 +21,9 @@ public class ModOverworldRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube,
                     RegistryKey<Biome>>> mapper) {
 
-
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.LUSH_CAVES, ModBiomes.DEEP_JUNGLE);
+        });
         MultiNoiseUtil.ParameterRange temperature = MultiNoiseUtil.ParameterRange.of(0.7F, 0.8F);
         MultiNoiseUtil.ParameterRange humidity = MultiNoiseUtil.ParameterRange.of(0.4F, 0.6F);
         MultiNoiseUtil.ParameterRange continentalness = MultiNoiseUtil.ParameterRange.of(-1.0F, -0.7F);
