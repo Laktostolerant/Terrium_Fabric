@@ -23,9 +23,9 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ABYSS_PLANTS_PLACED_KEY = registerKey("abyss_plants_placed_key");
     public static final RegistryKey<PlacedFeature> DARKELP_PLACED_KEY = registerKey("darkelp_placed_key");
 
-    public static final RegistryKey<PlacedFeature> DEEP_JUNGLE_PLACED_KEY = registerKey("deep_jungle_placed_key");
-
-
+    public static final RegistryKey<PlacedFeature> DEEP_JUNGLE_TREES_PLACED_KEY = registerKey("deep_jungle_trees_placed_key");
+    public static final RegistryKey<PlacedFeature> DEEP_JUNGLE_PLANTS_PLACED_KEY = registerKey("deep_jungle_plants_placed_key");
+    
     private static final Set<RegistryKey<Biome>> EXCLUDED_BIOMES = Set.of(
             BiomeKeys.DEEP_DARK,
             BiomeKeys.LUSH_CAVES,
@@ -40,7 +40,9 @@ public class ModPlacedFeatures {
 
         RegistryEntry<ConfiguredFeature<?, ?>> darkelp_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DARKELP_CONFIGURED_KEY);
         RegistryEntry<ConfiguredFeature<?, ?>> deep_spikes_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_SPIKES_KEY);
-        RegistryEntry<ConfiguredFeature<?, ?>> deep_jungle_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_JUNGLE_TREES);
+        
+        RegistryEntry<ConfiguredFeature<?, ?>> deep_jungle_trees_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_JUNGLE_TREES);
+        RegistryEntry<ConfiguredFeature<?, ?>> deep_jungle_plants_configured_key = registryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_JUNGLE_PLANTS_KEY);
 
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
@@ -86,17 +88,26 @@ public class ModPlacedFeatures {
 
         register(
                 context,
-                DEEP_JUNGLE_PLACED_KEY,
-                deep_jungle_configured_key,
-                CountPlacementModifier.of(100),
+                DEEP_JUNGLE_TREES_PLACED_KEY,
+                deep_jungle_trees_configured_key,
+                CountPlacementModifier.of(30),
                 PlacedFeatures.BOTTOM_TO_120_RANGE,
-                EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 20),
-                RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
+                EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 12),
+                RandomOffsetPlacementModifier.horizontally(ConstantIntProvider.create(1)),
                 BiomePlacementModifier.of()
         );
 
-
-
+        register(
+                context,
+                DEEP_JUNGLE_PLANTS_PLACED_KEY,
+                deep_jungle_plants_configured_key,
+                CountPlacementModifier.of(30),
+                SquarePlacementModifier.of(),
+                PlacedFeatures.BOTTOM_TO_120_RANGE,
+                EnvironmentScanPlacementModifier.of(Direction.DOWN, BlockPredicate.solid(), BlockPredicate.IS_AIR, 30),
+                RandomOffsetPlacementModifier.vertically(ConstantIntProvider.create(1)),
+                BiomePlacementModifier.of()
+        );
     }
 
 

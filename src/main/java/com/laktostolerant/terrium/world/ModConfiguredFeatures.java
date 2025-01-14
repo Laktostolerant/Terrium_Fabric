@@ -1,15 +1,11 @@
 package com.laktostolerant.terrium.world;
 
-import com.google.common.collect.ImmutableList;
 import com.laktostolerant.terrium.Terrium;
 import com.laktostolerant.terrium.block.ModBlocks;
-import com.laktostolerant.terrium.feature.DarkelpFeature;
 import com.laktostolerant.terrium.feature.DarkelpFeatureConfig;
 import com.laktostolerant.terrium.feature.DeepSpikesFeature;
 import com.laktostolerant.terrium.feature.DeepSpikesFeatureConfig;
 import com.laktostolerant.terrium.util.ModTags;
-import com.mojang.serialization.Lifecycle;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.*;
@@ -17,35 +13,23 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.VerticalSurfaceType;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.world.gen.ProbabilityConfig;
-import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.size.FeatureSize;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.foliage.FoliagePlacer;
-import net.minecraft.world.gen.foliage.JungleFoliagePlacer;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 import net.minecraft.util.collection.DataPool;
-import net.minecraft.world.gen.treedecorator.CocoaBeansTreeDecorator;
-import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
-import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-import net.minecraft.world.gen.trunk.TrunkPlacer;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+
+import javax.xml.catalog.CatalogFeatures.Feature;
 
 public class ModConfiguredFeatures {
 
@@ -58,8 +42,8 @@ public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ROSE_TREE_KEY = registerKey("rose");
 
-    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_GROUP = registerKey("deep_jungle_plants_group");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_KEY = registerKey("deep_jungle_plants_key");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_PLANTS_GROUP = registerKey("deep_jungle_plants_group");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_PLANTS_KEY = registerKey("deep_jungle_plants_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_SPIKES_KEY = registerKey("deep_spikes_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_JUNGLE_TREES = registerKey("deep_jungle_trees");
 
@@ -139,6 +123,37 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(3, 0, 2)).build()
         );
 
+        register(
+                context,
+                DEEP_JUNGLE_PLANTS_GROUP,
+                Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(
+                        new WeightedBlockStateProvider(
+                                DataPool.<BlockState>builder() // Explicitly specify BlockState
+                                        .add(Blocks.SHORT_GRASS.getDefaultState(), 40)
+                                        .add(Blocks.LILY_OF_THE_VALLEY.getDefaultState(), 10)
+                                        .build()
+                        )
+                )
+        );
+
+        register(
+                context,
+                DEEP_JUNGLE_PLANTS_KEY,
+                Feature.VEGETATION_PATCH,
+                new VegetationPatchFeatureConfig(
+                        BlockTags.DIRT,
+                        BlockStateProvider.of(Blocks.GRASS_BLOCK),
+                        PlacedFeatures.createEntry(registryEntryLookup.getOrThrow(ABYSS_PLANTS_GROUP),
+                                new PlacementModifier[0]), VerticalSurfaceType.FLOOR,
+                        ConstantIntProvider.create(1),
+                        0.0F,
+                        10,
+                        0.5F,
+                        UniformIntProvider.create(6, 9),
+                        0.4F
+                )
+        );
     }
 
 

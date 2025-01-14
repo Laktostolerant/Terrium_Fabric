@@ -23,13 +23,10 @@ public class ModBiomeModifiers {
                 ModPlacedFeatures.DARKELP_PLACED_KEY
         );
 
-        /*
         BiomeModifications.addFeature(
                 BiomeSelectors.includeByKey(ModBiomes.DEEP_JUNGLE),
                 GenerationStep.Feature.UNDERGROUND_DECORATION,
-                ModPlacedFeatures.DEEP_JUNGLE_PLACED_KEY
+                ModPlacedFeatures.DEEP_JUNGLE_PLANTS_PLACED_KEY
         );
-
-         */
     }
 }

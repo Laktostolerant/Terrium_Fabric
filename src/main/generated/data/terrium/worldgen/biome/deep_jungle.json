@@ -81,8 +81,8 @@
     ],
     [
       "minecraft:glow_lichen",
-      "terrium:deep_jungle_placed_key",
-      "minecraft:lush_caves_vegetation"
+      "terrium:deep_jungle_plants_placed_key",
+      "terrium:deep_jungle_trees_placed_key"
     ],
     [
       "minecraft:freeze_top_layer"
