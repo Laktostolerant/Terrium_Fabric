@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "minecraft:short_grass"
+          },
+          "weight": 40
+        },
+        {
+          "data": {
+            "Name": "minecraft:lily_of_the_valley"
+          },
+          "weight": 10
+        }
+      ]
+    }
+  }
+}

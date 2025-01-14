@@ -1,9 +1,12 @@
 {
-  "feature": "terrium:deep_jungle_trees",
+  "feature": "terrium:deep_jungle_plants_key",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 100
+      "count": 30
+    },
+    {
+      "type": "minecraft:in_square"
     },
     {
       "type": "minecraft:height_range",
@@ -24,7 +27,7 @@
         "blocks": "minecraft:air"
       },
       "direction_of_search": "down",
-      "max_steps": 20,
+      "max_steps": 30,
       "target_condition": {
         "type": "minecraft:solid"
       }
