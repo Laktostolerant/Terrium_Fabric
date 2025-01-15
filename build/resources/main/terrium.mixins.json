@@ -5,7 +5,6 @@
   "mixins": [
     "world.MineshaftStructureMixin",
     "world.StrongholdStructureMixin",
-    "world.PurshaleMixin",
     "world.AquiferSamplerMixin",
     "world.MultiNoiseUtilParameterRangeMixin",
     "world.PlayerEntityGravity",

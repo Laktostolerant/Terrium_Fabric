@@ -15,7 +15,7 @@ import net.minecraft.world.Heightmap;
 public class ModEntitySpawns {
     public static void addSpawns() {
         BiomeModifications.addSpawn(BiomeSelectors.includeByKey(ModBiomes.ABYSS_BIOME),
-                SpawnGroup.AMBIENT, ModEntities.VOID_FISH, 15, 2, 5);
+                SpawnGroup.CREATURE, ModEntities.VOID_FISH, 1, 2, 5);
 
         SpawnRestriction.register(ModEntities.VOID_FISH, SpawnLocationTypes.ON_GROUND,
                 Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, FlyingEntity::canMobSpawn);
