@@ -246,7 +246,13 @@ public class ModBlocks {
     );
 
 
-
+    public static final Block FACTORY_BLOCK = registerBlock("factory_block",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f, 7)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE)
+            )
+    );
 
 
 

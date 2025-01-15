@@ -94,6 +94,8 @@ public class ModItemGroups {
                         entries.add(ModItems.POTION_OF_RECALL);
 
                         entries.add(ModItems.DYNAMITE);
+
+                        entries.add(ModBlocks.FACTORY_BLOCK);
                     })
 
                     .build()
