@@ -21,8 +21,23 @@ public class CustomSurfaceBuilder extends SurfaceBuilder {
         //SurfaceRuleManager.addSurfaceRules();
     }
 
-    public static void setupCustomSurface()
+    public static MaterialRules.MaterialRule setupCustomSurface()
     {
+
+        return MaterialRules.sequence(
+                MaterialRules.condition(
+                        MaterialRules.verticalGradient("terrium:pyscoria_gradient", YOffset.fixed(-230), YOffset.fixed(-220)),
+                        MaterialRules.block(ModBlocks.PYSCORIA.getDefaultState())
+                ),
+                MaterialRules.condition(MaterialRules.verticalGradient("terrium:purshale_gradient", YOffset.fixed(-64), YOffset.fixed(-60)),
+                        MaterialRules.block(ModBlocks.ROSE_PLANKS.getDefaultState())
+                )
+        );
+
+
+
+
+                /*
         MaterialRules.MaterialRule purshaleRule = MaterialRules.sequence(
                 // purshale
                 MaterialRules.condition(
@@ -39,7 +54,9 @@ public class CustomSurfaceBuilder extends SurfaceBuilder {
                 )
         );
 
+                 */
 
+/*
         SurfaceRuleManager.addToDefaultSurfaceRulesAtStage(
                 SurfaceRuleManager.RuleCategory.OVERWORLD,
                 SurfaceRuleManager.RuleStage.BEFORE_BEDROCK,
@@ -53,5 +70,9 @@ public class CustomSurfaceBuilder extends SurfaceBuilder {
                 1,
                 pyscoriaRule
         );
+
+ */
+
+
     }
 }
