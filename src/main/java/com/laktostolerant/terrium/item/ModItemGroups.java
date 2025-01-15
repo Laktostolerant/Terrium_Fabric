@@ -96,6 +96,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DYNAMITE);
 
                         entries.add(ModBlocks.FACTORY_BLOCK);
+                        entries.add(ModBlocks.FACTORY_GRATE);
                     })
 
                     .build()
