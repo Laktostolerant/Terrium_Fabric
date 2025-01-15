@@ -26,7 +26,6 @@ public class SurfaceRulesMixin {
             }
         };
 
-        // Return the modified sampler
         cir.setReturnValue(modifiedSampler);
     }
 }

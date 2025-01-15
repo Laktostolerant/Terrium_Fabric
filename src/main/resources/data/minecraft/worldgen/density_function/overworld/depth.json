@@ -1,11 +1,37 @@
 {
-  "type": "minecraft:add",
-  "argument1": {
-    "type": "minecraft:y_clamped_gradient",
-    "from_value": 3,
-    "from_y": -320,
-    "to_value": -3,
-    "to_y": 600
+  "type": "minecraft:range_choice",
+  "input": "minecraft:y",
+  "min_inclusive": -64,
+  "max_exclusive": 600,
+  "when_in_range": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": -64,
+      "to_y": 320,
+      "from_value": 1.5,
+      "to_value": -1.5
+    },
+    "argument2": "minecraft:overworld/offset"
   },
-  "argument2": "minecraft:overworld/offset"
+  "when_out_of_range": {
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": -190,
+    "max_exclusive": -64,
+    "when_in_range": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": -64,
+      "to_y": -190,
+      "from_value": 1.6,
+      "to_value": 2
+    },
+    "when_out_of_range": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": -190,
+      "to_y": -320,
+      "from_value": 2.1,
+      "to_value": 3
+    }
+  }
 }
