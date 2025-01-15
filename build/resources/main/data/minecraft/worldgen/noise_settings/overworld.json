@@ -284,7 +284,7 @@
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "minecraft:y",
-            "min_inclusive": -180,
+            "min_inclusive": -190,
             "max_exclusive": -100,
             "when_in_range": "minecraft:custom1",
             "when_out_of_range": {
@@ -296,7 +296,7 @@
               "when_out_of_range": {
                 "type": "minecraft:range_choice",
                 "input": "minecraft:y",
-                "min_inclusive": -315,
+                "min_inclusive": -319,
                 "max_exclusive": -210,
                 "when_in_range": "minecraft:custom2",
                 "when_out_of_range": 2
