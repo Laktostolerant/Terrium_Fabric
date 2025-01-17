@@ -36,6 +36,9 @@ public class ModOverworldRegion extends Region {
         MultiNoiseUtil.ParameterRange purshale_depth = MultiNoiseUtil.ParameterRange.of(1.6F, 2.3F);
         MultiNoiseUtil.ParameterRange pyscoria_depth = MultiNoiseUtil.ParameterRange.of(2.4F, 3.0F);
 
+        MultiNoiseUtil.ParameterRange purshale_re = MultiNoiseUtil.ParameterRange.of(1.6F);
+        MultiNoiseUtil.ParameterRange pyscoria_re = MultiNoiseUtil.ParameterRange.of(1.6F);
+
         float offset = 0.0F;
 
         this.addBiome(mapper, temperature, humidity, continentalness, erosion, weirdness, purshale_depth, offset, ModBiomes.ABYSS_BIOME);

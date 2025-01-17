@@ -250,7 +250,7 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create()
                     .strength(4f, 7)
                     .requiresTool()
-                    .luminance(state -> 5)
+                    .luminance(state -> 11)
                     .sounds(BlockSoundGroup.METAL)
             )
     );

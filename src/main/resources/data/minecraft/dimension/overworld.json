@@ -42361,7 +42361,7 @@
             ],
             "offset": 0
           },
-          "biome": "terrium:abyss_biome"
+          "biome": "terrium:deep_jungle"
         },
         {
           "parameters": {
@@ -42391,7 +42391,7 @@
             ],
             "offset": 0
           },
-          "biome": "terrium:deep_jungle"
+          "biome": "terrium:abyss_biome"
         }
       ],
       "type": "minecraft:multi_noise"
