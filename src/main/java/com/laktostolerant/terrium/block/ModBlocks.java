@@ -134,7 +134,7 @@ public class ModBlocks {
                     .replaceable()
                     .noCollision()
                     .breakInstantly()
-                    .luminance(state -> 1)
+                    .luminance(state -> 4)
                     .sounds(BlockSoundGroup.GRASS)
                     .offset(AbstractBlock.OffsetType.XZ)
                     .pistonBehavior(PistonBehavior.DESTROY)

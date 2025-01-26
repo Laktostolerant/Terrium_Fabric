@@ -280,25 +280,25 @@
           "input": "minecraft:y",
           "min_inclusive": -100,
           "max_exclusive": -65,
-          "when_in_range": "minecraft:custom1",
+          "when_in_range": "terrium:custom1",
           "when_out_of_range": {
             "type": "minecraft:range_choice",
             "input": "minecraft:y",
-            "min_inclusive": -190,
+            "min_inclusive": -210,
             "max_exclusive": -100,
-            "when_in_range": "minecraft:custom1",
+            "when_in_range": "terrium:custom1",
             "when_out_of_range": {
               "type": "minecraft:range_choice",
               "input": "minecraft:y",
-              "min_inclusive": -210,
+              "min_inclusive": -200,
               "max_exclusive": -185,
-              "when_in_range": "minecraft:custom2",
+              "when_in_range": "terrium:custom2",
               "when_out_of_range": {
                 "type": "minecraft:range_choice",
                 "input": "minecraft:y",
                 "min_inclusive": -319,
                 "max_exclusive": -210,
-                "when_in_range": "minecraft:custom2",
+                "when_in_range": "terrium:custom2",
                 "when_out_of_range": 2
               }
             }

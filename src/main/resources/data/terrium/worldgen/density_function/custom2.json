@@ -9,9 +9,9 @@
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
           "from_value": 0.5,
-          "from_y": -210,
+          "from_y": -240,
           "to_value": 5,
-          "to_y": -190
+          "to_y": -215
         },
         "argument2": {
           "type": "minecraft:noise",

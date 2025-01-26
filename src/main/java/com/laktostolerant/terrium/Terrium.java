@@ -68,8 +68,8 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 	@Override
 	public void onTerraBlenderInitialized()
 	{
-		Regions.register(new ModOverworldRegion(Identifier.of(Terrium.MOD_ID, "overworld"), RegionType.OVERWORLD, 4));
-
+		Regions.register(new ModOverworldRegion(4));
+		;
 		CustomSurfaceBuilder.setupCustomSurface();
 		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, Terrium.MOD_ID, ModMaterialRules.makeRules());
 

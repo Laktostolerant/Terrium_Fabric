@@ -9,7 +9,7 @@
   },
   "argument2": {
     "type": "minecraft:noise",
-    "noise": "minecraft:deepocean",
+    "noise": "terrium:deepocean",
     "xz_scale": 2,
     "y_scale": 1
   }
