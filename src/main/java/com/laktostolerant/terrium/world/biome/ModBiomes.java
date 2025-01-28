@@ -36,7 +36,7 @@ public class ModBiomes {
             BiomeKeys.DEEP_DARK,
             BiomeKeys.LUSH_CAVES,
             BiomeKeys.DRIPSTONE_CAVES,
-            ModBiomes.DEEP_JUNGLE, // Your custom biome
+            ModBiomes.DEEP_JUNGLE,
             ModBiomes.ABYSS_BIOME
 
     );
@@ -199,13 +199,13 @@ public class ModBiomes {
                 .spawnSettings(builder.build())
                 .generationSettings(lookupBackedBuilder.build())
                 .effects((new BiomeEffects.Builder())
-                .waterColor(4159204)     // Vanilla Deep Dark water color (#3F76E4)
-                .waterFogColor(329011)   // Vanilla Deep Dark water fog (#050533)
-                .fogColor(12638463)      // Vanilla Deep Dark fog color (#C0D8FF)// No foliage
+                .waterColor(4159204)
+                .waterFogColor(329011)
+                .fogColor(12638463)
                         .skyColor(7907327)
                 .moodSound(BiomeMoodSound.CAVE)
                         .music(musicSound)
-                        .build())// Cave ambiance
+                        .build())
                 .build();
     }
 }
