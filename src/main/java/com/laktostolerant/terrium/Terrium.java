@@ -13,6 +13,7 @@ import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import com.laktostolerant.terrium.world.biome.ModBiomeModifiers;
 import com.laktostolerant.terrium.world.biome.ModBiomes;
 import com.laktostolerant.terrium.world.biome.ModOverworldRegion;
+import com.laktostolerant.terrium.world.biome.surface.ModBiolithRegion;
 import com.laktostolerant.terrium.world.biome.surface.ModMaterialRules;
 import com.laktostolerant.terrium.world.gen.CustomSurfaceBuilder;
 import com.laktostolerant.terrium.world.gen.ModWorldGeneration;
@@ -33,6 +34,9 @@ import terrablender.api.RegionType;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 import terrablender.api.TerraBlenderApi;
+
+import static terrablender.api.RegionType.OVERWORLD;
+
 
 public class Terrium implements ModInitializer, TerraBlenderApi {
 	public static final String MOD_ID = "terrium";
@@ -63,12 +67,13 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 		FabricDefaultAttributeRegistry.register(ModEntities.CRAWLER, CrawlerEntity.createCrawlerAttributes());
 
 		ModLootTableModifier.register();
+		ModBiolithRegion.init();
 	}
 
 	@Override
 	public void onTerraBlenderInitialized()
 	{
-		Regions.register(new ModOverworldRegion(4));
+		Regions.register(new com.laktostolerant.terrium.world.biome.ModOverworldRegion(Identifier.of("overworld"), OVERWORLD, 4));
 		;
 		CustomSurfaceBuilder.setupCustomSurface();
 		SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, Terrium.MOD_ID, ModMaterialRules.makeRules());

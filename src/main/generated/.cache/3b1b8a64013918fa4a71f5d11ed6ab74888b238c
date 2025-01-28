@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-22T21:11:26.146373525	Terrium/Model Definitions
+// 1.21.1	2025-01-28T23:45:37.057454099	Terrium/Model Definitions
 1a45e480056df2a98e115e184d1cd512a128f374 assets/terrium/models/block/rose_planks.json
 5d0c1a61a3af5ede606e3d989637ee9b799260eb assets/terrium/models/item/hellite_boots_diamond_trim.json
 3c61a3d2e946967bf14fdcbabda7b28bcd0b3fa5 assets/terrium/blockstates/stripped_rose_log.json
@@ -16,8 +16,8 @@ f6349d2695c709ae1928ea92f4977c5c229182fd assets/terrium/models/item/hellite_ches
 278b2cd39661b838db88224e8f5aebfa69f4e472 assets/terrium/models/block/pyscoria.json
 27268dc2436cffbaf686be50324fdd6d55236c45 assets/terrium/models/item/astralite_dust.json
 4cac85ab5a52e827e2f094aa9a867b043d6bbac8 assets/terrium/blockstates/rose_fence.json
-b23f9620d7ecdb7d67fb5edcfaab16ae8fb712ea assets/terrium/models/item/hellite_helmet.json
 d607ad6c401daf6f352ffffb571d5799f71b5987 assets/terrium/models/item/astralite_boots_quartz_trim.json
+b23f9620d7ecdb7d67fb5edcfaab16ae8fb712ea assets/terrium/models/item/hellite_helmet.json
 73a16d7d09a853e89a87445c2b1ee7096831da66 assets/terrium/models/item/astralite_boots_diamond_trim.json
 3095d0a380203ecc937cba735d337bd6dec64dc0 assets/terrium/models/item/hellite_leggings_quartz_trim.json
 e3605eae1643fe29b2f285f40ef8bcb9956e34a5 assets/terrium/models/item/potion_of_recall.json
@@ -74,8 +74,8 @@ a17641d7e8b58423de8a7bdf97c47de34717a99c assets/terrium/models/item/duskweed.jso
 7ee5f0c82399e97154cba79b8e057e30ba303faa assets/terrium/models/item/raw_hellite.json
 6fa17d16fa0a9646cb5fb61d6063fee5edec1658 assets/terrium/models/block/rose_log_horizontal.json
 37f8987f539b6eccf8d8d08742eb84763b8bbf39 assets/terrium/blockstates/blackrock_pillar.json
-c0906b8041114d7e2b248b7e982671a09508a504 assets/terrium/models/item/hellite_chestplate_copper_trim.json
 b7a64e31f41f248ea7b1f1674169ca4aa9374eb3 assets/terrium/models/item/astralite_shard.json
+c0906b8041114d7e2b248b7e982671a09508a504 assets/terrium/models/item/hellite_chestplate_copper_trim.json
 b64c8d446d8b18f00af9b97c79d4835a9f44d934 assets/terrium/models/item/hellite_helmet_gold_trim.json
 a5ca18cb199430348115356cd2ead0d6c9798556 assets/terrium/models/item/rose_door.json
 17a353208808537d9124326a75813c6ae46fe72c assets/terrium/blockstates/rose_pressure_plate.json

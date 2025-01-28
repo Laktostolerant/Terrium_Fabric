@@ -17,9 +17,6 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 import org.spongepowered.include.com.google.common.collect.ImmutableList;
-import terrablender.api.SurfaceRuleManager;
-import terrablender.api.TerraBlenderApi;
-import terrablender.worldgen.TBSurfaceRuleData;
 
 public class ModWorldGeneration {
     public static void generateModWorldGen() {

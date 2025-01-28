@@ -5,6 +5,7 @@ import com.laktostolerant.terrium.world.ModPlacedFeatures;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
@@ -12,6 +13,7 @@ import net.minecraft.sound.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.*;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.carver.ConfiguredCarver;
 import net.minecraft.world.gen.carver.ConfiguredCarvers;
 import net.minecraft.world.gen.feature.*;
 
@@ -27,11 +29,16 @@ public class ModBiomes {
     public static final RegistryKey<Biome> TEST_BIOME = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(Terrium.MOD_ID, "test_biome"));
 
+    public static final RegistryKey<Biome> DEEP_DARK = RegistryKey.of(RegistryKeys.BIOME,
+            Identifier.of(Terrium.MOD_ID, "deep_dark"));
+
     private static final Set<RegistryKey<Biome>> EXCLUDED_BIOMES = Set.of(
             BiomeKeys.DEEP_DARK,
             BiomeKeys.LUSH_CAVES,
             BiomeKeys.DRIPSTONE_CAVES,
-            ModBiomes.DEEP_JUNGLE // Your custom biome
+            ModBiomes.DEEP_JUNGLE, // Your custom biome
+            ModBiomes.ABYSS_BIOME
+
     );
 
 
@@ -39,6 +46,7 @@ public class ModBiomes {
         context.register(ABYSS_BIOME, abyssBiome(context));
         context.register(DEEP_JUNGLE, deepJungle(context));
         context.register(TEST_BIOME, testBiome(context));
+        context.register(DEEP_DARK, DEEP_DARK(context));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
@@ -48,6 +56,7 @@ public class ModBiomes {
         DefaultBiomeFeatures.addMineables(builder);
         DefaultBiomeFeatures.addSprings(builder);
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
+
     }
 
 
@@ -161,5 +170,28 @@ public class ModBiomes {
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundEvents.BLOCK_AMETHYST_CLUSTER_HIT))).build())
                 .build();
     }
+    public static Biome DEEP_DARK (Registerable<Biome> context){
+        RegistryEntryLookup<PlacedFeature> registryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
+        RegistryEntryLookup<ConfiguredCarver<?>> registryEntryLookup2 = context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER);
+        OverworldBiomeCreator.createDeepDark(registryEntryLookup, registryEntryLookup2);
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+    return new Biome.Builder()
+            .precipitation(false)
+            .temperature(0.8F)
+            .downfall(0.4F)
+            .effects(new BiomeEffects.Builder()
+                    .waterColor(4159204)
+                    .waterFogColor(329011)
+                    .fogColor(12638463)
+                    .skyColor(0)
+                    .build())
+            .spawnSettings(new SpawnSettings.Builder()
+                    .creatureSpawnProbability(0.07F)
+                    .build())
+            .generationSettings(biomeBuilder.build())
 
+            .build();
+    }
 }

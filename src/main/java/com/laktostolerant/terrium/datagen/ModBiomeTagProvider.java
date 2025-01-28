@@ -28,6 +28,7 @@ public class ModBiomeTagProvider extends FabricTagProvider<Biome> {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BiomeTags.IS_OVERWORLD)
                 .add(ModBiomes.ABYSS_BIOME)
+                .add(ModBiomes.DEEP_DARK)
                 .add(ModBiomes.DEEP_JUNGLE);
     }
 }

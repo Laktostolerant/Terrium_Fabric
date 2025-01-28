@@ -13,6 +13,10 @@ base {
 repositories {
 	maven { url = 'https://maven.minecraftforge.net/' }
 	maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/'
+	}
 
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
@@ -44,7 +48,7 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
+	modImplementation("com.terraformersmc:biolith-fabric:${project.biolith_version}")
 	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21-4.0.0.2'
 	modImplementation 'maven.modrinth:sodium:mc1.21.1-0.6.3-fabric'
 }
