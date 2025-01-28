@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-28T23:45:37.051572315	Terrium/World Gen
+// 1.21.1	2025-01-29T01:06:34.176674537	Terrium/World Gen
 493ba25bdd6fe2fa7460e251316ca4aae6e75e4e data/terrium/worldgen/configured_feature/darkelp_configured_key.json
 5e42b45bdc7f505d6bdc29a47308205e199b37fe data/terrium/worldgen/configured_feature/abyss_plants_group.json
 fb0de26e377f35098e9c78502ad4782c8d0313cc data/terrium/worldgen/configured_feature/hellite_ore.json
@@ -16,5 +16,5 @@ cca236aaca9be867fc17d4116efc6d810f07a4ba data/terrium/worldgen/configured_featur
 17ac5806bba2f50ebb0e24d95c1e3e750d1cddc4 data/terrium/worldgen/placed_feature/darkelp_placed_key.json
 4562c58951b525cdaa88ea96a7f9144ef23a522a data/terrium/worldgen/biome/deep_jungle.json
 165716d5a219a77c1b98b0f151d79b09c387f469 data/terrium/worldgen/configured_feature/abyss_plants.json
-0d2812c71f49de89641808745b1dd35869f6eb2e data/terrium/worldgen/biome/deep_dark.json
+b309453462480a497c3e24e1058436a19b6e9964 data/terrium/worldgen/biome/deep_dark.json
 5c63f71f7f4f88e259142b8cef461183a2155362 data/terrium/worldgen/placed_feature/abyss_plants_placed_key.json

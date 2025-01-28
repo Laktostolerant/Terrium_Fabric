@@ -43,10 +43,12 @@ public class ModBiomes {
 
 
     public static void boostrap (Registerable<Biome> context) {
+        RegistryEntryLookup<PlacedFeature> featureLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
+        RegistryEntryLookup<ConfiguredCarver<?>> carverLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER);
         context.register(ABYSS_BIOME, abyssBiome(context));
         context.register(DEEP_JUNGLE, deepJungle(context));
         context.register(TEST_BIOME, testBiome(context));
-        context.register(DEEP_DARK, DEEP_DARK(context));
+        context.register(DEEP_DARK, DEEP_DARK(context, featureLookup, carverLookup));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
@@ -170,28 +172,40 @@ public class ModBiomes {
                         .music(MusicType.createIngameMusic(RegistryEntry.of(SoundEvents.BLOCK_AMETHYST_CLUSTER_HIT))).build())
                 .build();
     }
-    public static Biome DEEP_DARK (Registerable<Biome> context){
-        RegistryEntryLookup<PlacedFeature> registryEntryLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
-        RegistryEntryLookup<ConfiguredCarver<?>> registryEntryLookup2 = context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER);
-        OverworldBiomeCreator.createDeepDark(registryEntryLookup, registryEntryLookup2);
-        GenerationSettings.LookupBackedBuilder biomeBuilder =
-                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
-                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
-    return new Biome.Builder()
-            .precipitation(false)
-            .temperature(0.8F)
-            .downfall(0.4F)
-            .effects(new BiomeEffects.Builder()
-                    .waterColor(4159204)
-                    .waterFogColor(329011)
-                    .fogColor(12638463)
-                    .skyColor(0)
-                    .build())
-            .spawnSettings(new SpawnSettings.Builder()
-                    .creatureSpawnProbability(0.07F)
-                    .build())
-            .generationSettings(biomeBuilder.build())
 
-            .build();
+
+    public static Biome DEEP_DARK (Registerable<Biome> context, RegistryEntryLookup<PlacedFeature> featureLookup, RegistryEntryLookup<ConfiguredCarver<?>> carverLookup) {
+        SpawnSettings.Builder builder = new SpawnSettings.Builder();
+        GenerationSettings.LookupBackedBuilder lookupBackedBuilder = new GenerationSettings.LookupBackedBuilder(featureLookup, carverLookup);
+        lookupBackedBuilder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CAVE);
+        lookupBackedBuilder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CAVE_EXTRA_UNDERGROUND);
+        lookupBackedBuilder.carver(GenerationStep.Carver.AIR, ConfiguredCarvers.CANYON);
+        DefaultBiomeFeatures.addAmethystGeodes(lookupBackedBuilder);
+        DefaultBiomeFeatures.addDungeons(lookupBackedBuilder);
+        DefaultBiomeFeatures.addMineables(lookupBackedBuilder);
+        DefaultBiomeFeatures.addFrozenTopLayer(lookupBackedBuilder);
+        DefaultBiomeFeatures.addPlainsTallGrass(lookupBackedBuilder);
+        DefaultBiomeFeatures.addDefaultOres(lookupBackedBuilder);
+        DefaultBiomeFeatures.addDefaultDisks(lookupBackedBuilder);
+        DefaultBiomeFeatures.addPlainsFeatures(lookupBackedBuilder);
+        DefaultBiomeFeatures.addDefaultMushrooms(lookupBackedBuilder);
+        DefaultBiomeFeatures.addDefaultVegetation(lookupBackedBuilder);
+        DefaultBiomeFeatures.addSculk(lookupBackedBuilder);
+        MusicSound musicSound = MusicType.createIngameMusic(SoundEvents.MUSIC_OVERWORLD_DEEP_DARK);
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.4f)
+                .temperature(0.4f)
+                .spawnSettings(builder.build())
+                .generationSettings(lookupBackedBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                .waterColor(4159204)     // Vanilla Deep Dark water color (#3F76E4)
+                .waterFogColor(329011)   // Vanilla Deep Dark water fog (#050533)
+                .fogColor(12638463)      // Vanilla Deep Dark fog color (#C0D8FF)// No foliage
+                        .skyColor(7907327)
+                .moodSound(BiomeMoodSound.CAVE)
+                        .music(musicSound)
+                        .build())// Cave ambiance
+                .build();
     }
 }
