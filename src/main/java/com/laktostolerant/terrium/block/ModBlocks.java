@@ -250,7 +250,16 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create()
                     .strength(4f, 7)
                     .requiresTool()
-                    .sounds(BlockSoundGroup.DEEPSLATE)
+                    .luminance(state -> 11)
+                    .sounds(BlockSoundGroup.METAL)
+            )
+    );
+
+    public static final Block FACTORY_GRATE = registerBlock("factory_grate",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f, 7)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.METAL)
             )
     );
 
