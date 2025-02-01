@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-16T14:30:28.4231354	Terrium/Model Definitions
+// 1.21.1	2025-02-01T21:57:35.5958972	Terrium/Model Definitions
 3ac90630e3f934faec1cb373072d5569a813ecc0 assets\terrium\models\block\factory_block.json
 6af8a6bd414ecc2408c89b395f64082807f67182 assets\terrium\models\block\rose_stairs_inner.json
 d0507c5a6773b75fe5a6b4fc41087aa93a04931d assets\terrium\models\item\hellite_boots.json
@@ -64,6 +64,7 @@ a004156df452c4f7496b306afb483b8c69e1f20c assets\terrium\models\block\rose_pressu
 7fefd19774e32ad1aa41bfb1635f85cc4c869e7f assets\terrium\blockstates\natural_astralite.json
 d34f1dc9604ffa09b932c95bd8618591a8705fb0 assets\terrium\models\item\factory_grate.json
 e1edcedcc5419657563fd1d5aa84a1adccba6551 assets\terrium\models\item\purshale.json
+6811fdf50f48fc3caaa1b7efaed04999a4cc1310 assets\terrium\blockstates\metal_wall.json
 a2cc2cf10789d25cf7dc7f53c3e2b406730b39c4 assets\terrium\models\block\hellite_ore.json
 78f4fbef6db9d3b889b076f42f1e7b7f36430941 assets\terrium\models\item\astralite_helmet_lapis_trim.json
 56cdab49c7af8902ad24f6e1be6819b20413b0aa assets\terrium\blockstates\watchful_purshale.json
@@ -171,6 +172,7 @@ f3b2e8d5f04002077360b7116063a47349d557d5 assets\terrium\models\block\murkroot.js
 41fae29acf295831dff992190706d0e42655d937 assets\terrium\models\item\hellite_chestplate_amethyst_trim.json
 9eb4d86870318dfd49a79111a0745486d8fc9d4c assets\terrium\models\item\astralite_boots_gold_trim.json
 a577448f38150506986d88e1ee80af6051292796 assets\terrium\models\item\astralite_helmet_copper_trim.json
+98db0b2212c05b90dff8365de9a936ff3e12a0cb assets\terrium\models\item\metal_wall.json
 15916918b265f87991873c9f96ebd046f274d2d5 assets\terrium\models\item\astralite_helmet_redstone_trim.json
 81903d1403c4c56ea4e0afc77b98db2c702b6432 assets\terrium\blockstates\factory_block.json
 8421204786d0de1be487c0fee4d6e3d3954b0027 assets\terrium\models\item\astralite_helmet_emerald_trim.json
@@ -187,8 +189,8 @@ aae9da9d4d58bdeef12bafafff4cf47e1617a038 assets\terrium\models\block\rose_gate_o
 6ec4c75322ff056a90df5ecf3534ba1a341060ff assets\terrium\models\item\astralite_leggings_emerald_trim.json
 80b3ad854c590f79f7a2290cccc90915cb9f7ee2 assets\terrium\models\item\astralite_chestplate_redstone_trim.json
 4200067704349a3183e50a2d3af282c88f07d454 assets\terrium\models\item\hellite_chestplate_lapis_trim.json
-6dab0990f4c2dc930afb88d24767a63ad8622aeb assets\terrium\models\item\hellite_chestplate_diamond_trim.json
 16d37c8a6f29134a21e0155a75a414760e95859f assets\terrium\models\item\dynamite.json
+6dab0990f4c2dc930afb88d24767a63ad8622aeb assets\terrium\models\item\hellite_chestplate_diamond_trim.json
 d39d43502b82bea88197c45664564a44525000ce assets\terrium\models\item\astralite_leggings_diamond_trim.json
 b333e124dc49bd51d67d423a2de01954248c6102 assets\terrium\models\item\hellite_helmet_redstone_trim.json
 8e8d42625b7fe70c973901286a9f2271b946cc62 assets\terrium\models\block\rose_slab.json

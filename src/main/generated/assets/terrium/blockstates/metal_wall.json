@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "terrium:block/metal_wall",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "terrium:block/metal_wall"
+    },
+    "facing=south": {
+      "model": "terrium:block/metal_wall",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "terrium:block/metal_wall",
+      "y": 270
+    }
+  }
+}
