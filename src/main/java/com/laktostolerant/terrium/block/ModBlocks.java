@@ -263,6 +263,13 @@ public class ModBlocks {
             )
     );
 
+    public static final Block METAL_WALL = registerBlock("metal_wall",
+            new MetalWallBlock(AbstractBlock.Settings.create()
+                    .strength(4, 7)
+                    .requiresTool()
+            )
+    );
+
 
 
 

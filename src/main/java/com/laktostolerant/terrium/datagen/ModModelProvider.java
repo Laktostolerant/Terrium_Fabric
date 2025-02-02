@@ -67,6 +67,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FACTORY_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FACTORY_GRATE);
+
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.METAL_WALL);
     }
 
     @Override
