@@ -80,6 +80,7 @@ public class ModBiomes {
                 .spawnSettings(spawnBuilder.build())
                 .effects((new BiomeEffects.Builder())
                         .waterColor(0xf68ad1)
+                        .grassColor(0xff00ff)
                         .waterFogColor(0xbf1b26)
                         .skyColor(0x1a0632)
                         .grassColor(0x418dbe)
