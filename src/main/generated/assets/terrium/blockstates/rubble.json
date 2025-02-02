@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "terrium:block/rubble",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "terrium:block/rubble"
+    },
+    "facing=south": {
+      "model": "terrium:block/rubble",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "terrium:block/rubble",
+      "y": 270
+    }
+  }
+}
