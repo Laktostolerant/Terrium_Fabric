@@ -270,6 +270,14 @@ public class ModBlocks {
             )
     );
 
+    public static final Block RUBBLE = registerBlock("rubble",
+            new CustomPassableBlock(AbstractBlock.Settings.create()
+                    .strength(4, 7)
+                    .requiresTool()
+                    .noCollision()
+            )
+    );
+
 
 
 
