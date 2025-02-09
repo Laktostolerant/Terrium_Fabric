@@ -1,13 +1,12 @@
 {
-  "name": "terrium:lower_abyss/lab",
   "fallback": "minecraft:empty",
   "elements": [
     {
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "projection": "terrain_matching",
-        "location": "terrium:lower_abyss/lab/lab_entrance",
+        "projection": "rigid",
+        "location": "terrium:lab/lab_entrance_main",
         "processors": "minecraft:empty"
       }
     }

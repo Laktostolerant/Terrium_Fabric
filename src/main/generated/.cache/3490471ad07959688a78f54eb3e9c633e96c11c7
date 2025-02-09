@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-01T01:43:10.943967845	Terrium/Block Loot Tables
+// 1.21.1	2025-02-09T16:31:59.080309856	Terrium/Block Loot Tables
 838654d451d47b07b6746bbfe10e523179a3706c data/terrium/loot_table/blocks/loamstone.json
 ad111d21022b0677f0ea1f80f4707be4701d4549 data/terrium/loot_table/blocks/rose_button.json
 43fc89aed953cb5421a66787b14d618ef6682556 data/terrium/loot_table/blocks/purshale.json
@@ -7,8 +7,8 @@ f4585a039fb776da85fd773b33e7c2aaadd3040a data/terrium/loot_table/blocks/watchful
 74c19dd2cf5cffde7c17189624519a8dcb34dbee data/terrium/loot_table/blocks/stripped_rose_wood.json
 472c61b1f92761bb987f7ad6fd4804109096cd3e data/terrium/loot_table/blocks/stripped_rose_log.json
 5e7e5913e1507a417d005bc57d341fe37848e5fa data/terrium/loot_table/blocks/hellite_ore.json
-cd9fd814766c0a78f15f3eb1258dce80e86ab3fc data/terrium/loot_table/blocks/rose_fence.json
 4582673e44d77683a9759be965958587d4454f19 data/terrium/loot_table/blocks/rose_planks.json
+cd9fd814766c0a78f15f3eb1258dce80e86ab3fc data/terrium/loot_table/blocks/rose_fence.json
 c3de409d9fceb462530aa5126f9055860f7e03d9 data/terrium/loot_table/blocks/rose_log.json
 580271dcd7ac2bf6ef7e9298d2904ba7246d9b8a data/terrium/loot_table/blocks/rose_gate.json
 176bc70eda5825fed4b3a80a0917f2b84ff64420 data/terrium/loot_table/blocks/rose_slab.json

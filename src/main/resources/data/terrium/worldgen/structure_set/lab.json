@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "terrium:lab",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 9592963,
+    "spacing": 20,
+    "separation": 7
+  }
+}
