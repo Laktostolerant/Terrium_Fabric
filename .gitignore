@@ -38,3 +38,4 @@ replay_*.log
 *.hprof
 *.jfr
 /build/
+/New Snowcapped File/
