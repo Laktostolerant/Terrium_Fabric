@@ -6,7 +6,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "terrium:lab/lab_entrance_main",
+        "location": "terrium:lab/lab_entrance_struct",
         "processors": "minecraft:empty"
       }
     }

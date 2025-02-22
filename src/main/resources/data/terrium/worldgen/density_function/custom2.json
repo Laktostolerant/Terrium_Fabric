@@ -8,16 +8,16 @@
         "type": "minecraft:add",
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
-          "from_value": 0.5,
+          "from_value": -0.5,
           "from_y": -240,
-          "to_value": 5,
+          "to_value": 6,
           "to_y": -215
         },
         "argument2": {
           "type": "minecraft:noise",
           "noise": "minecraft:deepocean",
-          "xz_scale": -5,
-          "y_scale": 1.4
+          "xz_scale": -8,
+          "y_scale": 0
         }
       },
       "argument2": {
@@ -33,8 +33,8 @@
         "type": "minecraft:y_clamped_gradient",
         "from_y": -170,
         "to_y": -320,
-        "from_value": -0.5,
-        "to_value": -3.5
+        "from_value": -1,
+        "to_value": -4
       },
       "argument2": {
         "type": "minecraft:noise",

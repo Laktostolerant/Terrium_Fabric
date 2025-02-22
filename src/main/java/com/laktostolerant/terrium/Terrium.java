@@ -42,6 +42,7 @@ public class Terrium implements ModInitializer, TerraBlenderApi {
 	public static final String MOD_ID = "terrium";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
