@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "terrium:block/small_mud_bricks",
+    "side": "terrium:block/small_mud_bricks",
+    "top": "terrium:block/small_mud_bricks"
+  }
+}

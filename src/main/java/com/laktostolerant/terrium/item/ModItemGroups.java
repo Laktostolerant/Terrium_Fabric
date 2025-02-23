@@ -99,6 +99,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.FACTORY_GRATE);
                         entries.add(ModBlocks.METAL_WALL);
                         entries.add(ModBlocks.RUBBLE);
+
+                        entries.add(ModBlocks.SMALL_MUD_BRICKS);
+                        entries.add(ModBlocks.SMALL_MUD_BRICKS_STAIRS);
+                        entries.add(ModBlocks.SMALL_MUD_BRICKS_SLAB);
+
+                        entries.add(ModBlocks.SMOOTH_PACKED_MUD);
                     })
 
                     .build()

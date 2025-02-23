@@ -278,6 +278,21 @@ public class ModBlocks {
             )
     );
 
+    public static final Block SMALL_MUD_BRICKS = registerBlock("small_mud_bricks",
+            new Block(AbstractBlock.Settings.copy(Blocks.MUD_BRICKS)
+            )
+    );
+
+    public static final Block SMALL_MUD_BRICKS_STAIRS = registerBlock("small_mud_bricks_stairs",
+            new StairsBlock(ModBlocks.SMALL_MUD_BRICKS.getDefaultState(), AbstractBlock.Settings.copy(Blocks.MUD_BRICK_STAIRS)));
+
+    public static final Block SMALL_MUD_BRICKS_SLAB = registerBlock("small_mud_bricks_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.MUD_BRICK_SLAB)));
+
+    public static final Block SMOOTH_PACKED_MUD = registerBlock("smooth_packed_mud",
+            new Block(AbstractBlock.Settings.copy(Blocks.PACKED_MUD)
+            )
+    );
 
 
 

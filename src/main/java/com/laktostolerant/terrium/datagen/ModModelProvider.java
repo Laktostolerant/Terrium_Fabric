@@ -70,6 +70,15 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.METAL_WALL);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.RUBBLE);
+
+        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMALL_MUD_BRICKS);
+
+        BlockStateModelGenerator.BlockTexturePool smallMudBricksPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.SMALL_MUD_BRICKS);
+        smallMudBricksPool.family(new BlockFamily.Builder(ModBlocks.SMALL_MUD_BRICKS).build());
+        smallMudBricksPool.stairs(ModBlocks.SMALL_MUD_BRICKS_STAIRS);
+        smallMudBricksPool.slab(ModBlocks.SMALL_MUD_BRICKS_SLAB);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SMOOTH_PACKED_MUD);
     }
 
     @Override
