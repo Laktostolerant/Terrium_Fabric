@@ -5,19 +5,18 @@
   ],
   "step": "underground_structures",
   "spawn_overrides": {},
-  "terrain_adaptation": "beard_thin",
+  "terrain_adaptation": "bury",
   "start_pool": "terrium:lab/lab_pool",
   "size": 1,
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {
-      "absolute": -200
+      "absolute": -195
     },
     "max_inclusive": {
-      "absolute": -160
+      "absolute": -184
     }
   },
-  "project_start_to_heightmap": "WORLD_SURFACE",
   "max_distance_from_center": 116,
   "start_jigsaw_name": "terrium:lab_entrance_jig",
   "use_expansion_hack": false

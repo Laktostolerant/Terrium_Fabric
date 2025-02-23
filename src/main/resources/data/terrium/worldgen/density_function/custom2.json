@@ -8,10 +8,10 @@
         "type": "minecraft:add",
         "argument1": {
           "type": "minecraft:y_clamped_gradient",
-          "from_value": -0.5,
-          "from_y": -240,
-          "to_value": 6,
-          "to_y": -215
+          "from_value": 0.1,
+          "from_y": -300,
+          "to_value": 1,
+          "to_y": -100
         },
         "argument2": {
           "type": "minecraft:noise",
@@ -31,15 +31,15 @@
       "type": "minecraft:add",
       "argument1": {
         "type": "minecraft:y_clamped_gradient",
-        "from_y": -170,
-        "to_y": -320,
-        "from_value": -1,
-        "to_value": -4
+        "from_y": -130,
+        "to_y": -290,
+        "from_value": 3.2,
+        "to_value": -4.5
       },
       "argument2": {
         "type": "minecraft:noise",
         "noise": "minecraft:deepocean",
-        "xz_scale": 14,
+        "xz_scale": 19,
         "y_scale": 2.1
       }
     }
@@ -50,8 +50,8 @@
       "type": "minecraft:y_clamped_gradient",
       "from_y": -300,
       "to_y": -330,
-      "from_value": 2.4,
-      "to_value": 9
+      "from_value": 3.6,
+      "to_value": 8
     },
     "argument2": {
       "type": "minecraft:noise",
