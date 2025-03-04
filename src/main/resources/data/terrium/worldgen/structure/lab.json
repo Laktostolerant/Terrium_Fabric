@@ -7,7 +7,7 @@
   "spawn_overrides": {},
   "terrain_adaptation": "bury",
   "start_pool": "terrium:lab/lab_pool",
-  "size": 1,
+  "size": 20,
   "start_height": {
     "type": "minecraft:uniform",
     "min_inclusive": {

@@ -2,7 +2,7 @@
   "type": "minecraft:range_choice",
   "input": "minecraft:y",
   "min_inclusive": -64,
-  "max_exclusive": 600,
+  "max_exclusive": 6000,
   "when_in_range": {
     "type": "minecraft:add",
     "argument1": {
