@@ -78,11 +78,12 @@ public class ModBlocks {
     );
 
     public static final Block NATURAL_ASTRALITE = registerBlock("natural_astralite",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+            new CustomSpreadableBlock(
                     AbstractBlock.Settings.create()
                             .strength(5f, 4)
                             .requiresTool()
                             .sounds(BlockSoundGroup.DEEPSLATE)
+                            .ticksRandomly()
             )
     );
 
