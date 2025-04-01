@@ -12,7 +12,8 @@
     "render.BackgroundRendererMixin",
     "render.CameraMixin",
     "accessors.CameraAccessor",
-    "world.SurfaceRulesMixin"
+    "world.SurfaceRulesMixin",
+    "world.StructureJigsawSizeMixin"
   ],
   "injectors": {
     "defaultRequire": 1

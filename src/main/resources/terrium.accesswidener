@@ -4,3 +4,4 @@ extendable class net/minecraft/world/chunk/light/BlockLightStorage$Data
 accessible method net/minecraft/world/chunk/light/LightStorage get (J)I
 accessible method net/minecraft/world/chunk/light/LightStorage set (JI)V
 accessible field net/minecraft/world/chunk/light/ChunkLightProvider lightStorage Lnet/minecraft/world/chunk/light/LightStorage;
+accessible class net/minecraft/world/gen/structure/JigsawStructure

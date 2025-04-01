@@ -32,15 +32,23 @@ public class ModBiomes {
     public static final RegistryKey<Biome> DEEP_DARK = RegistryKey.of(RegistryKeys.BIOME,
             Identifier.of(Terrium.MOD_ID, "deep_dark"));
 
+    public static final RegistryKey<Biome> CHASM_CENTER = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Terrium.MOD_ID, "chasm_center"));
+
+    public static final RegistryKey<Biome> CHASM_BARRIER = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Terrium.MOD_ID, "chasm_barrier"));
+
+    public static final RegistryKey<Biome> CHASM_OUTER = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(Terrium.MOD_ID, "chasm_outer"));
+
     private static final Set<RegistryKey<Biome>> EXCLUDED_BIOMES = Set.of(
             BiomeKeys.DEEP_DARK,
             BiomeKeys.LUSH_CAVES,
             BiomeKeys.DRIPSTONE_CAVES,
             ModBiomes.DEEP_JUNGLE,
-            ModBiomes.ABYSS_BIOME
+            ModBiomes.ABYSS_BIOME,
+            ModBiomes.CHASM_CENTER,
+            ModBiomes.CHASM_BARRIER,
+            ModBiomes.CHASM_OUTER
 
     );
-
 
     public static void boostrap (Registerable<Biome> context) {
         RegistryEntryLookup<PlacedFeature> featureLookup = context.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
@@ -49,6 +57,9 @@ public class ModBiomes {
         context.register(DEEP_JUNGLE, deepJungle(context));
         context.register(TEST_BIOME, testBiome(context));
         context.register(DEEP_DARK, DEEP_DARK(context, featureLookup, carverLookup));
+        context.register(CHASM_CENTER, chasm_centerBiome(context));
+        context.register(CHASM_BARRIER, chasm_barrierBiome(context));
+        context.register(CHASM_OUTER, chasm_outerBiome(context));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
@@ -61,6 +72,74 @@ public class ModBiomes {
 
     }
 
+    public static Biome chasm_centerBiome(Registerable<Biome> context){
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.6f)
+                .temperature(2f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0x1fe0d7)
+                        .grassColor(0x35e69f)
+                        .skyColor(0x5679e3)
+                        .waterFogColor(0x98abe3)
+                        .fogColor(0x65a6c2)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .build()
+                ).build();
+    }
+
+    public static Biome chasm_barrierBiome(Registerable<Biome> context){
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.6f)
+                .temperature(2f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0x1fe0d7)
+                        .grassColor(0x35e69f)
+                        .skyColor(0x5679e3)
+                        .waterFogColor(0x98abe3)
+                        .fogColor(0x65a6c2)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .build()
+                ).build();
+    }
+
+    public static Biome chasm_outerBiome(Registerable<Biome> context){
+        SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
+        GenerationSettings.LookupBackedBuilder biomeBuilder =
+                new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),
+                        context.getRegistryLookup(RegistryKeys.CONFIGURED_CARVER));
+
+        return new Biome.Builder()
+                .precipitation(true)
+                .downfall(0.6f)
+                .temperature(2f)
+                .generationSettings(biomeBuilder.build())
+                .spawnSettings(spawnBuilder.build())
+                .effects((new BiomeEffects.Builder())
+                        .waterColor(0x1fe0d7)
+                        .grassColor(0x35e69f)
+                        .skyColor(0x5679e3)
+                        .waterFogColor(0x98abe3)
+                        .fogColor(0x65a6c2)
+                        .moodSound(BiomeMoodSound.CAVE)
+                        .build()
+                ).build();
+    }
 
     public static Biome abyssBiome(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
