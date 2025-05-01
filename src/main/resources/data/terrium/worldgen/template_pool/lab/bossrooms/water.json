@@ -2,11 +2,11 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 150,
+      "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "terrium:lab/wind_tunnel_horizontal",
+        "location": "terrium:lab/water_bossroom",
         "processors": "minecraft:empty"
       }
     }

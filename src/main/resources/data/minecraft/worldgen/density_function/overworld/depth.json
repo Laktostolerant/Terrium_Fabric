@@ -7,7 +7,7 @@
       "argument": {
         "type": "minecraft:noise",
         "noise": "terrium:chasm_select_1",
-        "xz_scale": 0.01,
+        "xz_scale": 0.012,
         "y_scale": 0
       }
     },

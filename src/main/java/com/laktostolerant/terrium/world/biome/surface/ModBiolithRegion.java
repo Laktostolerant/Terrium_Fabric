@@ -38,7 +38,7 @@ public class ModBiolithRegion {
                 MultiNoiseUtil.ParameterRange.of(0.3f, 1f),
                 MultiNoiseUtil.ParameterRange.of(0.3f, 1f),
                 MultiNoiseUtil.ParameterRange.of(0.55f, 1f),
-                MultiNoiseUtil.ParameterRange.of(0.1f, 2.3f),
+                MultiNoiseUtil.ParameterRange.of(4.4f, 5.5f),
                 MultiNoiseUtil.ParameterRange.of(0.767f, 1f),
                 0L
 
@@ -51,7 +51,7 @@ public class ModBiolithRegion {
                         MultiNoiseUtil.ParameterRange.of(0.3f, 1f),
                         MultiNoiseUtil.ParameterRange.of(0.3f, 1f),
                         MultiNoiseUtil.ParameterRange.of(0.55f, 1f),
-                        MultiNoiseUtil.ParameterRange.of(4.9f, 5.1f),
+                        MultiNoiseUtil.ParameterRange.of(4.4f, 5.5f),
                         MultiNoiseUtil.ParameterRange.of(0.4f, 0.767f),
                         0L
 
@@ -64,7 +64,7 @@ public class ModBiolithRegion {
                         MultiNoiseUtil.ParameterRange.of(0.3f, 1f),
                         MultiNoiseUtil.ParameterRange.of(0.3f, 1f),
                         MultiNoiseUtil.ParameterRange.of(0.55f, 1f),
-                        MultiNoiseUtil.ParameterRange.of(4.9f, 5.1f),
+                        MultiNoiseUtil.ParameterRange.of(4.4f, 5.5f),
                         MultiNoiseUtil.ParameterRange.of(0.05f, 0.4f),
                         0L
 
@@ -78,7 +78,7 @@ public class ModBiolithRegion {
                         MultiNoiseUtil.ParameterRange.of(-1f, 1f),
                         MultiNoiseUtil.ParameterRange.of(-1f, 1f),
                         MultiNoiseUtil.ParameterRange.of(-1f, -0.375f),
-                        MultiNoiseUtil.ParameterRange.of(4.9f, 5.1f),
+                        MultiNoiseUtil.ParameterRange.of(0.8f, 1.1f),
                         MultiNoiseUtil.ParameterRange.of(-1f, 1f),
                         0L
 

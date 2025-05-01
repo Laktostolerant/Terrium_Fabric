@@ -8,6 +8,6 @@ import org.spongepowered.asm.mixin.injection.*;
 public class StructureJigsawSizeMixin {
     @ModifyConstant(method = "method_41662", constant = @Constant(intValue = 20, ordinal = 0))
     private static int modifySizeConstant(int original) {
-        return 40;
+        return 60;
     }
 }
